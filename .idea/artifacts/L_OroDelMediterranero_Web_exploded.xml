@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="L-OroDelMediterranero:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/L_OroDelMediterranero_Web_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="L-OroDelMediterranero/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="L-OroDelMediterranero" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
