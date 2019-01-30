@@ -1,0 +1,47 @@
+// Event table
+.--o--events-table {
+  th, td {
+    text-align: center;
+  }
+  td {
+    position: relative;
+    text-align: center;
+    padding: $table-cell-padding/2;
+    &:hover {
+      z-index: 1;
+    }
+  }
+  p {
+    margin-bottom: 10px;
+  }
+}
+@include media-breakpoint-up(md) {
+  .--o--events-table  {
+    th, td {
+      text-align: left;
+    }
+    td {
+      height: 12em;
+      padding: $table-cell-padding;
+    }
+  }
+}
+
+.--o--event-date {
+  margin-bottom: 20px;
+}
+
+.--o--event-day-past > * , .tribe-events-past > div > p {
+  opacity: .4;
+}
+
+.--o--event-day-current, .tribe-events-present {
+  background: $o-secondary !important;
+  color: color-yiq($o-secondary);
+  h1, h2, h3, h4, h5, h6, a, p, div, span {
+    color: color-yiq($o-secondary);
+    &:hover {
+      color: color-yiq($o-secondary);
+    }
+  }
+}

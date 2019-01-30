@@ -1,0 +1,51 @@
+{% set active_page = 'contact.html' -%}
+
+{% extends "layouts/default.html" %}
+{% block extrajs %}
+    <script type="text/javascript" src="assets/js/contact.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA53lVLoFr_BgRcgzx80ThvLm4vBJLp3x0"></script>
+{% endblock %}
+
+{% block content %}
+<div class="section">
+     <div class="section-background">
+        <div class="section-bg-image section-bg-image-size-100 section-bg-image-position-top section-bg-image-paralax --o--demo-bg-image-02"></div>
+    </div>
+    <div class="section-content">
+        <div class="container">
+            <div class="row --o--pt-20 --o--pb-15">
+                <div class="col-lg-5">
+                    <div class="card card-hero --o--shadow-15 --o--shadow-hover-20 --o--transition --o--os-animation card-inverse --o--mb-3 --o--demo-bg-orange" data-os-animation="fadeIn" data-os-animation-delay=".3s">
+                        <div class="card-body">
+                            <h2 class="card-title --o--mb-3">Get in Touch</h2>
+                            <p class="card-text">Gain traction. Take five, punch the tree, and come back in here with a clear head we don't want to boil the ocean one-sheet, but value prop so out of the loop.</p>
+                            <p>77 Winchester Lane , Coachella, CA 92236</p>
+                            <p>Or call me at <strong>147-258-3690</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="card --o--shadow-8 --o--shadow-hover-16 --o--transition --o--os-animation --o--mb-3 text-center card-hero" data-os-animation="fadeIn" data-os-animation-delay=".4s">
+                        <div class="card-body">
+                            <form action="contact_mailer.php" class="contact-form">
+                                <input type="text" id="name" name="name" class="form-control --o--shadow-0 --o--shadow-focus-2 --o--transition --o--mb-3" placeholder="Name">
+                                <input type="email" id="email" name="email" class="form-control --o--shadow-0 --o--shadow-focus-2 --o--transition --o--mb-3" placeholder="Your Email">
+                                <textarea id="message" name="message" rows="8" class="form-control --o--shadow-0 --o--shadow-focus-2 --o--transition --o--mb-3" placeholder="Your Comment"></textarea>
+                                <div class="form-check --o--mb-3">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="sign" name="sign" type="checkbox" value="sign"> Sign me up to the newsletter
+                                    </label>
+                                </div>
+                                <button type="submit" class="btn btn-primary --o--shadow-2">Send</button>
+                                <div class="--o--messages --o--pt-2"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

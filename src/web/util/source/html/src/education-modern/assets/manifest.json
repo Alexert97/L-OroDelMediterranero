@@ -1,0 +1,89 @@
+{
+  "dependencies": {
+    "education-modern.min.css": {
+      "files": [
+        "scss/education-modern.scss"
+      ]
+    },
+    "animate.min.css": {
+      "files": [
+        "node_modules/animate.css/animate.css"
+      ],
+      "external": true
+    },
+    "jquery.min.js": {
+      "files": [
+        "node_modules/jquery/dist/jquery.js"
+      ],
+      "external": true
+    },
+    "bootstrap.min.js": {
+      "files": [
+        "node_modules/tether/dist/js/tether.js",
+        "node_modules/bootstrap/dist/js/bootstrap.bundle.js",
+        "assets/js/verso.bootstrap.js"
+      ],
+      "external": true
+    },
+    "magnific.min.js": {
+      "files": [
+        "node_modules/magnific-popup/dist/jquery.magnific-popup.js",
+        "assets/js/verso.magnific.js"
+      ],
+      "external": true
+    },
+    "pace.min.js": {
+      "files": [
+        "node_modules/pace-progress/pace.js"
+      ],
+      "external": true
+    },
+    "smooth-scroll.min.js": {
+      "files": [
+        "node_modules/smooth-scroll/dist/js/smooth-scroll.js",
+        "assets/js/verso.smooth.scroll.js"
+      ],
+      "external": true
+    },
+    "waypoints.min.js": {
+      "files": [
+        "node_modules/waypoints/lib/noframework.waypoints.js",
+        "node_modules/waypoints/lib/shortcuts/sticky.js"
+      ],
+      "external": true
+    },
+    "prlx.min.js": {
+      "files": [
+        "node_modules/prlx/dist/prlx.js",
+        "assets/js/verso.prlx.js"
+      ],
+      "external": true
+    },
+    "countdown.min.js": {
+      "files": [
+        "node_modules/jquery-countdown/dist/jquery.countdown.js",
+        "assets/js/verso.countdown.js"
+      ],
+      "external": true
+    },
+    "education-modern.min.js": {
+      "files": [
+        "assets/js/verso.core.js",
+        "assets/js/verso.map.js",
+        "assets/js/verso.nav.js",
+        "assets/js/verso.search.widget.js"
+      ],
+      "external": true
+    },
+    "contact.min.js": {
+      "files": [
+        "node_modules/jquery-form/dist/jquery.form.min.js",
+        "assets/js/verso.contact.js"
+      ],
+      "external": true
+    }
+  },
+  "paths": {
+    "source": "html/src/education-modern/assets/"
+  }
+}

@@ -1,0 +1,1941 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if (gt IE 8)]><!-->
+<html lang="en">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+        <title>Verso 1.0.1 | Support</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <!-- Fav Icons -->
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="230x230" href="assets/images/favicon/favicon-230x230.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon/favicon-96x96.png">
+        <link rel="shortcut icon" href="assets/images/favicon/favicon.ico">
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300|Source+Code+Pro|Oxygen:300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="assets/css/main.css">
+    </head>
+    <body class="oxy-docs-body">
+        <nav class="oxy-navbar navbar navbar-toggleable-md navbar-light bg-inverse">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo.png" alt="" /> Verso
+            </a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ">
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank" href="https://versohtml.oxygenna.com/">Demo</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="docs.html">
+                    Documentation
+                </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="changelog.html">
+                    Changelog
+                </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="support.html">
+                    Support
+                </a>
+                    </li>
+                </ul>
+                <form class="form-inline ml-1">
+                    <a target="_blank" href="" class="btn btn-success m-x-1">Purchase</a>
+                </form>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="oxy-docs-sidebar col-md-3 sidebar-fixed hidden-sm-down">
+                    <nav id="sidenav" role="navigation" class="oxy-docs-sidebar-nav">
+                        <h5 class="oxy-docs-sidebar-nav__section-heading">Getting Started</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#downloading">Downloading</a></li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#unzipping">Unzipping</a></li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#zip-contents">Zip Contents</a></li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#html-or-gulp">HTML or Gulp</a></li>
+                        </ul>
+                        <h5 class="oxy-docs-sidebar-nav__section-heading">HTML</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#file-structure">File Structure</a></li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#html-structure">HTML Structure</a></li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#deploying">Deploying</a></li>
+                        </ul>
+                        <h5 class="oxy-docs-sidebar-nav__section-heading">Gulp Setup</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#the-source-files">The source files</a></li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#prerequisites">Prerequisites</a>
+                                <ul class="nav">
+                                    <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#installing-node-js">Installing Node.js</a></li>
+                                    <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#checking-node">Checking node</a></li>
+                                    <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#installing-bower">Installing bower</a></li>
+                                    <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#checking-bower">Checking bower</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#setup-development-server">Setup Development Server</a>
+                                <ul class="nav">
+                                    <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#use-the-source">Use the source</a></li>
+                                    <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#installing-node-packages">Installing node packages</a></li>
+                                    <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#installing-git">Installing Git</a></li>
+                                    <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#installing-bower-packages">Installing bower packages</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#running-the-development-server">Running the development server</a>
+                                <ul class="nav">
+                                    <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#browsersync">Browsersync</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#production-build">Production build</a>
+                                <ul class="nav">
+                                    <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#running-a-production-build">Running a production build</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#available-demos">Available Demos</a></li>
+                        </ul>
+                        <h5 class="oxy-docs-sidebar-nav__section-heading">Logo</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#changing-the-header-logo">Changing the header logo</a></li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#setting-the-logo-link-url">Setting the logo link url</a></li>
+                        </ul>
+                        <h5 class="oxy-docs-sidebar-nav__section-heading">Fonts</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#default-fonts">Default fonts</a></li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#changing-the-site-fonts">Changing the site fonts</a></li>
+                        </ul>
+                        <h5 class="oxy-docs-sidebar-nav__section-heading">Typography</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#headings">Headings</a>
+                                <ul class="nav">
+                                    <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#bordered-heading">Bordered Heading</a></li>
+                                    <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#bordered-image-heading">Bordered Image Heading</a></li>
+                                    <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#reversed-bordered-heading">Reversed Bordered Heading</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#font-weight">Font Weight</a></li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#line-height">Line height</a></li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#light-text-color">Light Text Color</a></li>
+                        </ul>
+                        <h5 class="oxy-docs-sidebar-nav__section-heading">Colors</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#changing-the-site-colors">Changing the site colors</a></li>
+                        </ul>
+                        <h5 class="oxy-docs-sidebar-nav__section-heading">Header</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#basic-menu-markup">Basic Menu markup</a></li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#top-bar">Top Bar</a></li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#menu-layout">Menu Layout</a></li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#fullwidth-menu">Fullwidth Menu</a></li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#sticky-menu">Sticky Menu</a></li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#on-hover-menu">On Hover Menu</a></li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#transparent-menu">Transparent Menu</a></li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#floating-menu">Floating Menu</a></li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#menu-buttons">Menu Buttons</a></li>
+                        </ul>
+                        <h5 class="oxy-docs-sidebar-nav__section-heading">Footer</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#footer-structure">Footer structure</a></li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#adding-a-background-image-to-the-footer">Adding a background image to the footer</a></li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#adding-a-widget-to-the-footer">Adding a widget to the footer</a></li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#adding-a-sub-footer">Adding a sub footer</a></li>
+                        </ul>
+                        <h5 class="oxy-docs-sidebar-nav__section-heading">Layout</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#boxed-layout">Boxed Layout</a></li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#page-layout">Page Layout</a></li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#page-sections">Page Sections</a>
+                                <ul class="nav">
+                                    <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#create-a-section-with-a-color-background">Create a section with a color background</a></li>
+                                    <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#create-a-section-with-an-image-background">Create a section with an image background</a></li>
+                                    <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#section-background-image-position">Section background image position</a></li>
+                                    <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#create-a-section-with-a-parallax-background">Create a section with a parallax background</a></li>
+                                    <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#section-background-image-sizes">Section background image sizes</a></li>
+                                    <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#section-background-image-repeat">Section background image repeat</a></li>
+                                    <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#section-background-image-fixed">Section background image fixed</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <h5 class="oxy-docs-sidebar-nav__section-heading">Theme Components</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#carousel">Carousel</a>
+                                <ul class="nav">
+                                    <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#horizontal-carousel">Horizontal Carousel</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#loader">Loader</a></li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#timeline">Timeline</a>
+                                <ul class="nav">
+                                    <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#horizontal-timeline">Horizontal Timeline</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#icon-sets">Icon Sets</a></li>
+                        </ul>
+                        <h5 class="oxy-docs-sidebar-nav__section-heading">Cards</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#card-components">Card Components</a></li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#card-vertical-layout">Card Vertical Layout</a>
+                                <ul class="nav">
+                                    <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#card-block">Card block</a></li>
+                                    <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#image-container">Image container</a></li>
+                                    <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#card-footer">Card Footer</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#card-horizontal-layout">Card Horizontal Layout</a></li>
+                        </ul>
+                        <h5 class="oxy-docs-sidebar-nav__section-heading">Utilities</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#margin">Margin</a></li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#margins-for-all-devices">Margins For All Devices</a></li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#padding">Padding</a></li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#paddings-for-all-devices">Paddings For All Devices</a></li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#on-scroll-animations">On scroll animations</a></li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#opacity">Opacity</a></li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#shadow">Shadow</a></li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#smooth-transitions">Smooth transitions</a></li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#text">Text</a></li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#image-filters">Image filters</a></li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#zindex">Zindex</a></li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#positioning">Positioning</a></li>
+                        </ul>
+                        <h5 class="oxy-docs-sidebar-nav__section-heading">Blog</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#blog-list">Blog List</a>
+                                <ul class="nav">
+                                    <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#no-sidebar">No Sidebar</a></li>
+                                    <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#left-sidebar">Left Sidebar</a></li>
+                                    <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#right-sidebar">Right Sidebar</a></li>
+                                    <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#adding-a-widget-to-the-sidebar">Adding a widget to the sidebar</a></li>
+                                    <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#adding-a-post-to-the-list">Adding a post to the list</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#single-post">Single Post</a>
+                                <ul class="nav">
+                                    <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#create-a-new-post">Create a new post</a></li>
+                                    <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#single-post-page">Single Post Page</a></li>
+                                    <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#left-sidebar-post-page">Left Sidebar Post Page</a></li>
+                                    <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#right-sidebar-post-page">Right Sidebar Post Page</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <h5 class="oxy-docs-sidebar-nav__section-heading">Contact</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#changing-the-contact-form">Changing the contact form</a></li>
+                        </ul>
+                        <h5 class="oxy-docs-sidebar-nav__section-heading">Map</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#create-a-new-map">Create a new map</a></li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#create-an-api-key">Create an API Key</a></li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#imports-for-the-map">Imports for the map</a></li>
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#changing-the-map-options">Changing the map options</a></li>
+                        </ul>
+                        <h5 class="oxy-docs-sidebar-nav__section-heading">Advanced</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#php-contact-form">PHP Contact Form</a>
+                                <ul class="nav">
+                                    <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#connecting-the-contact-page-to-phpmailer">Connecting the Contact Page to PHPMailer</a></li>
+                                    <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#setup-phpmailer">Setup PHPMailer</a></li>
+                                    <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#troubleshooting">Troubleshooting</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <h5 class="oxy-docs-sidebar-nav__section-heading">Technologies</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#bootstrap-4">Bootstrap 4</a></li>
+                        </ul>
+                        <h5 class="oxy-docs-sidebar-nav__section-heading">Migration</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item"><a class="nav-link oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js" href="#migrating-to-version-1-2">Migrating to Version 1.2</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="oxy-docs-content col-md-9 offset-md-3">
+                    <h1 id="getting-started">Getting Started</h1>
+                    <h2 id="downloading">Downloading</h2>
+                    <p>First of all you will need to log in to your <strong>Themeforest</strong> account.</p>
+                    <p>After that goto your downloads page</p>
+                    <p><img src="assets/images/getting-started/tf-download.png" alt="ThemeForest Downloads Page"></p>
+                    <p>From there locate the Verso template click the <strong>download button</strong> and then select <strong>All files &amp; documentation</strong>
+                        <img src="assets/images/getting-started/tf-downloads.png" alt="ThemeForest Downloads Page"></p>
+                    <div class="alert alert-info" role="alert">
+                        Congratulations. You now have a shiny new copy of Verso
+                    </div>
+                    <h2 id="unzipping">Unzipping</h2>
+                    <p>You should now have a file that looks something like this.</p>
+                    <p><code>verso-1.0.0.zip</code></p>
+                    <p>In order to get at the goodness inside you will need to <a href="https://answers.stanford.edu/solution/how-do-i-zip-and-unzip-files-and-folders-do-i-need-winzip-or-stuffit">unzip this file</a>.</p>
+                    <h2 id="zip-contents">Zip Contents</h2>
+                    <p>Once you have unzipped the Verso zip file you will find the following folders have been created.</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="text-align:left">Folder / File</th>
+                                <th style="text-align:left">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="text-align:left">docs/</td>
+                                <td style="text-align:left">The docs your are looking at now</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left">html/</td>
+                                <td style="text-align:left">Copy of the demo site</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left">source/</td>
+                                <td style="text-align:left">Copy of the template source with Gulp development server</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left">psds/</td>
+                                <td style="text-align:left">Contains the templates PSD files</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h2 id="html-or-gulp">HTML or Gulp</h2>
+                    <p>This template was built using the <a href="https://mozilla.github.io/nunjucks/">Nunjucks</a> templates which are compiled into HTML using Gulp.</p>
+                    <p>We provide both the plain HTML files and the full Nunjucks source code with this template.</p>
+                    <p>So you can either dive in and edit the HTML files that are inside the <em>/html</em> folder or install Gulp and get started using the Nunjucks templates which are in the <em>/source</em> folder.</p>
+                    <h1 id="html">HTML</h1>
+                    <h2 id="file-structure">File Structure</h2>
+                    <p>When you open an html demo folder from the .zip file that you downloaded you will find the following file structure</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="text-align:left">Folder / File</th>
+                                <th style="text-align:left">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="text-align:left">demo-folder/</td>
+                                <td style="text-align:left">Each demo comes in its own folder, i.e <em>corporate-classic</em></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left">demo-folder/assets/</td>
+                                <td style="text-align:left">Contains all the necessary styling and logic for your website</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left">demo-folder/assets/css/</td>
+                                <td style="text-align:left">Contains the CSS that the theme uses</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left">demo-folder/assets/fonts/</td>
+                                <td style="text-align:left">Contains the fontawesome font files</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left">demo-folder/assets/images/</td>
+                                <td style="text-align:left">Contains all the images of the theme</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left">demo-folder/assets/js/</td>
+                                <td style="text-align:left">Contains all javascript files that the theme needs</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left">demo-folder/vendor/phpmailer/</td>
+                                <td style="text-align:left">Used by the contact forms in the theme to send the form email</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left">demo-folder/*.html</td>
+                                <td style="text-align:left">The html files that render the theme pages for each demo</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h2 id="html-structure">HTML Structure</h2>
+                    <p>The structure for the html pages that Verso uses is the following</p>
+                    <pre><code>    &lt;html&gt;
+        &lt;head&gt;
+            &lt;title&gt;Page Title&lt;/title&gt;
+            Scripts and Styles go here
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;section&gt;
+                &lt;div class=&quot;section-background&quot;&gt;
+                    Set a background image or video(optional)
+                &lt;/div&gt;
+                &lt;div class=&quot;section-content&quot;&gt;
+                    &lt;div class=&quot;container&quot;&gt;
+                        &lt;div class=&quot;row&quot;&gt;
+                            &lt;div class=&quot;col-md-12&quot;&gt;
+                                Section content
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/section&gt;
+                .
+                . (more sections)
+                .
+            &lt;footer&gt;
+                Add your footer widgets
+                Add your subfooter
+            &lt;/footer&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;</code></pre>
+                    <h2 id="deploying">Deploying</h2>
+                    <p>Deploying your website on a server requires that you have the necessary <strong>ftp credentials</strong> provided by your hosting provider. All you need to do is copy your files over to your server using an ftp client such as <a href="https://filezilla-project.org/">Filezilla</a>. Pick the demo that you want to start with and copy <strong>all</strong> the files from the respective demo folder.</p>
+                    <h1 id="gulp-setup">Gulp Setup</h1>
+                    <h2 id="the-source-files">The source files</h2>
+                    <p>Once you have <a href="#downloading">downloaded and unzipped</a> the main template download zip, you will find a folder called <code>/source</code>. This folder contains all the source code you will need to build the template.</p>
+                    <p>The template uses <a href="http://gulpjs.com/">gulp</a> to build the source files into HTML / CSS and JS files that you can then deploy to your server.</p>
+                    <p>The build system also uses <a href="http://bower.io/">bower</a> to manage loading all the templates&#39; dependencies.</p>
+                    <h2 id="prerequisites">Prerequisites</h2>
+                    <p>Before you start to set up the template development server you will need to install nodejs and bower.</p>
+                    <h3 id="installing-node-js">Installing Node.js</h3>
+                    <p>We recommend installing the latest version of node.</p>
+                    <p>You can download the latest of node.js <a href="https://nodejs.org/download/">from here</a> alternatively there are <a href="https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager">guides on how to install using a package manager</a>.</p>
+                    <h3 id="checking-node">Checking node</h3>
+                    <p>Once you have node.js installed on your system you should be able to go to your command line and type</p>
+                    <pre><code>node --version</code></pre>
+                    <p>and see something like this</p>
+                    <pre><code>v4.1.2</code></pre>
+                    <h3 id="installing-bower">Installing bower</h3>
+                    <p>If you do not have bower installed you should go to your command line and type</p>
+                    <pre><code>npm -g install bower</code></pre>
+                    <div class="alert alert-info" role="alert">
+                        <strong>Note</strong> - You will need git installed for bower to work. Visit <a href="https://git-scm.com/">Git website</a>
+                    </div>
+                    <h3 id="checking-bower">Checking bower</h3>
+                    <p>Once you have node.js installed on your system you should be able to go to your command line and type</p>
+                    <pre><code>bower --version</code></pre>
+                    <p>you should see something like this</p>
+                    <pre><code>1.5.2</code></pre>
+                    <h2 id="setup-development-server">Setup Development Server</h2>
+                    <h3 id="use-the-source">Use the source</h3>
+                    <p>To start off you will need to open the <code>/source</code> folder contained in the download.</p>
+                    <h3 id="installing-node-packages">Installing node packages</h3>
+                    <p>Open a command prompt and change directory to the /source that was created when you unzipped the source folder and run this command</p>
+                    <pre><code>npm install</code></pre>
+                    <div class="alert alert-info" role="alert">
+                        <strong>Note</strong> - This may take some time to install all the packages.
+                    </div>
+                    <h3 id="installing-git">Installing Git</h3>
+                    <p>You will also need to install the Git source control system on your machine. Check out <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">this guide</a> on how to install on Windows, Mac and Linux.</p>
+                    <h3 id="installing-bower-packages">Installing bower packages</h3>
+                    <p>Using the command prompt and from the same /source directory that you installed the node packages, run this command</p>
+                    <pre><code>bower install</code></pre>
+                    <p>This will install all the components that the template needs.</p>
+                    <div class="alert alert-info" role="alert">
+                        <strong>Note</strong> - You will need <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">git installed</a> for bower to work.
+                    </div>
+                    <h2 id="running-the-development-server">Running the development server</h2>
+                    <p>First make sure you have gulp-cli installed globally</p>
+                    <pre><code>npm -g install gulp-cli</code></pre>
+                    <p>Verso comes shipped with different demos that you can choose from.</p>
+                    <p>The format of the command to start a web server with a specific demo is</p>
+                    <pre><code>gulp serve:folder-name-of-demo</code></pre>
+                    <p>So for example to start working on a desired demo, named <em>corporate-classic</em> type</p>
+                    <pre><code>gulp serve:corporate-classic</code></pre>
+                    <p>This should automatically open up a browser window with the demo running.</p>
+                    <div class="alert alert-info">Check the available demos <a href="#available-demos">here</a></div>
+                    <h3 id="browsersync">Browsersync</h3>
+                    <p>Once the development server is up and running any changes you make to the HTML &amp; JS &amp; SASS files will be auto updated in your browser window.</p>
+                    <h2 id="production-build">Production build</h2>
+                    <h3 id="running-a-production-build">Running a production build</h3>
+                    <p>Once you are happy with your site you can initiate a build that will create a copy of the template that you can FTP to your web server.</p>
+                    <p>Verso comes shipped with different demos that you can choose from. To initiate a build with a demo named i.e <em>corporate-classic</em>, run the command</p>
+                    <pre><code>gulp build:corporate-classic</code></pre>
+                    <p>This will initiate a build, once it has finished you will find your built files in a folder called dist that will have been created for you.</p>
+                    <div class="alert alert-info">Check the available demos <a href="#available-demos">here</a></div>
+                    <h2 id="available-demos">Available Demos</h2>
+                    <p>The name of the demos that you can use are the same as the folder name that they are located in. Check <strong>source/html/src/</strong> folder for the list of available demos.</p>
+                    <p><strong>Currently available</strong></p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="text-align:left">Demos</th>
+                                <th style="text-align:left">Located at</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="text-align:left">Blog Food</td>
+                                <td style="text-align:left">src/blog-food</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left">Blog Travel Winter</td>
+                                <td style="text-align:left">src/blog-travel-winter</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left">Charity Classic</td>
+                                <td style="text-align:left">src/charity-classic</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left">Church Classic</td>
+                                <td style="text-align:left">src/chruch-classic</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left">Commerce Funky</td>
+                                <td style="text-align:left">src/commerce-funky</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left">Corporate Classic</td>
+                                <td style="text-align:left">src/corporate-classic</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left">Corporate Modern</td>
+                                <td style="text-align:left">src/corporate-modern</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left">Creative Agency</td>
+                                <td style="text-align:left">src/creative-agency</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left">Creative Personal</td>
+                                <td style="text-align:left">src/creative-personal</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left">Education Modern</td>
+                                <td style="text-align:left">src/education-modern</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left">Landing Funky</td>
+                                <td style="text-align:left">src/landing-funky</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left">Magazine Food</td>
+                                <td style="text-align:left">src/magazine-food</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left">Magazine Pastry</td>
+                                <td style="text-align:left">src/magazine-pastry</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left">Medical Modern</td>
+                                <td style="text-align:left">src/medical-modern</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left">Restaurant Dark</td>
+                                <td style="text-align:left">src/restaurant-dark</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left">Wedding</td>
+                                <td style="text-align:left">src/wedding</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h1 id="logo">Logo</h1>
+                    <h2 id="changing-the-header-logo">Changing the header logo</h2>
+                    <p>The code for changing the header logo is located inside <strong>source/html/src/demo-folder/partials/headers/default.html</strong> file. In order to change the logo of the website you need to look inside the <code>&lt;div class=&quot;verso-nav-brand&quot;&gt;</code> tag for the code</p>
+                    <pre><code>&lt;a href=&quot;index.html&quot;&gt;
+    &lt;img src=&quot;assets/images/logo.png&quot; alt=&quot;&quot;&gt;
+&lt;/a&gt;</code></pre>
+                    <p>Change the <strong>src</strong> attribute of that image to point to your logo.</p>
+                    <p><img src="assets/images/header_logo.png" alt="Change header logo"></p>
+                    <h2 id="setting-the-logo-link-url">Setting the logo link url</h2>
+                    <p>From the code used in the previous section</p>
+                    <pre><code>&lt;a href=&quot;index.html&quot;&gt;
+    &lt;img src=&quot;assets/images/logo.png&quot; alt=&quot;&quot;&gt;
+&lt;/a&gt;</code></pre>
+                    <p>Change the <strong>href=&quot;index.html&quot;</strong> to point to the page that you wish should set the logo link url.</p>
+                    <h1 id="fonts">Fonts</h1>
+                    <h2 id="default-fonts">Default fonts</h2>
+                    <p>The default fonts that Verso is using is Quattrocento(Corporate Classic), with the styles <code>Normal 400, Bold 700</code>. Also, Verso is using Oswald, with the styles <code>Light 300, Normal 400, Bold 600, Bold 700</code>. The fonts are set inside <code>&lt;head&gt;</code> using the link that <a href="https://www.google.com/fonts">Google Fonts</a> provide.</p>
+                    <p>It should look like</p>
+                    <pre><code>&lt;link href=&quot;https://fonts.googleapis.com/css?family=Quattrocento:400,700%7COswald:300,400,500,600,700&quot; rel=&quot;stylesheet&quot;&gt;</code></pre>
+                    <h2 id="changing-the-site-fonts">Changing the site fonts</h2>
+                    <p>If you want to change the site fonts, you need to load them first. To do that, should you want to use Google Fonts, you need to visit the <a href="https://www.google.com/fonts">Google Fonts</a> page and create the import link that you will use inside the <code>&lt;head&gt;</code>.</p>
+                    <p>If you are new to Google Fonts, follow these simple steps to create the new import link:</p>
+                    <ol>
+                        <li>Choose: Search or browse hundreds of font families, then add the ones you like to your Collection.</li>
+                        <li>Review: Compare and refine your Collection, even see the styles in a dynamic sample layout.</li>
+                        <li>Use: Grab the code prepared and you’re ready to add the Collection to your website!</li>
+                    </ol>
+                    <p>Once you have the new link, replace the default one with the new one in the <code>&lt;head&gt;</code>.</p>
+                    <p>In order for the new font to be applied to the body of <strong>Verso</strong>, make sure that you edit <strong>source/html/src/demo-folder/assets/scss/variables.scss</strong> and set line 6 that looks like</p>
+                    <pre><code>    $font-family-base:  &#39;Quattrocento&#39;;</code></pre>
+                    <p>to use the font that you want. Now your font is applied to the body. To change the font for the headings check line 12 that looks like</p>
+                    <pre><code>    $headings-font-family: &#39;Oswald&#39;;</code></pre>
+                    <h1 id="typography">Typography</h1>
+                    <h2 id="headings">Headings</h2>
+                    <h3 id="bordered-heading">Bordered Heading</h3>
+                    <p>To add a border on the left of a heading, use the <code>verso-heading-bordered</code> class. For example</p>
+                    <pre><code>&lt;h2 class=&quot;verso-heading-bordered text-capitalize&quot;&gt;
+    &lt;small class=&quot;text-muted font-italic&quot;&gt;About&lt;/small&gt; Verso
+&lt;/h2&gt;</code></pre>
+                    <p><img src="assets/images/bordered_heading.png" alt="Bordered heading"></p>
+                    <h3 id="bordered-image-heading">Bordered Image Heading</h3>
+                    <p>Instead of a border, a heading can use an image. For example</p>
+                    <pre><code>&lt;h2 class=&quot;verso-heading-image verso-heading-image-01 verso-heading-image-reversed&quot;&gt;
+    Save
+    &lt;span class=&quot;d-block&quot;&gt;The date&lt;/span&gt;
+&lt;/h2&gt;</code></pre>
+                    <p><img src="assets/images/bordered_image_heading.png" alt="Bordered image heading"></p>
+                    <h3 id="reversed-bordered-heading">Reversed Bordered Heading</h3>
+                    <p>A bordered heading can be reversed, placing the border on the right of the title. Adding the <code>verso-heading-bordered-reversed</code> should do it, code example</p>
+                    <pre><code>&lt;h4 class=&quot;verso-heading-bordered verso-heading-bordered-reversed text-capitalize&quot;&gt;
+    &lt;a href=&quot;video-post.html&quot;&gt;
+        &lt;small class=&quot;text-muted font-italic&quot;&gt;Next →&lt;/small&gt; The Beast &amp;amp; the Book
+    &lt;/a&gt;
+&lt;/h4&gt;</code></pre>
+                    <p><img src="assets/images/bordered_heading_reversed.png" alt="Bordered heading reversed"></p>
+                    <h2 id="font-weight">Font Weight</h2>
+                    <p>To add a special font weight to your text you need to apply the <code>verso-font-weight-n</code> class, where <strong>n=100, 200, ..., 900</strong>, depending on the font weights that your <strong>font loads</strong>, remember the font import at the <a href="#default-fonts">Fonts</a> section. For example</p>
+                    <pre><code>&lt;span class=&quot;pull-right verso-font-weight-700&quot;&gt;$2000 total&lt;/span&gt;</code></pre>
+                    <h2 id="line-height">Line height</h2>
+                    <p>To change the <em>line-height</em> property of an element you can use the following classes:</p>
+                    <ul>
+                        <li><strong>verso-line-height-small</strong>: sets the line height to <em>1</em></li>
+                        <li><strong>verso-line-height-normal</strong>: sets the line height to whatever value is set in the <strong>skin</strong>. Check the skin variable <strong>$line-height-base</strong> inside <strong>source/html/src/demo-folder/assets/scss/variables.scss</strong></li>
+                        <li><strong>verso-line-height-big</strong>: sets the line height to <strong>twice</strong> the size of <strong>verso-line-height-normal</strong></li>
+                    </ul>
+                    <h2 id="light-text-color">Light Text Color</h2>
+                    <p>You can set an alternative <strong>light color</strong> for your text that changes the default text colors, in case you are using background colors on elements that do not match the default text colors. For example, when you have a black background color and your text color is dark as well, using a light text will make the text stand out. Check out the variables inside <strong>source/html/src/demo-folder/assets/scss/variables.scss</strong>, lines 130-135</p>
+                    <pre><code>// Light colored elements
+$o-light-color: #f8f2e6;
+$o-light-headings-color: #f8f2e6;
+$o-light-link-color: #f8f2e6;
+$o-light-link-hover-color: #f8f2e6;
+$o-light-text-muted: #f8f2e6;
+$o-light-border-color: #f8f2e6;</code></pre>
+                    <p>To add the light color style to your elements use the <code>verso-text-breakpoint-light</code> class by replacing the <em>breakpoint</em> notation to either <em>blank</em>, as in <strong>verso-text-light</strong> for <strong>Extra Small</strong> or <em>sm, md, lg</em> or <em>xl</em> for <strong>Small, Medium, Large or Extra Large</strong> container widths.</p>
+                    <div class="alert alert-info">
+                        <a href="http://v4-alpha.getbootstrap.com/layout/grid/">Check out the Bootstrap 4 grid system</a>
+                    </div>
+                    <h1 id="colors">Colors</h1>
+                    <h2 id="changing-the-site-colors">Changing the site colors</h2>
+                    <p>To change the colors of the website, you need to edit <strong>/source/html/src/demo-folder/assets/scss/variables.scss</strong> and change the variables that define the colors of the website, i.e</p>
+                    <pre><code>    $link-color: #121823;</code></pre>
+                    <div class="alert alert-info">
+                        <strong>Note:</strong> You need to <a href="#production-build">build</a> your files for the new CSS to take effect
+                    </div>
+                    <h1 id="header">Header</h1>
+                    <h2 id="basic-menu-markup">Basic Menu markup</h2>
+                    <p>To use the demo menu(Church Classic) this is the suggested markup</p>
+                    <pre><code>&lt;div class=&quot;verso-header verso-header-transparent&quot;&gt;
+    &lt;div class=&quot;verso-nav verso-nav-sticky verso-nav-layout-logo-c-menu-lr&quot;&gt;
+        &lt;div class=&quot;verso-nav-inner&quot;&gt;
+            &lt;div class=&quot;verso-nav-container&quot;&gt;
+                &lt;!-- Logo --&gt;
+                &lt;div class=&quot;verso-nav-brand&quot;&gt;
+                    &lt;a href=&quot;index.html&quot;&gt;
+                        Church
+                        &lt;!-- or &lt;img src=&quot;assets/images/logo.png&quot; alt=&quot;&quot;&gt; --&gt;
+                    &lt;/a&gt;
+                &lt;/div&gt;
+                &lt;!-- Mobile menu toggle button --&gt;
+                &lt;div class=&quot;verso-nav-mobile&quot;&gt;
+                    &lt;a id=&quot;nav-toggle&quot; href=&quot;#&quot;&gt;
+                        &lt;span&gt;&lt;/span&gt;
+                    &lt;/a&gt;
+                &lt;/div&gt;
+                &lt;!-- Menu One --&gt;
+                &lt;nav class=&quot;verso-nav-menu&quot;&gt;
+                    &lt;ul class=&quot;verso-nav-list&quot;&gt;
+                        &lt;li&gt;
+                            &lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href=&quot;about.html&quot;&gt;About&lt;/a&gt;
+                            &lt;ul class=&quot;verso-nav-dropdown closed&quot;&gt;
+                                &lt;li&gt;
+                                    &lt;a href=&quot;about.html&quot;&gt;About Us&lt;/a&gt;
+                                &lt;/li&gt;
+                                &lt;li&gt;
+                                    &lt;a href=&quot;team-list.html&quot;&gt;Staff List&lt;/a&gt;
+                                &lt;/li&gt;
+                                  .
+                                  .(more links)
+                                  .
+                            &lt;/ul&gt;
+                        &lt;/li&gt;
+                          .
+                          .(more menu items)
+                          .
+                    &lt;/ul&gt;
+                    &lt;div class=&quot;verso-nav-widget&quot;&gt;&lt;/div&gt;
+                &lt;/nav&gt;
+                &lt;!-- Second menu is ONLY used if you want the logo in the center splitting the menu into two --&gt;
+                &lt;!-- Menu Two --&gt;
+                &lt;nav class=&quot;verso-nav-menu&quot;&gt;
+                    &lt;ul class=&quot;verso-nav-list&quot;&gt;
+                        &lt;li&gt;
+                            &lt;a href=&quot;blog.html&quot;&gt;News&lt;/a&gt;
+                            &lt;ul class=&quot;verso-nav-dropdown closed&quot;&gt;
+                                &lt;li&gt;
+                                    &lt;a href=&quot;blog.html&quot;&gt;Blog&lt;/a&gt;
+                                &lt;/li&gt;
+                                &lt;li&gt;
+                                    &lt;a href=&quot;single-post.html&quot;&gt;Single Post&lt;/a&gt;
+                                &lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/li&gt;
+                        &lt;li class=&quot;active&quot;&gt;
+                            &lt;a href=&quot;contact.html&quot;&gt;Contact&lt;/a&gt;
+                        &lt;/li&gt;
+                          .
+                          .(more menu items)
+                          .
+                    &lt;/ul&gt;
+                    &lt;div class=&quot;verso-nav-widget&quot;&gt;&lt;/div&gt;
+                &lt;/nav&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    <h2 id="top-bar">Top Bar</h2>
+                    <p>To add a top bar above your menu place this markup inside the <em>verso-header</em> container and above the menu as in</p>
+                    <pre><code>&lt;div class=&quot;verso-header&quot;&gt;
+    &lt;div class=&quot;verso-topbar verso-topbar-leftright&quot;&gt;
+        &lt;div class=&quot;verso-topbar-inner&quot;&gt;
+            &lt;div class=&quot;verso-topbar-container&quot;&gt;
+                &lt;div class=&quot;verso-topbar-col&quot;&gt;
+                    &lt;div class=&quot;verso-widget widget_text&quot;&gt;
+                        &lt;i class=&quot;fa fa-phone&quot;&gt;&lt;/i&gt; &amp;nbsp; 1-800-555-555
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;verso-topbar-col&quot;&gt;
+                    &lt;div class=&quot;verso-widget widget_social&quot;&gt;
+                        &lt;div class=&quot;verso-icon-set&quot;&gt;
+                            &lt;a class=&quot;verso-icon-set-item verso-transition&quot; href=&quot;#&quot;&gt;
+                                &lt;i class=&quot;fa fa-instagram&quot;&gt;&lt;/i&gt;
+                            &lt;/a&gt;
+                            &lt;a class=&quot;verso-icon-set-item verso-transition&quot; href=&quot;#&quot;&gt;
+                                &lt;i class=&quot;fa fa-facebook&quot;&gt;&lt;/i&gt;
+                            &lt;/a&gt;
+                            &lt;a class=&quot;verso-icon-set-item verso-transition&quot; href=&quot;#&quot;&gt;
+                                &lt;i class=&quot;fa fa-twitter&quot;&gt;&lt;/i&gt;
+                            &lt;/a&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    .
+    . (your menu)
+    .
+&lt;/div&gt;</code></pre>
+                    <h2 id="menu-layout">Menu Layout</h2>
+                    <p>The following classes are added to the <em><div class="verso-nav"></em> of the menu, giving the user the option to choose from <strong>6</strong> different layouts:</p>
+                    <ul>
+                        <li><strong>verso-nav-layout-logo-r-menu-l</strong>: Logo left menu right</li>
+                        <li><strong>verso-nav-layout-logo-l-menu-r</strong>: Logo right menu left</li>
+                        <li><strong>verso-nav-layout-logo-c-menu-lr</strong>: Logo center menu left and right</li>
+                        <li><strong>verso-nav-layout-logo-tl-menu-b</strong>: Logo top left menu below</li>
+                        <li><strong>verso-nav-layout-logo-tr-menu-b</strong>: Logo top right menu below</li>
+                        <li><strong>verso-nav-layout-logo-tc-menu-b</strong>: Logo top center menu below</li>
+                    </ul>
+                    <h2 id="fullwidth-menu">Fullwidth Menu</h2>
+                    <p>To make the menu fulwidth, add the class <code>verso-header-fluid</code> to the outer div as in</p>
+                    <pre><code>&lt;div class=&quot;verso-header verso-header-fluid&quot;&gt;   ...</code></pre>
+                    <h2 id="sticky-menu">Sticky Menu</h2>
+                    <p>To make the menu scroll with the page, add the class <code>verso-nav-sticky</code> to the <em><div class="verso-nav"></em> div as in</p>
+                    <pre><code>&lt;div class=&quot;verso-nav verso-nav-sticky&quot;&gt; ...</code></pre>
+                    <h2 id="on-hover-menu">On Hover Menu</h2>
+                    <p>To make the menu work on-hover, add the class <code>verso-nav-hover</code> to the <em><div class="verso-nav"></em> div as in</p>
+                    <pre><code>&lt;div class=&quot;verso-nav verso-nav-hover&quot;&gt; ...</code></pre>
+                    <h2 id="transparent-menu">Transparent Menu</h2>
+                    <p>To make the menu transparent, add the class <code>verso-header-transparent</code> to the outer div as in</p>
+                    <pre><code>&lt;div class=&quot;verso-header verso-header-transparent&quot;&gt;  ...</code></pre>
+                    <p><img src="assets/images/transparent-menu.png" alt="Menu"></p>
+                    <h2 id="floating-menu">Floating Menu</h2>
+                    <p>To make the menu appear as if it is floating at the top of the page, add the <code>verso-header-float</code> class to the outer div as in</p>
+                    <pre><code>&lt;div class=&quot;verso-header verso-header-float&quot;&gt; ...</code></pre>
+                    <p><img src="assets/images/float-menu.png" alt="Menu"></p>
+                    <h2 id="menu-buttons">Menu Buttons</h2>
+                    <p>A menu item can be turned into a button if the proper classes are applied to it. Classes <code>nav-btn</code> and <code>nav-btn-*</code> where <strong>*</strong> can be <em>primary</em> and <em>secondary</em>. For example</p>
+                    <pre><code>&lt;li class=&quot;nav-btn nav-btn-secondary&quot;&gt;
+    &lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;
+&lt;/li&gt;</code></pre>
+                    <p><img src="assets/images/button_menu.png" alt="Button Menu"></p>
+                    <h1 id="footer">Footer</h1>
+                    <h2 id="footer-structure">Footer structure</h2>
+                    <p>The footer of <strong>Verso</strong> has the same layout as a section. The code for the footer is</p>
+                    <pre><code>    &lt;footer class=&quot;verso-footer&quot;&gt;
+        &lt;section class=&quot;section verso-py-9&quot;&gt;
+            &lt;div class=&quot;section-background&quot;&gt;
+                &lt;div class=&quot;section-bg-image section-bg-image-size-cover section-bg-image-position-bottom verso-demo-bg-image-09 section-bg-image-paralax verso-opacity-2&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;section-content&quot;&gt;
+                &lt;div class=&quot;container&quot;&gt;
+                    &lt;div class=&quot;row&quot;&gt;
+                      Place your widgets here...
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+    &lt;/footer&gt;</code></pre>
+                    <p><img src="assets/images/footer.png" alt="Footer"></p>
+                    <p>For each of the widgets that are placed inside the footer, for a 3-column footer layout use <em>.col-md-4</em>, as in</p>
+                    <pre><code>    &lt;div class=&quot;col-md-4&quot;&gt;
+        &lt;div class=&quot;verso-widget widget_text&quot;&gt;
+            &lt;h4 class=&quot;verso-widget-header&quot;&gt;About Us&lt;/h4&gt;
+            &lt;p&gt;Why do the nations rage, and the peoples plot a vain thing? &lt;/p&gt;
+            &lt;p&gt;The kings of the earth take a stand, and the rulers take counsel together.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+                    <p>To use the already styled widgets for Verso, use the code provided in <em>source/html/partials/widgets/</em> folder. There you will find the HTML used to render the following widgets: <strong>Categories, Events, Menu, Recent Posts, Search, Social, Tags and Text</strong>.</p>
+                    <h2 id="adding-a-background-image-to-the-footer">Adding a background image to the footer</h2>
+                    <p>To add a background image to the footer you can assign a class to the <em>section-background</em> div and use CSS to add the image as background. As shown in the example above, the <em>verso-demo-bg-image-09</em> class is added and the following CSS sets the <em>background-image</em> property</p>
+                    <pre><code>.verso-demo-bg-image-09 {
+    background-image: url(../images/church-09-1600x1000-notinclude.jpg);
+}</code></pre>
+                    <h2 id="adding-a-widget-to-the-footer">Adding a widget to the footer</h2>
+                    <p>What we need to add a widget is firstly a title. Use this markup to add a title as an <code>&lt;h4&gt;</code></p>
+                    <pre><code>    &lt;h4 class=&quot;verso-widget-header&quot;&gt;About Us&lt;/h4&gt;</code></pre>
+                    <p>Everything that is considered as the content of the widget can either be a list or not. <strong>If it is a list</strong>, like a list of products for example, we need to wrap it inside</p>
+                    <pre><code>    &lt;ul&gt;
+        &lt;li&gt;...&lt;/li&gt;
+        &lt;li&gt;...&lt;/li&gt;
+        &lt;li&gt;...&lt;/li&gt;
+    &lt;/ul&gt;</code></pre>
+                    <p>If it is not a list, we need to wrap it inside</p>
+                    <pre><code>    &lt;p&gt;
+        content
+    &lt;/p&gt;</code></pre>
+                    <p>We can add there as a content anything we like, images, text, icons etc.</p>
+                    <h2 id="adding-a-sub-footer">Adding a sub footer</h2>
+                    <p>You can add a mini footer if you use markup similar to the footer.</p>
+                    <pre><code>    &lt;section class=&quot;section&quot;&gt;
+        &lt;div class=&quot;section-content&quot;&gt;
+            &lt;div class=&quot;container&quot;&gt;
+                &lt;div class=&quot;row&quot;&gt;
+                    &lt;div class=&quot;col-sm-6 text-sm-left&quot;&gt;
+                        Add your widget code
+                    &lt;/div&gt;
+                    &lt;div class=&quot;col-sm-6 text-sm-right&quot;&gt;
+                        Add your widget code
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;</code></pre>
+                    <p>This will render a subfooter section split into two columns, each holding one widget. Use that code <strong>before closing the main footer</strong> to add a subfooter at the end of your pages.</p>
+                    <p><img src="assets/images/subfooter.png" alt="Subfooter"></p>
+                    <h1 id="layout">Layout</h1>
+                    <h2 id="boxed-layout">Boxed Layout</h2>
+                    <p>To make your website use a boxed layout you need to do the following:</p>
+                    <ol>
+                        <li>Edit your <strong>variables.scss</strong> file, it should be located in <strong>source/html/src/demo-folder/assets/scss/variables.scss</strong>.</li>
+                        <li>Locate the <strong>$o-box-layout-width</strong> variable around <strong>line 401</strong>. Change that to something less than 100% and that will be the width that your content will have, producing a boxed layout effect.</li>
+                        <li>Set a background color for the page outside your main content by setting the <strong>$o-box-layout-bg</strong> on the same file.</li>
+                    </ol>
+                    <h2 id="page-layout">Page Layout</h2>
+                    <p>The layout of the pages on Verso is defined in <strong>default.html</strong> inside the <strong>source/html/src/demo-folder/layouts</strong> folder. If you take a look at this file, the main components are</p>
+                    <ul>
+                        <li><code>&lt;head&gt;</code>: is consisted of some meta data and the imports for the fonts and css.</li>
+                        <li>
+                            <p><code>&lt;body&gt;</code>: this is the main content of the page. First, we define the header. Your header gets imported from the <strong>source/html/src/demo-folder/layouts/headers</strong> folder</p>
+                            <pre><code>  &lt;div class=&quot;verso-content-box verso-content-box-move-behind&quot;&gt;
+      {% block header %}
+          {% include &quot;partials/headers/default.html&quot; %}
+      {% endblock %}</code></pre>
+                        </li>
+                    </ul>
+                    <p>Now is the time to add your pages&#39; content</p>
+                    <pre><code>        &lt;div class=&quot;verso-content&quot;&gt;
+            {% block content %}{% endblock %}
+        &lt;/div&gt;</code></pre>
+                    <p>Add your footer</p>
+                    <pre><code>        {% block footer %}
+            {% include &quot;partials/footer.html&quot; %}
+        {% endblock %}
+    &lt;/div&gt;</code></pre>
+                    <p>To end with, before you close the <code>&lt;body&gt;</code>, you need to import your scripts.</p>
+                    <pre><code>    &lt;script src=&quot;assets/js/theme.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+    {% block extrajs %}{% endblock %}</code></pre>
+                    <h2 id="page-sections">Page Sections</h2>
+                    <p>In order to create a section, just create a div and give it a class <code>section</code>. You can insert grids inside sections in order to populate them with content. The content has to be wrapped by a <code>section-content</code> container, as in the example below:</p>
+                    <pre><code>    &lt;div class=&quot;section&quot;&gt;
+        &lt;div class=&quot;section-content&quot;&gt;
+            &lt;div class=&quot;container&quot;&gt;
+                &lt;div class=&quot;row&quot;&gt;
+                    &lt;h1&gt;A header inside a section!&lt;/h1&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+                    <p>Besides using grids to insert content into sections as we saw above, you can customize your sections and give them unique colors and background images.</p>
+                    <h3 id="create-a-section-with-a-color-background">Create a section with a color background</h3>
+                    <p>We will build on the example code that we previously used, and we will add some coloring. To add a <strong>background color</strong> to a section, <strong>you need to add a class that defines a background color to the outer section wrapper</strong>. This class should exist inside a file named <strong>custom-css.css</strong> inside <strong>assets/css/</strong> folder for the built version or <strong>/source/html/src/demo-folder/assets/scss/</strong> folder for the <em>source</em> version. Feel free to create your own classes, such as</p>
+                    <pre><code>.verso-demo-bg-1 {
+  background: #e8e2d7;
+}</code></pre>
+                    <p>The code that renders the section with a background color is</p>
+                    <pre><code>&lt;div class=&quot;section verso-demo-bg-1&quot;&gt;
+    &lt;div class=&quot;section-content&quot;&gt;
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-md-6&quot;&gt;
+                    &lt;h1&gt;Section Title&lt;/h1&gt;
+                    &lt;p class=&quot;lead verso-line-height-normal&quot;&gt;
+                        Section subtitle
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    <h3 id="create-a-section-with-an-image-background">Create a section with an image background</h3>
+                    <p>Sections can have background images. Add a div with an <code>section-background</code> class before your content. Then, inside that div add another div with the class <strong>section-bg-image</strong> and an <strong>extra class</strong> such as <strong>verso-demo-bg-image-1</strong> that loads the class which will load the background image(to avoid inline styles). The class that loads that image should be inside a file named <strong>custom-css.css</strong> inside <strong>assets/css/</strong> folder for the built version or <strong>/source/assets/scss/</strong> folder for the <em>source</em> version. Feel free to create your own classes, such as</p>
+                    <pre><code>.verso-demo-bg-image-1 {
+  background-image: url(&#39;../images/verso/verso-01-1600x1000.jpg&#39;);
+}</code></pre>
+                    <p>The code that renders the section with a background image is</p>
+                    <pre><code>&lt;div class=&quot;section&quot;&gt;
+    &lt;div class=&quot;section-background&quot;&gt;
+        &lt;div class=&quot;section-bg-image verso-demo-bg-image-1&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;section-content&quot;&gt;
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                your content
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    <h3 id="section-background-image-position">Section background image position</h3>
+                    <p>You can configure the alignment of the background image using one of the following classes: <code>section-bg-image-position-top</code>, <code>section-bg-image-position-middle</code> and <code>section-bg-image-position-bottom</code>. Add one of those classes to the <code>section-bg-image</code> div that holds your background image. For example the following code will align the background image at the bottom:</p>
+                    <pre><code>&lt;div class=&quot;section&quot;&gt;
+    &lt;div class=&quot;section-background&quot;&gt;
+        &lt;div class=&quot;section-bg-image section-bg-image-position-bottom verso-demo-bg-image-1&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;section-content&quot;&gt;
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                your content
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    <div class="alert alert-info">
+                        <strong>Note:</strong> The above classes can be <strong>grid-specific</strong>, allowing different alignment for different screen sizes. Just tweak the <code>section-bg-image-size-breakpoint-bottom</code> class by replacing the <em>breakpoint</em> notation to either <em>blank</em> (section-bg-image-size-bottom) for <strong>Extra Small</strong> or <strong>sm, md, lg or xl</strong> for <strong>Small, Medium, Large or Extra Large</strong> container widths respectively. <a href="http://v4-alpha.getbootstrap.com/layout/grid/">Bootstrap 4 grid system</a>
+                    </div>
+                    <h3 id="create-a-section-with-a-parallax-background">Create a section with a parallax background</h3>
+                    <p>You can give a parallax effect to your section background images by adding the <code>section-bg-image-paralax</code> class to the <code>section-bg-image</code> div.</p>
+                    <pre><code>&lt;div class=&quot;section&quot;&gt;
+    &lt;div class=&quot;section-background&quot;&gt;
+        &lt;div class=&quot;section-bg-image section-bg-image-paralax verso-demo-bg-image-1&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;section-content&quot;&gt;
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                your content
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    <h3 id="section-background-image-sizes">Section background image sizes</h3>
+                    <p>Section background images can have different image sizes that define how the image will fit in the section. Add one of the following classes to the <code>section-bg-image</code> div that holds your background image: <code>section-bg-image-size-md-100</code>, <code>section-bg-image-size-md-cover</code> and <code>section-bg-image-size-md-contain</code>. Explaining those classes below:</p>
+                    <ul>
+                        <li><strong>section-bg-image-size-md-100</strong>: The image resizes until it reaches the <strong>width</strong> of its container, <strong>keeping its aspect ratio</strong></li>
+                        <li><strong>section-bg-image-size-md-cover</strong>: The image resizes until <strong>both the width and height</strong> of its container are reached, <strong>keeping its aspect ratio</strong></li>
+                        <li><strong>section-bg-image-size-md-contain</strong>: The image resizes until <strong>either the height or the width</strong> of its container is reached, <strong>keeping its aspect ratio</strong></li>
+                    </ul>
+                    <pre><code>&lt;div class=&quot;section&quot;&gt;
+    &lt;div class=&quot;section-background&quot;&gt;
+        &lt;div class=&quot;section-bg-image section-bg-image-size-md-cover verso-demo-bg-image-1&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;section-content&quot;&gt;
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                your content
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    <div class="alert alert-info">
+                        <strong>Note:</strong> The above classes can be <strong>grid-specific</strong>, allowing different alignment for different screen sizes. Just tweak the <code>section-bg-image-size-breakpoint-cover</code> class by replacing the <em>breakpoint</em> notation to either <em>blank</em> (section-bg-image-size-cover) for <strong>Extra Small</strong> or either <strong>sm, md, lg or xl</strong> for <strong>Small, Medium, Large or Extra Large</strong> container widths. <a href="http://v4-alpha.getbootstrap.com/layout/grid/">Bootstrap 4 grid system</a>
+                    </div>
+                    <h3 id="section-background-image-repeat">Section background image repeat</h3>
+                    <p>If you want the background image to repeat - suitable for small images - use the <strong>section-bg-image-repeat</strong> class in the <code>section-bg-image</code> div that holds your background image:</p>
+                    <pre><code>&lt;div class=&quot;section&quot;&gt;
+    &lt;div class=&quot;section-background&quot;&gt;
+        &lt;div class=&quot;section-bg-image section-bg-image-repeat verso-demo-bg-image-1&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;section-content&quot;&gt;
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                your content
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    <h3 id="section-background-image-fixed">Section background image fixed</h3>
+                    <p>If you want the background image to be fixed as the user scrolls down or up the page, use the <strong>section-bg-image-attachment-fix</strong> class in the <code>section-bg-image</code> div that holds your background image:</p>
+                    <pre><code>&lt;div class=&quot;section&quot;&gt;
+    &lt;div class=&quot;section-background&quot;&gt;
+        &lt;div class=&quot;section-bg-image section-bg-image-attachment-fix verso-demo-bg-image-1&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;section-content&quot;&gt;
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                your content
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    <h1 id="theme-components">Theme Components</h1>
+                    <h2 id="carousel">Carousel</h2>
+                    <p>The <strong>Carousel</strong> component is based on the <strong>Bootstrap</strong> framework, Verso however has many additions to offer on the functionality and look of the carousel.</p>
+                    <p>The default markup that you can use, as viewed in the <strong>Magazine Food</strong> demo in the <em>categories.html</em> page, is</p>
+                    <pre><code>&lt;div id=&quot;carousel&quot; class=&quot;carousel captions-fullwidth  slide verso-mb-3 verso-shadow-15 verso-shadow-hover-20 verso-transition&quot; data-ride=&quot;carousel&quot;&gt;
+    &lt;ol class=&quot;carousel-indicators&quot;&gt;
+        &lt;li data-target=&quot;#carousel&quot; data-slide-to=&quot;0&quot; class=&quot;active verso-transition&quot;&gt;&lt;/li&gt;
+        &lt;li class=&quot;verso-transition&quot; data-target=&quot;#carousel&quot; data-slide-to=&quot;1&quot;&gt;&lt;/li&gt;
+        &lt;li class=&quot;verso-transition&quot; data-target=&quot;#carousel&quot; data-slide-to=&quot;2&quot;&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;div class=&quot;carousel-inner&quot; role=&quot;listbox&quot;&gt;
+        &lt;div class=&quot;carousel-item active&quot;&gt;
+            &lt;img src=&quot;assets/images/magazine-food-slider-07-800x600-notinclude.jpg&quot; alt=&quot;Card image&quot;&gt;
+            &lt;div class=&quot;carousel-caption&quot;&gt;
+                &lt;h4 class=&quot;text-uppercase verso-mb-1&quot;&gt;Traditional Juicy Steak Recipe&lt;/h4&gt;
+                &lt;p class=&quot;font-italic&quot;&gt;Only for meat lovers!&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;carousel-item&quot;&gt;
+            &lt;img src=&quot;assets/images/magazine-food-slider-05-800x600-notinclude.jpg&quot; alt=&quot;Card image&quot;&gt;
+            &lt;div class=&quot;carousel-caption&quot;&gt;
+                &lt;h4 class=&quot;text-uppercase verso-mb-1&quot;&gt;Chicken Breast &amp;amp; veggies, a super-food story&lt;/h4&gt;
+                &lt;p class=&quot;font-italic&quot;&gt;Super nutritional &amp;amp; delicious!&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;carousel-item&quot;&gt;
+            &lt;img src=&quot;assets/images/magazine-food-slider-06-800x600-notinclude.jpg&quot; alt=&quot;Card image&quot;&gt;
+            &lt;div class=&quot;carousel-caption&quot;&gt;
+                &lt;h4 class=&quot;text-uppercase verso-mb-1&quot;&gt;10 Secret Vegan Pizza Recipes&lt;/h4&gt;
+                &lt;p class=&quot;font-italic&quot;&gt;Only the best recipes, from all around the world. &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    <p><img src="assets/images/carousel.png" alt="Carousel"></p>
+                    <p>Special classes that you can use on the Carousel are:</p>
+                    <ul>
+                        <li><strong>captions-fullwidth</strong> : Gives the captions 100% width over the carousel width so that adding more content is possible. Added in the outer container.</li>
+                        <li><strong>carousel-indicators-circle</strong> : Makes the indicators circles instead of flat lines. Added in <code>&lt;ol class=&quot;carousel-indicators&quot;&gt;</code></li>
+                        <li><strong>carousel-controls-bg</strong> : Adds a background overlay to the controls when images of the carousel have the same color. Added in the outer container.</li>
+                        <li><strong>carousel-fade</strong> : Carousel slides fade instead of sliding. Added in the outer container.</li>
+                        <li>
+                            <p><strong>carousel-thumbnails</strong> : Adds thumbnails below the carousel. The following markup describes how to do so</p>
+                            <pre><code>  &lt;div id=&quot;carousel-product&quot; class=&quot;carousel slide carousel-thumbnails&quot; data-ride=&quot;carousel&quot;&gt;
+      &lt;div class=&quot;carousel-inner&quot; role=&quot;listbox&quot;&gt;
+          &lt;div class=&quot;carousel-item active&quot;&gt;
+              &lt;img src=&quot;assets/images/commerce-funky-product-25-750x750-notinclude.jpg&quot;&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;carousel-item&quot;&gt;
+              &lt;img src=&quot;assets/images/commerce-funky-product-26-750x750-notinclude.jpg&quot;&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;ol class=&quot;carousel-indicators&quot;&gt;
+          &lt;li data-target=&quot;#carousel-product&quot; data-slide-to=&quot;0&quot; class=&quot;active verso-transition&quot;&gt;
+              &lt;img src=&quot;assets/images/commerce-funky-thumbnail-01-100x100-notinclude.jpg&quot;&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;verso-transition&quot; data-target=&quot;#carousel-product&quot; data-slide-to=&quot;1&quot;&gt;
+              &lt;img src=&quot;assets/images/commerce-funky-thumbnail-02-100x100-notinclude.jpg&quot;&gt;
+          &lt;/li&gt;
+      &lt;/ol&gt;
+  &lt;/div&gt;</code></pre>
+                        </li>
+                    </ul>
+                    <p><img src="assets/images/carousel_thumbnails.png" alt="Carousel thumbnails"></p>
+                    <h3 id="horizontal-carousel">Horizontal Carousel</h3>
+                    <p>A carousel in Verso can have a horizontal layout if the <strong>carousel-horizontal</strong> class is used. This layout can be viewed in the <strong>Magazine Food</strong> demo and is described by the following markup</p>
+                    <pre><code>&lt;div id=&quot;carousel-news&quot; class=&quot;carousel slide carousel-horizontal verso-shadow-15 verso-shadow-hover-20 verso-transition verso-mb-6&quot; data-ride=&quot;carousel&quot;&gt;
+    &lt;div class=&quot;carousel-inner&quot; role=&quot;listbox&quot;&gt;
+        &lt;div class=&quot;carousel-item active&quot;&gt;
+            &lt;img src=&quot;assets/images/magazine-food-slider-01-750x400-notinclude.jpg&quot;&gt;
+            &lt;div class=&quot;carousel-caption text-md-left&quot;&gt;
+                &lt;h4 class=&quot;verso-mb-0 text-uppercase&quot;&gt;Traditional Juicy Steak Recipe&lt;/h4&gt;
+                &lt;a href=&quot;single.html&quot;&gt;read the article →&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;carousel-item&quot;&gt;
+            &lt;img src=&quot;assets/images/magazine-food-slider-02-750x400-notinclude.jpg&quot;&gt;
+            &lt;div class=&quot;carousel-caption text-md-left&quot;&gt;
+                &lt;h4 class=&quot;verso-mb-0 text-uppercase&quot;&gt;Chicken Breast &amp;amp; veggies, a super-food story&lt;/h4&gt;
+                &lt;a href=&quot;single.html&quot;&gt;read the article →&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;carousel-item&quot;&gt;
+            &lt;img src=&quot;assets/images/magazine-food-slider-03-750x400-notinclude.jpg&quot;&gt;
+            &lt;div class=&quot;carousel-caption text-md-left&quot;&gt;
+                &lt;h4 class=&quot;verso-mb-0 text-uppercase&quot;&gt;10 Secret Vegan Pizza Recipes&lt;/h4&gt;
+                &lt;a href=&quot;single.html&quot;&gt;read the article →&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;carousel-item&quot;&gt;
+            &lt;img src=&quot;assets/images/magazine-food-slider-04-750x400-notinclude.jpg&quot;&gt;
+            &lt;div class=&quot;carousel-caption text-md-left&quot;&gt;
+                &lt;h4 class=&quot;verso-mb-0 text-uppercase&quot;&gt;Fancy meals at your place, fast &amp;amp; easy&lt;/h4&gt;
+                &lt;a href=&quot;single.html&quot;&gt;read the article →&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;ol class=&quot;carousel-indicators&quot;&gt;
+        &lt;li data-target=&quot;#carousel-news&quot; data-slide-to=&quot;0&quot; class=&quot;active&quot;&gt;
+            &lt;h3 class=&quot;h5 verso-mb-1 text-truncate text-uppercase&quot;&gt;
+                Traditional Juicy Steak Recipe
+            &lt;/h3&gt;
+            &lt;p class=&quot;verso-mb-0 text-truncate text-muted font-italic&quot;&gt;Only for meat lovers!&lt;/p&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;verso-transition&quot; data-target=&quot;#carousel-news&quot; data-slide-to=&quot;1&quot;&gt;
+            &lt;h3 class=&quot;h5 verso-mb-1 text-truncate text-uppercase&quot;&gt;
+                Chicken Breast &amp;amp; veggies
+            &lt;/h3&gt;
+            &lt;p class=&quot;verso-mb-0 text-truncate text-muted font-italic&quot;&gt;Super nutritional &amp;amp; delicious!&lt;/p&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;verso-transition&quot; data-target=&quot;#carousel-news&quot; data-slide-to=&quot;2&quot;&gt;
+            &lt;h3 class=&quot;h5 verso-mb-1 text-truncate text-uppercase&quot;&gt;
+                10 Secret Vegan Pizza Recipes
+            &lt;/h3&gt;
+            &lt;p class=&quot;verso-mb-0 text-truncate text-muted font-italic&quot;&gt;Only the best recipes, from all around the world.&lt;/p&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;verso-transition&quot; data-target=&quot;#carousel-news&quot; data-slide-to=&quot;3&quot;&gt;
+            &lt;h3 class=&quot;h5 verso-mb-1 text-truncate text-uppercase&quot;&gt;
+                Fancy meals at your place!
+            &lt;/h3&gt;
+            &lt;p class=&quot;verso-mb-0 text-truncate text-muted font-italic&quot;&gt;Dinner for two? Make it exceptional!&lt;/p&gt;
+        &lt;/li&gt;
+    &lt;/ol&gt;
+&lt;/div&gt;</code></pre>
+                    <p><img src="assets/images/carousel_horizontal.png" alt="Carousel horizontal"></p>
+                    <h2 id="loader">Loader</h2>
+                    <p>Verso comes with a big set of loaders that you can use. To add a loader to your site you need to do the following:</p>
+                    <ol>
+                        <li>Add the classes <code>pace-on</code> and <code>pace-*</code> to the body.</li>
+                        <li>
+                            <p><code>pace-*</code> can be</p>
+                            <pre><code> 1. pace-dot
+ 2. pace-line
+ 3. pace-counter
+ 4. pace-logo-pulse(requires logo image)
+ 5. pace-logo-counter(requires logo image)
+ 6. pace-logo-rotate(requires logo image)
+ 7. pace-circle
+ 8. pace-cross
+ 9. pace-flower
+ 10. pace-double-dot
+ 11. pace-squares
+ 12. pace-flipper
+ 13. pace-double-spinner
+ 14. pace-bars
+ 15. pace-heart</code></pre>
+                        </li>
+                        <li>
+                            <p>If the loader requires an image to be set, you need to edit your <strong>variables.scss</strong> file and set the url here</p>
+                            <pre><code> $o-loader-image: url(&quot;../images/logo.png&quot;);</code></pre>
+                        </li>
+                        <li>
+                            <p>Add the <code>&lt;div class=&quot;pace-overlay&quot;&gt;&lt;/div&gt;</code> code after the <code>&lt;body&gt;</code>, as in</p>
+                            <pre><code> &lt;body class=&quot;pace-on pace-flower&quot;&gt;
+     &lt;div class=&quot;pace-overlay&quot;&gt;&lt;/div&gt;</code></pre>
+                        </li>
+                    </ol>
+                    <h2 id="timeline">Timeline</h2>
+                    <p>A timeline is a way of displaying a list of posts in chronological order, to do so you can use the following markup</p>
+                    <pre><code>    &lt;div class=&quot;card card-hero&quot;&gt;
+        &lt;div class=&quot;card-block&quot;&gt;
+            &lt;div class=&quot;verso-timeline&quot;&gt;
+                &lt;div class=&quot;verso-timeline-item&quot;&gt;
+                    &lt;h3 class=&quot;verso-timeline-item-title verso-mb-1&quot;&gt;2009 &lt;small class=&quot; verso-opacity-5&quot;&gt;- The Start&lt;/small&gt;&lt;/h3&gt;
+                    &lt;p class=&quot;verso-timeline-item-description&quot;&gt;
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam veniam obcaecati animi voluptates expedita ratione facilis officiis, eum illo id dolor deleniti quidem quo sed quibusdam rem neque eos. Facilis?
+                    &lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;verso-timeline-item&quot;&gt;
+                    &lt;h3 class=&quot;verso-timeline-item-title verso-mb-1&quot;&gt;2012 &lt;small class=&quot; verso-opacity-5&quot;&gt;- First 200 Courses&lt;/small&gt;&lt;/h3&gt;
+                    &lt;p class=&quot;verso-timeline-item-description&quot;&gt;
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos repellat, voluptatum cumque aut adipisci magnam. Aliquam hic vel culpa eligendi saepe cum fugiat alias eum maiores ut cumque voluptas, debitis.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;verso-timeline-item&quot;&gt;
+                    &lt;h3 class=&quot;verso-timeline-item-title verso-mb-1&quot;&gt;2015 &lt;small class=&quot; verso-opacity-5&quot;&gt;- 1000 Courses&lt;/small&gt;&lt;/h3&gt;
+                    &lt;p class=&quot;verso-timeline-item-description verso-mb-0&quot;&gt;
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel repellendus nisi quibusdam amet tenetur placeat ipsum perferendis, earum illo. Dolores deleniti, tempore, asperiores esse libero quo natus dolorem ipsa est.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+                    <p><img src="assets/images/timeline.png" alt="Timeline"></p>
+                    <h3 id="horizontal-timeline">Horizontal Timeline</h3>
+                    <p>A timeline component can have a horizontal layout if the <strong>verso-timeline-horizontal</strong> class is used. It follows similar markup as above but with the previous class added to the outer container <code>&lt;div class=&quot;verso-timeline verso-timeline-horizontal&quot;&gt;</code></p>
+                    <p><img src="assets/images/timeline_horizontal.png" alt="Timeline Horizontal"></p>
+                    <h2 id="icon-sets">Icon Sets</h2>
+                    <p>To create a set of icons you can use the following markup</p>
+                    <pre><code>    &lt;div class=&quot;verso-icon-set&quot;&gt;
+        &lt;a class=&quot;verso-icon-set-item verso-transition&quot; href=&quot;#&quot;&gt;
+            &lt;i class=&quot;fa fa-instagram&quot;&gt;&lt;/i&gt;
+        &lt;/a&gt;
+        &lt;a class=&quot;verso-icon-set-item verso-transition&quot; href=&quot;#&quot;&gt;
+            &lt;i class=&quot;fa fa-linkedin&quot;&gt;&lt;/i&gt;
+        &lt;/a&gt;
+        &lt;a class=&quot;verso-icon-set-item verso-transition&quot; href=&quot;#&quot;&gt;
+            &lt;i class=&quot;fa fa-facebook&quot;&gt;&lt;/i&gt;
+        &lt;/a&gt;
+        &lt;a class=&quot;verso-icon-set-item verso-transition&quot; href=&quot;#&quot;&gt;
+            &lt;i class=&quot;fa fa-twitter&quot;&gt;&lt;/i&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;</code></pre>
+                    <p><img src="assets/images/icon_sets.png" alt="Icon Sets"></p>
+                    <p>The icons set can be expanded and collapsed on click, you can use the following markup</p>
+                    <pre><code>    &lt;div class=&quot;verso-icon-set verso-icon-set-expandable verso-transition float-right&quot;&gt;
+        &lt;a class=&quot;verso-icon-set-item verso-icon-set-item-trigger text-muted&quot; href=&quot;1&quot;&gt;
+            &lt;i class=&quot;fa fa-share-alt&quot;&gt;&lt;/i&gt;
+        &lt;/a&gt;
+        &lt;a class=&quot;verso-icon-set-item verso-icon-set-item-close verso-transition&quot; href=&quot;2&quot;&gt;
+            &lt;i class=&quot;fa fa-close&quot;&gt;&lt;/i&gt;
+        &lt;/a&gt;
+        &lt;a class=&quot;verso-icon-set-item text-muted verso-transition&quot; href=&quot;#&quot;&gt;
+            &lt;i class=&quot;fa fa-instagram&quot;&gt;&lt;/i&gt;
+        &lt;/a&gt;
+        &lt;a class=&quot;verso-icon-set-item text-muted verso-transition&quot; href=&quot;#&quot;&gt;
+            &lt;i class=&quot;fa fa-linkedin&quot;&gt;&lt;/i&gt;
+        &lt;/a&gt;
+        &lt;a class=&quot;verso-icon-set-item text-muted verso-transition&quot; href=&quot;#&quot;&gt;
+            &lt;i class=&quot;fa fa-facebook&quot;&gt;&lt;/i&gt;
+        &lt;/a&gt;
+        &lt;a class=&quot;verso-icon-set-item text-muted verso-transition&quot; href=&quot;#&quot;&gt;
+            &lt;i class=&quot;fa fa-twitter&quot;&gt;&lt;/i&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;</code></pre>
+                    <p><img src="assets/images/icon_sets_expandable.png" alt="Icon Sets expandable"></p>
+                    <h1 id="cards">Cards</h1>
+                    <h2 id="card-components">Card Components</h2>
+                    <p>A card is consisted of three main blocks, the <strong>card-block</strong> where you set the content of the card, the <strong>card-img-container</strong> where you set the image and its overlay and the <strong>card-footer</strong> where you can add extra information such as social links.</p>
+                    <div class="alert alert-info">
+                        A card can also be a <em>Hero card</em> if you add the <code>card-hero</code> class to the main <code>div</code>. A hero card behaves the same as a small card, it just adds more padding to the sides making it bigger.
+                    </div>
+                    <div class="alert alert-success">
+                        To make your card load the primary color as background color which will make the card stand out use the <code>card-inverse</code> class in the main <code>div</code>.
+                    </div>
+                    <div class="alert alert-success">
+                        A card can make use of all the available <strong>Utility</strong> classes. Check them out in the <a href="#utilities">Utilities</a> section.
+                    </div>
+                    <h2 id="card-vertical-layout">Card Vertical Layout</h2>
+                    <p>The basic layout that a card can have is</p>
+                    <pre><code>&lt;div class=&quot;card verso-shadow-8 verso-shadow-hover-16 verso-transition&quot;&gt;
+    &lt;div class=&quot;card-img-container&quot;&gt;
+        &lt;img class=&quot;card-img&quot; src=&quot;assets/images/church-team-5-1200x600-notinclude.jpg&quot; alt=&quot;Card image&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;card-block&quot;&gt;
+        &lt;p class=&quot;card-text lead&quot;&gt;
+            Why do the nations rage, and the peoples plot a vain thing? The kings of the earth take a stand.
+        &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;card-footer clearfix&quot;&gt;
+        &lt;div class=&quot;verso-icon-set pull-right&quot;&gt;
+            &lt;a class=&quot;verso-icon-set-item verso-transition text-muted&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;fa fa-instagram&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+            &lt;a class=&quot;verso-icon-set-item verso-transition text-muted&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;fa fa-linkedin&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+            &lt;a class=&quot;verso-icon-set-item verso-transition text-muted&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;fa fa-facebook&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+            &lt;a class=&quot;verso-icon-set-item verso-transition text-muted&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;fa fa-twitter&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    <p><img src="assets/images/card_layout.png" alt="Card Layout"></p>
+                    <p>Let&#39;s break down those blocks</p>
+                    <h3 id="card-block">Card block</h3>
+                    <p>A card can have many card blocks as you want. Inside those blocks you can have text if you put it in a paragraph with the class <code>card-text</code>, as in</p>
+                    <pre><code>&lt;div class=&quot;card-block&quot;&gt;
+    &lt;p class=&quot;card-text lead&quot;&gt;
+        Why do the nations rage, and the peoples plot a vain thing? The kings of the earth take a stand.
+    &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                    <p>To add a card title inside the card block use</p>
+                    <pre><code>&lt;h4 class=&quot;card-title&quot;&gt;&lt;a href=&quot;single-post.html&quot;&gt;Header &amp; Subtitle&lt;/a&gt;&lt;/h4&gt;</code></pre>
+                    <p>To add a card subtitle inside the card block use</p>
+                    <pre><code>&lt;p class=&quot;card-subtitle&quot;&gt;By &lt;a href=&quot;staff-single.html&quot;&gt;Christos&lt;/a&gt; on May 1977&lt;/p&gt;</code></pre>
+                    <h3 id="image-container">Image container</h3>
+                    <p>To add an image to the card you need to add a</p>
+                    <pre><code>&lt;div class=&quot;card-img-container&quot;&gt;
+    &lt;img class=&quot;card-img&quot; src=&quot;assets/images/church-team-5-1200x600-notinclude.jpg&quot; alt=&quot;Card image&quot;&gt;
+&lt;/div&gt;</code></pre>
+                    <p>inside the main card <code>div</code>.</p>
+                    <p>You can also add an <strong>image overlay</strong> to the card if you use</p>
+                    <pre><code>&lt;div class=&quot;card-img-overlay&quot;&gt;
+    &lt;h4 class=&quot;card-title&quot;&gt;Card Image&lt;/h4&gt;
+    &lt;p class=&quot;card-subtitle&quot;&gt;Text on the top&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                    <p>You should place this code after the <em>card-img-container</em> div.</p>
+                    <p>To add a fading effect to the overlay you can use the following classes:</p>
+                    <ul>
+                        <li><strong>card-img-overlay-fade-to-bottom</strong> : The fading effect starts from top to bottom</li>
+                        <li><strong>card-img-overlay-fade-to-top</strong> : The fading effect starts from bottom to top</li>
+                        <li><strong>card-img-overlay-fade-to-left</strong> : The fading effect starts from right to left</li>
+                        <li><strong>card-img-overlay-fade-to-right</strong> : The fading effect starts from left to right</li>
+                    </ul>
+                    <p>To enable the overlay only when the user <strong>hovers on</strong> the image, use the <strong>card-img-overlay-on-hover</strong> class. When the user <strong>hovers</strong> on the image an overlay will show with the above contents. You can also set the alignment of the text in the overlay if you use the following classes:</p>
+                    <ul>
+                        <li><strong>card-img-overlay-top</strong> : Aligns the text to the top of the container</li>
+                        <li><strong>card-img-overlay-center</strong> : Aligns the text to the center of the container</li>
+                        <li><strong>card-img-overlay-bottom</strong> : Aligns the text to the bottom of the container</li>
+                        <li><strong>card-img-overlay-left</strong> : Aligns the text to the left of the container</li>
+                        <li><strong>card-img-overlay-right</strong> : Aligns the text to the right of the container</li>
+                    </ul>
+                    <p>For example</p>
+                    <pre><code>&lt;div class=&quot;card-img-overlay card-img-overlay-center card-img-overlay-on-hover  verso-transition&quot;&gt;
+    &lt;h4 class=&quot;card-title verso-transition&quot;&gt;Card Image&lt;/h4&gt;
+    &lt;p class=&quot;card-subtitle verso-transition&quot;&gt;Text on the top&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                    <h3 id="card-footer">Card Footer</h3>
+                    <p>The card footer can be used to provide extra information regarding your card&#39;s content. For example</p>
+                    <pre><code>&lt;div class=&quot;card-footer&quot;&gt;
+    &lt;div class=&quot;verso-icon-set pull-right&quot;&gt;
+        &lt;a class=&quot;verso-icon-set-item verso-transition text-muted&quot; href=&quot;#&quot;&gt;
+            &lt;i class=&quot;fa fa-instagram&quot;&gt;&lt;/i&gt;
+        &lt;/a&gt;
+        &lt;a class=&quot;verso-icon-set-item verso-transition text-muted&quot; href=&quot;#&quot;&gt;
+            &lt;i class=&quot;fa fa-linkedin&quot;&gt;&lt;/i&gt;
+        &lt;/a&gt;
+        &lt;a class=&quot;verso-icon-set-item verso-transition text-muted&quot; href=&quot;#&quot;&gt;
+            &lt;i class=&quot;fa fa-facebook&quot;&gt;&lt;/i&gt;
+        &lt;/a&gt;
+        &lt;a class=&quot;verso-icon-set-item verso-transition text-muted&quot; href=&quot;#&quot;&gt;
+            &lt;i class=&quot;fa fa-twitter&quot;&gt;&lt;/i&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    <h2 id="card-horizontal-layout">Card Horizontal Layout</h2>
+                    <p>A card can also have a horizontal layout, whereby the image lies either on the left or the right side of the card. To achieve this layout, the following markup can be used where we add a row inside the card and split the content by using the Bootstrap grid system</p>
+                    <pre><code>&lt;div class=&quot;card card-horizontal verso-shadow-15 verso-shadow-hover-20 verso-transition&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-lg-4&quot;&gt;
+            &lt;div class=&quot;card-img-container&quot;&gt;
+                &lt;img class=&quot;card-img&quot; src=&quot;assets/images/corporate-classic-article-01-400x500-notinclude.jpg&quot; alt=&quot;Card image&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-lg-8&quot;&gt;
+            &lt;div class=&quot;card-block&quot;&gt;
+                &lt;h2 class=&quot;h4 card-title m-b-1 text-uppercase verso-mb-3&quot;&gt;Start-up Solution&lt;/h2&gt;
+                &lt;p class=&quot;card-text&quot;&gt;Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions. Holistically pontificate installed base portals after maintainable products.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    <p>The above code creates a horizontal card with the image placed on the left. You can place the image on the right if you change the column order.</p>
+                    <p><img src="assets/images/horizontal_card.png" alt="Horizontal Card Layout"></p>
+                    <h1 id="utilities">Utilities</h1>
+                    <h2 id="margin">Margin</h2>
+                    <p>Adding margin to an element is a matter of using the appropriate classes. The following classes are provided:</p>
+                    <ul>
+                        <li><strong>verso-mt--30</strong> : Adds <strong>300px</strong> of <strong>negative</strong> margin to the top of an element.
+                            <div class="alert alert-info">
+                                This class has variations that grow up to <strong>zero</strong> margin and continue up to <strong>verso-mt-30</strong>, which <strong>adds 300px</strong>. Classes scale by <strong>10px</strong> for each index increase. You can use <em>verso-mt-29</em>, <em>verso-mt-28</em>, ..., <em>verso-mt-0</em>, <em>verso-mt--1</em>, <em>verso-mt--2</em>, ..., <em>verso-mt--30</em>.
+                            </div>
+                        </li>
+                        <li><strong>verso-ml--30</strong> : Adds <strong>300px</strong> of <strong>negative</strong> margin to the left of an element. Variations follow the same pattern as above.</li>
+                        <li><strong>verso-mr--30</strong> : Adds <strong>300px</strong> of <strong>negative</strong> margin to the right of an element. Variations follow the same pattern as above.</li>
+                        <li><strong>verso-mb--30</strong> : Adds <strong>300px</strong> of <strong>negative</strong> margin to the bottom of an element. Variations follow the same pattern as above.</li>
+                    </ul>
+                    <div class="alert alert-success">
+                        Note that <em>verso-mt-30</em> <strong>adds</strong> margin whilst <em>verso-mt--30</em> <strong>adds negative</strong> margin.
+                    </div>
+                    <h2 id="margins-for-all-devices">Margins For All Devices</h2>
+                    <p>To add even more control over the top/bottom margins on <strong>different screen sizes</strong>, we have introduced a set of rules that define different margins on different devices.
+                        <br> The classes are set as <code>verso-mt-breakpoint-n</code> or <code>verso-mb-breakpoint-n</code> where <strong>n = -30, -29, ..., 29, 30</strong>(each number removes/adds 10px) and replacing the <em>breakpoint</em> notation to either <strong>sm, md, lg or xl</strong> for <strong>Small, Medium, Large or Extra Large</strong> container widths. If <em>breakpoint</em> is set to blank, as in <strong>verso-mt-30</strong> for example, it affects <strong>Extra Small</strong> devices and up. See <a href="http://v4-alpha.getbootstrap.com/layout/grid/">Bootstrap 4 grid system</a>.</p>
+                    <h2 id="padding">Padding</h2>
+                    <p>Adding padding to an element is a matter of using the appropriate classes. The following classes are provided:</p>
+                    <ul>
+                        <li><strong>verso-py-1</strong> : Adds <strong>10px</strong> of padding to the <strong>top and bottom</strong> of an element.
+                            <div class="alert alert-info">
+                                This class has variations that scale up to <strong>300px</strong> padding. Classes scale by <strong>10px</strong> for each index increase. You can use <em>verso-py-1</em>, <em>verso-py-2</em>, ..., <em>verso-py-30</em>.
+                            </div>
+                        </li>
+                        <li><strong>verso-px-1</strong> : Adds <strong>10px</strong> of padding to the <strong>left and right</strong> of an element. Variations follow the same pattern as above.</li>
+                        <li><strong>verso-pt-30</strong> : Adds <strong>300px</strong> of padding to the top of an element. Variations follow the same pattern as above.</li>
+                        <li><strong>verso-pl-30</strong> : Adds <strong>300px</strong> of padding to the left of an element. Variations follow the same pattern as above.</li>
+                        <li><strong>verso-pr-30</strong> : Adds <strong>300px</strong> of padding to the right of an element. Variations follow the same pattern as above.</li>
+                        <li><strong>verso-pb-30</strong> : Adds <strong>300px</strong> of padding to the bottom of an element. Variations follow the same pattern as above.</li>
+                        <li><strong>verso-pa-30</strong> : Adds <strong>300px</strong> of padding around an element, top, bottom, left and right. Variations follow the same pattern as above.</li>
+                    </ul>
+                    <h2 id="paddings-for-all-devices">Paddings For All Devices</h2>
+                    <p>To add even more control over the top/bottom/left/right paddings on <strong>different screen sizes</strong>, we have introduced a set of rules that define different padding on different devices.
+                        <br> The classes are set as <code>verso-pt-breakpoint-n</code> or <code>verso-pb-breakpoint-n</code> where <strong>n = 0, 1, ..., 29, 30</strong>(each number adds 10px) and replacing the <em>breakpoint</em> notation to either <strong>sm, md, lg or xl</strong> for <strong>Small, Medium, Large or Extra Large</strong> container widths. If <em>breakpoint</em> is set to blank, as in <strong>verso-pt-30</strong> for example, it affects <strong>Extra Small</strong> devices and up. See <a href="http://v4-alpha.getbootstrap.com/layout/grid/">Bootstrap 4 grid system</a>.</p>
+                    <h2 id="on-scroll-animations">On scroll animations</h2>
+                    <p>To add an animation to an element, you need to assign the <code>verso-os-animation</code> class to it. In addition, you need to define the <strong>type</strong> of animation and <strong>when</strong> it is going to kick in. These are set from the two data attributes <code>data-os-animation</code> and <code>data-os-animation-delay</code>. An example</p>
+                    <pre><code>&lt;h1 class=&quot;verso-os-animation&quot; data-os-animation=&quot;fadeIn&quot; data-os-animation-delay=&quot;.3s&quot;&gt;
+    &lt;small&gt;Dont miss&lt;/small&gt; Upcoming Event
+&lt;/h1&gt;</code></pre>
+                    <div class="alert alert-success">
+                        To view the full set of the available animations visit <a href="https://daneden.github.io/animate.css/">Animate.css</a>
+                    </div>
+                    <div class="alert alert-info">
+                        Set the <strong>data-os-animation-delay</strong> attribute in seconds, i.e <strong>data-os-animation-delay=&quot;0.5s&quot;</strong>, for half a second. This means that the animation takes place half a second after the related item shows on the page.
+                    </div>
+                    <h2 id="opacity">Opacity</h2>
+                    <p>Setting the opacity level for an element in Verso is a matter of using the appropriate classes. The following classes are provided:</p>
+                    <ul>
+                        <li><strong>verso-opacity-0</strong> : Completely transparent.
+                            <div class="alert alert-info">
+                                This class has variations that scale up to <strong>10</strong>. Classes scale by <strong>1</strong> each. You can use <em>verso-opacity-1</em>, <em>verso-opacity-2</em>, <em>verso-opacity-3</em>, ..., <em>verso-opacity-10</em>.
+                            </div>
+                        </li>
+                        <li><strong>verso-opacity-10</strong> : Not transparent.</li>
+                    </ul>
+                    <h2 id="shadow">Shadow</h2>
+                    <p>Setting the shadow level for an element in Verso is a matter of using the appropriate classes. The following classes are provided:</p>
+                    <ul>
+                        <li><strong>verso-shadow-0</strong> : No shadow.
+                            <div class="alert alert-info">
+                                This class has variations that scale up to <strong>20</strong>. Classes scale by <strong>1</strong> each. You can use <em>verso-shadow-1</em>, <em>verso-shadow-2</em>, <em>verso-shadow-3</em>, ..., <em>verso-shadow-20</em>.
+                            </div>
+                        </li>
+                        <li><strong>verso-shadow-20</strong> : Maximum shadow effect.</li>
+                    </ul>
+                    <p>Shadow applied when the user <strong>hovers</strong> over an element.</p>
+                    <ul>
+                        <li><strong>verso-shadow-hover-0</strong> : No shadow.
+                            <div class="alert alert-info">
+                                This class has variations that scale up to <strong>20</strong>. Classes scale by <strong>1</strong> each. You can use <em>verso-shadow-hover-1</em>, <em>verso-shadow-hover-2</em>, <em>verso-shadow-hover-3</em>, ..., <em>verso-shadow-hover-20</em>.
+                            </div>
+                        </li>
+                        <li><strong>verso-shadow-hover-20</strong> : Maximum shadow effect.</li>
+                    </ul>
+                    <p>Shadow applied when an element is <strong>focused</strong>.</p>
+                    <ul>
+                        <li><strong>verso-shadow-focus-0</strong> : No shadow.
+                            <div class="alert alert-info">
+                                This class has variations that scale up to <strong>20</strong>. Classes scale by <strong>1</strong> each. You can use <em>verso-shadow-focus-1</em>, <em>verso-shadow-focus-2</em>, <em>verso-shadow-focus-3</em>, ..., <em>verso-shadow-focus-20</em>.
+                            </div>
+                        </li>
+                        <li><strong>verso-shadow-focus-20</strong> : Maximum shadow effect.</li>
+                    </ul>
+                    <h2 id="smooth-transitions">Smooth transitions</h2>
+                    <p>To achieve a smooth transition whenever a CSS property of an element changes, the <strong>verso-transition</strong> class is used. For example, if an element has a shadow of 8px and on-hover the shadow becomes 16px, the verso-transition class will make that transition run smoothly rather than instantly. Example in code</p>
+                    <pre><code>&lt;div class=&quot;card verso-shadow-8 verso-shadow-hover-16 verso-transition&quot;&gt;
+    &lt;div class=&quot;card-img-container&quot;&gt;
+        &lt;img class=&quot;card-img-top&quot; src=&quot;/verso/verso-05-640x800.jpg&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;card-block&quot;&gt;
+        &lt;h3 class=&quot;card-title&quot;&gt;Card With Image&lt;/h3&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    <h2 id="text">Text</h2>
+                    <p>To break the text into columns use the <code>verso-col-count-n</code> classes, where <strong>n=1-6</strong>. To add extra borders between the columns also use the <code>verso-col-count-bordered</code>.</p>
+                    <div class="alert alert-warning">
+                        <strong>Only</strong> works for screens larger than <strong>sm</strong>(≥544px)
+                    </div>
+                    <p>Example code</p>
+                    <pre><code>&lt;div class=&quot;verso-col-count-2&quot;&gt;
+    &lt;p&gt;
+        Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.
+    &lt;/p&gt;
+    &lt;p&gt;
+        Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring. Taking seamless key performance indicators offline to maximise the long tail.
+    &lt;/p&gt;
+    &lt;p&gt;
+        Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line. Podcasting operational change management inside of workflows to establish a framework.
+    &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                    <p><img src="assets/images/column_count.png" alt="Column Count"></p>
+                    <h2 id="image-filters">Image filters</h2>
+                    <p>To add a special filter on an image of a card you can use <code>verso-photo-filter-name</code> class by replacing the <em>name</em> notation with the following effects: <strong>none, grayscale, hue-rotate, hue-rotate-2, desaturate-50, sepia or blur</strong> so that the class will be for example <code>verso-photo-filter-sepia</code>. // Photo Filters</p>
+                    <p>The same pattern goes for the <code>verso-photo-filter-hover-name</code>, which applies the filter when the user <strong>hovers</strong> over the card.</p>
+                    <p>Example code</p>
+                    <pre><code>&lt;div class=&quot;card verso-transition verso-photo-filter-sepia verso-photo-filter-hover-grayscale verso-transition&quot;&gt;
+    &lt;div class=&quot;card-img-container&quot;&gt;
+        &lt;img class=&quot;card-img&quot; src=&quot;assets/images/verso/verso-05-800x500.jpg&quot; alt=&quot;Card image&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;card-img-overlay card-img-overlay-bottom card-img-overlay-fade-to-top&quot;&gt;
+        &lt;h3 class=&quot;card-title&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;Achieving Serenity&lt;/a&gt;
+        &lt;/h3&gt;
+        &lt;h6 class=&quot;card-subtitle font-italic&quot;&gt;By &lt;a href=&quot;#&quot;&gt;Christos&lt;/a&gt; on May 1977&lt;/h6&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    <p><img src="assets/images/image_filter.png" alt="Image Filter"></p>
+                    <h2 id="zindex">Zindex</h2>
+                    <p>To setup the z-index of your element, you can use the following classes:</p>
+                    <ul>
+                        <li><strong>verso-z-0</strong> : s-index is <em>0</em>.
+                            <div class="alert alert-info">
+                                This class has variations that scale up to <strong>10</strong>. Classes scale by <strong>1</strong> each. You can use <em>verso-z-1</em>, <em>verso-z-2</em>, <em>verso-z-3</em>, ..., <em>verso-z-10</em>.
+                            </div>
+                        </li>
+                        <li><strong>verso-z-10</strong> : Maximum z-index.</li>
+                    </ul>
+                    <h2 id="positioning">Positioning</h2>
+                    <p>To give an element a <strong>relative</strong> or <strong>absolute</strong> position you can use the following classes:</p>
+                    <ul>
+                        <li><strong>verso-pos-relative</strong> : the element is positioned relative to its normal position.</li>
+                        <li><strong>verso-pos-absolute</strong> : the element is positioned relative to the nearest positioned ancestor.</li>
+                    </ul>
+                    <p><strong>Note</strong>: A &quot;positioned&quot; element is one whose position is anything except <em>static</em>.</p>
+                    <h1 id="blog">Blog</h1>
+                    <h2 id="blog-list">Blog List</h2>
+                    <p>The Blog list page can be with <strong>left sidebar</strong>, <strong>right sidebar</strong> or <strong>no sidebar</strong> blog list. Also, you can have a <strong>wide</strong> layout where there is less padding on the sides, or a <strong>Small</strong> layout with a masonry-like layout. Our Blog page is consisted of a header section, the blog list and the pagination at the bottom.</p>
+                    <h3 id="no-sidebar">No Sidebar</h3>
+                    <p>In order to create the Blog list page with no sidebar, we use a <code>col-lg-12</code>. The general layout for the blog list is</p>
+                    <pre><code>&lt;section class=&quot;section&quot;&gt;
+    &lt;div class=&quot;section-background&quot;&gt;
+        &lt;div class=&quot;section-bg-image verso-demo-bg-image-13&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;section-content&quot;&gt;
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-lg-12&quot;&gt;
+                    &lt;h3 class=&quot;h2 verso-heading-bordered&quot;&gt;
+                        &lt;small class=&quot;text-muted font-italic&quot;&gt;Latest&lt;/small&gt; News from our Blog
+                    &lt;/h3&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-lg-12&quot;&gt;
+                    &lt;!-- Blog List markup --&gt;
+                    &lt;div class=&quot;card card-hero&gt; ... &lt;/div&gt;
+                        .
+                        . (more posts)
+                        .
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+                    <p><img src="assets/images/blog_list_no_sidebar.png" alt="No sidebar blog"></p>
+                    <h3 id="left-sidebar">Left Sidebar</h3>
+                    <p>To create a blog list with a sidebar, we need to divide the layout to two parts/columns. One for the sidebar and one for the blog list. To do so, this layout is suggested</p>
+                    <pre><code>&lt;section class=&quot;section&quot;&gt;
+    &lt;div class=&quot;section-background&quot;&gt;
+        &lt;div class=&quot;section-bg-image verso-demo-bg-image-13&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;section-content&quot;&gt;
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-lg-12&quot;&gt;
+                    &lt;h3 class=&quot;h2 verso-heading-bordered&quot;&gt;
+                        &lt;small class=&quot;text-muted font-italic&quot;&gt;Latest&lt;/small&gt; News from our Blog
+                    &lt;/h3&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-lg-8 verso-order-lg-2&quot;&gt;
+                    &lt;!-- Blog List markup --&gt;
+                    &lt;div class=&quot;card card-hero&gt; ... &lt;/div&gt;
+                        .
+                        . (more posts)
+                        .
+                &lt;/div&gt;
+                &lt;div class=&quot;col-lg-4 sidebar verso-order-lg-1&quot;&gt;
+                    &lt;!-- Code for the sidebar --&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+                    <h3 id="right-sidebar">Right Sidebar</h3>
+                    <p>The right sidebar layout is the same as <a href="#left-sidebar">Left Sidebar</a> layout, only to change the order of the sidebar and blog list content.</p>
+                    <pre><code>&lt;section class=&quot;section&quot;&gt;
+    &lt;div class=&quot;section-background&quot;&gt;
+        &lt;div class=&quot;section-bg-image verso-demo-bg-image-13&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;section-content&quot;&gt;
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-lg-12&quot;&gt;
+                    &lt;h3 class=&quot;h2 verso-heading-bordered&quot;&gt;
+                        &lt;small class=&quot;text-muted font-italic&quot;&gt;Latest&lt;/small&gt; News from our Blog
+                    &lt;/h3&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-lg-8&quot;&gt;
+                    &lt;!-- Blog List markup --&gt;
+                    &lt;div class=&quot;card card-hero&gt; ... &lt;/div&gt;
+                        .
+                        . (more posts)
+                        .
+                &lt;/div&gt;
+                &lt;div class=&quot;col-md-4 sidebar&quot;&gt;
+                    &lt;!-- Code for the sidebar --&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+                    <h3 id="adding-a-widget-to-the-sidebar">Adding a widget to the sidebar</h3>
+                    <p>The partial file that holds the sidebar content is located in <strong>source/html/partials</strong> and is named <code>sidebar.html</code>. If you want to edit a widget or add a new one, take a look at the code inside <strong>source/html/src/demo-folder/partials/widgets</strong> folder. Each widget has its own file. If you want to add a new widget you need to edit the file <code>sidebar.html</code>.
+                        <br> All widgets are wrapped inside an <strong>verso-widget</strong> class and are usually lists with a title. For example,</p>
+                    <pre><code>&lt;div class=&quot;verso-widget widget_tag_cloud&quot;&gt;
+    &lt;h4 class=&quot;verso-widget-header&quot;&gt;Tags&lt;/h4&gt;
+    &lt;ul&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;blog-list-wide.html&quot;&gt;faith&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;blog-list-wide.html&quot;&gt;bible&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+                    <p>Checkout the <code>sidebar.html</code> to get an idea of what sort of different widgets you can create.</p>
+                    <h3 id="adding-a-post-to-the-list">Adding a post to the list</h3>
+                    <p>Adding a post to the list is a matter of adding another</p>
+                    <pre><code>&lt;div class=&quot;card&gt; ... &lt;/div&gt;</code></pre>
+                    <p>to the blog list section.
+                        <br> In order to create a new post, see <a href="#create-a-new-post">this section</a>.</p>
+                    <h2 id="single-post">Single Post</h2>
+                    <h3 id="create-a-new-post">Create a new post</h3>
+                    <p>When you create a post use a <strong>Card</strong>. The layout for the post is</p>
+                    <pre><code>&lt;div class=&quot;card card-hero verso-shadow-8 verso-shadow-hover-16 verso-transition&quot;&gt;
+    &lt;div class=&quot;card-img-container&quot;&gt;
+        &lt;img class=&quot;card-img&quot; src=&quot;the_post_featured_image.png&quot; alt=&quot;Card image&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;card-block&quot;&gt;
+        &lt;h2 class=&quot;card-title verso-mb-1&quot;&gt;
+            &lt;a href=&quot;single-post.html&quot;&gt;Your post title&lt;/a&gt;
+        &lt;/h2&gt;
+        &lt;p class=&quot;card-subtitle font-italic text-muted verso-mb-3&quot;&gt;By &lt;a href=&quot;#&quot;&gt;author&lt;/a&gt; in &lt;a href=&quot;#&quot;&gt;Some categories&lt;/a&gt; on Date&lt;/p&gt;
+        &lt;p class=&quot;card-text&quot;&gt;Your posts text&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;card-footer&quot;&gt;
+        &lt;small class=&quot;text-muted&quot;&gt;&lt;i class=&quot;fa fa-tag&quot;&gt;&lt;/i&gt; &lt;a href=&quot;#&quot; class=&quot;text-muted&quot;&gt;holy&lt;/a&gt;, &lt;a href=&quot;#&quot; class=&quot;text-muted&quot;&gt;mary&lt;/a&gt;
+        &lt;a href=&quot;single-post.html&quot; class=&quot;float-right&quot;&gt;Read More&lt;/a&gt;&lt;/small&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    <h3 id="single-post-page">Single Post Page</h3>
+                    <p>The single post page is consisted of a <strong>card</strong> which is used for the post content, <strong>navigation</strong> below the post, another card for the <strong>author</strong> of the post, a <strong>related posts</strong> section, the <strong>comments list</strong> and a <strong>comment form</strong>.
+                        <br>
+                    </p>
+                    <p><img src="assets/images/single_post.png" alt="Single Post"></p>
+                    <p>The layout for the single post page is</p>
+                    <pre><code>&lt;section class=&quot;section&quot;&gt;
+    &lt;div class=&quot;section-background&quot;&gt;
+        &lt;div class=&quot;section-bg-image section-bg-image-size-100 section-bg-image-position-top section-bg-image-paralax verso-demo-bg-image-01&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;section-content&quot;&gt;
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-lg-8 offset-lg-2&quot;&gt;
+                    &lt;!-- Card --&gt;
+                    &lt;!-- Navigation --&gt;
+                    &lt;!-- Author Card --&gt;
+                    &lt;!-- Related Posts --&gt;
+                    &lt;!-- Comments List --&gt;
+                    &lt;!-- Comment Form --&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+                    <p>The <strong>card for the post content</strong> is the same as described in the <a href="#create-a-new-post">Create a new post</a> section. For the post navigation arrows, you can use</p>
+                    <pre><code>    &lt;!-- Navigation --&gt;
+    &lt;div class=&quot;verso-mb-10&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;btn btn-primary verso-shadow-4 verso-shadow-hover-8&quot;&gt; ← previous post &lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;btn btn-primary float-right verso-shadow-4 verso-shadow-hover-8&quot;&gt; next post →&lt;/a&gt;
+    &lt;/div&gt;</code></pre>
+                    <p>Tha <strong>author card</strong> could use the markup</p>
+                    <pre><code>&lt;!-- Author Card --&gt;
+&lt;div class=&quot;card card-horizontal verso-shadow-15 verso-shadow-hover-20 verso-mb-10&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-4&quot;&gt;
+            &lt;div class=&quot;card-img-container&quot;&gt;
+                &lt;img src=&quot;assets/images/blog-food-author-2-500x500-notinclude.jpg&quot; class=&quot;card-img&quot; alt=&quot;food&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-md-8&quot;&gt;
+            &lt;div class=&quot;card-block&quot;&gt;
+                &lt;h2 class=&quot;h3 text-uppercase card-title verso-mb-3&quot;&gt;
+                    &lt;a href=&quot;author.html&quot;&gt;Chris Doe&lt;/a&gt;
+                &lt;/h2&gt;
+                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eum voluptate quae perspiciatis vitae. Commodi delectus, esse quam nam blanditiis eum officiis consequatur culpa maxime quisquam.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    <p>For the <strong>Related Posts</strong> section you can use this markup for each post</p>
+                    <pre><code>&lt;div class=&quot;col-md-6&quot;&gt;
+    &lt;div class=&quot;card verso-shadow-15 verso-shadow-hover-20 verso-mb-3&quot;&gt;
+        &lt;div class=&quot;card-img-container&quot;&gt;
+            &lt;img class=&quot;card-img d-block mw-100&quot; src=&quot;assets/images/blog-food-recent-post-2-600x400-notinclude.jpg&quot; alt=&quot;Card image&quot;&gt;
+            &lt;div class=&quot;card-img-overlay card-img-overlay-fade-to-top card-img-overlay-bottom&quot;&gt;
+                &lt;h5 class=&quot;card-title text-uppercase&quot;&gt;
+                    &lt;a href=&quot;single.html&quot;&gt;Minetta Burger&lt;/a&gt;
+                &lt;/h5&gt;
+                &lt;p class=&quot;verso-mb-0 text-truncate font-italic&quot;&gt;
+                    By
+                    &lt;a href=&quot;author.html&quot;&gt;Christos&lt;/a&gt; in
+                    &lt;a href=&quot;blog.html&quot;&gt;Food&lt;/a&gt;
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    <p>For the <strong>comments list</strong> use this markup</p>
+                    <pre><code>    &lt;div class=&quot;media verso-mt-5&quot;&gt;
+        &lt;div class=&quot;media-left&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;
+                &lt;img class=&quot;d-flex verso-mr-1 verso-mr-md-3 rounded-circle&quot; src=&quot;assets/images/blog-food-author-2-70x70-notinclude.jpg&quot; alt=&quot;comments author&quot;&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;media-body&quot;&gt;
+            &lt;h5 class=&quot;h4 media-heading verso-mb-1 font-italic&quot;&gt;Don Johnson -
+                &lt;small class=&quot;text-muted&quot;&gt;June 11th, 2001
+                    &lt;a href=&quot;#&quot; class=&quot;float-right&quot;&gt;reply&lt;/a&gt;
+                &lt;/small&gt;
+            &lt;/h5&gt;
+            &lt;p&gt;Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.&lt;/p&gt;
+            &lt;!-- Nested media object --&gt;
+            &lt;div class=&quot;media verso-mt-5&quot;&gt;
+                &lt;a class=&quot;media-left&quot; href=&quot;#&quot;&gt;
+                    &lt;img class=&quot;d-flex verso-mr-1 verso-mr-md-3 rounded-circle&quot; src=&quot;assets/images/blog-food-author-3-70x70-notinclude.jpg&quot; alt=&quot;comments author&quot;&gt;
+                &lt;/a&gt;
+                &lt;div class=&quot;media-body&quot;&gt;
+                    &lt;h5 class=&quot;h4 media-heading verso-mb-1 font-italic&quot;&gt;Peter Chur Chlington -
+                        &lt;small class=&quot;text-muted&quot;&gt;June 11th, 2001
+                            &lt;a href=&quot;#&quot; class=&quot;float-right&quot;&gt;reply&lt;/a&gt;
+                        &lt;/small&gt;
+                    &lt;/h5&gt;
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    <p>For the <strong>comment form</strong> use this markup</p>
+                    <pre><code>&lt;!-- Comment Form --&gt;
+&lt;form&gt;
+    &lt;div class=&quot;form-group row&quot;&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+            &lt;input type=&quot;text&quot; class=&quot;form-control verso-shadow-2 verso-shadow-focus-4 verso-transition verso-mb-3&quot; id=&quot;lgFormGroupInput&quot; placeholder=&quot;Your Name&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+            &lt;input type=&quot;email&quot; class=&quot;form-control verso-shadow-2 verso-shadow-focus-4 verso-transition verso-mb-3&quot; id=&quot;smFormGroupInput&quot; placeholder=&quot;Your Email&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-group row verso-mb-3&quot;&gt;
+        &lt;div class=&quot;col-md-12&quot;&gt;
+            &lt;textarea rows=&quot;8&quot; class=&quot;form-control verso-shadow-2 verso-shadow-focus-4 verso-transition &quot; id=&quot;smFormGroupArea&quot; placeholder=&quot;Your Comment&quot;&gt;&lt;/textarea&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-group row &quot;&gt;
+        &lt;div class=&quot;col-md-12&quot;&gt;
+            &lt;input type=&quot;submit&quot; value=&quot;Post Comment&quot; class=&quot;btn btn-primary verso-shadow-2 verso-shadow-focus-4 verso-transition &quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+                    <h3 id="left-sidebar-post-page">Left Sidebar Post Page</h3>
+                    <p>In order to create a <em>left sidebar</em> single post page, the only difference is that we need to break the posts section to two columns</p>
+                    <pre><code>&lt;section class=&quot;section&quot;&gt;
+    &lt;div class=&quot;section-content&quot;&gt;
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-lg-9 verso-order-lg-2&quot;&gt;
+                    &lt;!-- Card --&gt;
+                    &lt;!-- Navigation --&gt;
+                    &lt;!-- Author Card --&gt;
+                    &lt;!-- Related Posts --&gt;
+                    &lt;!-- Comments List --&gt;
+                    &lt;!-- Comment Form --&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;col-lg-3 sidebar verso-order-lg-1&quot;&gt;
+                    &lt;!-- Code for the sidebar --&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+                    <h3 id="right-sidebar-post-page">Right Sidebar Post Page</h3>
+                    <p>Similarly for the <em>right sidebar</em> single post page</p>
+                    <pre><code>&lt;section class=&quot;section&quot;&gt;
+    &lt;div class=&quot;section-content&quot;&gt;
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-lg-9&quot;&gt;
+                    &lt;!-- Card --&gt;
+                    &lt;!-- Navigation --&gt;
+                    &lt;!-- Author Card --&gt;
+                    &lt;!-- Related Posts --&gt;
+                    &lt;!-- Comments List --&gt;
+                    &lt;!-- Comment Form --&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;col-lg-3 sidebar&quot;&gt;
+                    &lt;!-- Code for the sidebar --&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+                    <h1 id="contact">Contact</h1>
+                    <h2 id="changing-the-contact-form">Changing the contact form</h2>
+                    <p>The contact form used on <strong>Corporate Classic</strong> demo uses this markup</p>
+                    <pre><code>&lt;form action=&quot;contact_mailer.php&quot; class=&quot;contact-form&quot;&gt;
+    &lt;input type=&quot;text&quot; id=&quot;name&quot; name=&quot;name&quot; class=&quot;form-control verso-shadow-0 verso-shadow-focus-2 verso-transition verso-mb-3&quot; placeholder=&quot;Name&quot;&gt;
+    &lt;input type=&quot;email&quot; id=&quot;email&quot; name=&quot;email&quot; class=&quot;form-control verso-shadow-0 verso-shadow-focus-2 verso-transition verso-mb-3&quot; placeholder=&quot;Your Email&quot;&gt;
+    &lt;textarea id=&quot;message&quot; name=&quot;message&quot; rows=&quot;8&quot; class=&quot;form-control verso-shadow-0 verso-shadow-focus-2 verso-transition verso-mb-3&quot; placeholder=&quot;Your Comment&quot;&gt;&lt;/textarea&gt;
+    &lt;div class=&quot;form-check verso-mb-3&quot;&gt;
+        &lt;label class=&quot;form-check-label&quot;&gt;
+            &lt;input class=&quot;form-check-input&quot; id=&quot;sign&quot; name=&quot;sign&quot; type=&quot;checkbox&quot; value=&quot;sign&quot;&gt; Sign me up to the newsletter
+        &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary verso-shadow-2&quot;&gt;Send&lt;/button&gt;
+    &lt;div class=&quot;verso-messages verso-pt-2&quot;&gt;&lt;/div&gt;
+&lt;/form&gt;</code></pre>
+                    <p><img src="assets/images/contact_form.png" alt="Contact Form"></p>
+                    <div class="alert alert-warning">
+                        <strong>Make sure</strong> that you import the necessary <strong>contact.js</strong> file for the contact form to work, as in
+                        <br><code>&lt;script type=&quot;text/javascript&quot; src=&quot;assets/js/contact.js&quot;&gt;&lt;/script&gt;</code>
+                    </div>
+                    <h1 id="map">Map</h1>
+                    <h2 id="create-a-new-map">Create a new map</h2>
+                    <p>In order to add a new map to a page, you need to create a section and add the html required for the map to be drawn.</p>
+                    <pre><code>&lt;div class=&quot;google-map&quot; id=&quot;map&quot; style=&quot;height:450px&quot;&gt;&lt;/div&gt;</code></pre>
+                    <div class="alert alert-warning">
+                        Do not forget to assign the <strong>id=&quot;map&quot;</strong> and <strong>class=&quot;google-map&quot;</strong> so that the javascript kicks in.
+                    </div>
+                    <div class="alert alert-info"><strong>Note:</strong> the height of the map is set as an inline style <strong>style=&quot;height:450px&quot;</strong></div>
+                    <div class="alert alert-warning">
+                        <strong>Make sure</strong> that you import the necessary <strong>map.min.js</strong> file for the contact form to work, as in
+                        <br><code>&lt;script type=&quot;text/javascript&quot; src=&quot;assets/js/map.min.js&quot;&gt;&lt;/script&gt;</code>
+                    </div>
+                    <h2 id="create-an-api-key">Create an API Key</h2>
+                    <p>To use the <strong>Google Map</strong> you need to get an <strong>API Key</strong> which will activate the Google Maps JavaScript API and any related services automatically. To get the key, visit the <a href="https://developers.google.com/maps/documentation/javascript/get-api-key#get-an-api-key">Google Docs here</a>. On that page click on the <strong>GET A KEY</strong> button</p>
+                    <p><img src="assets/images/get_a_key.png" alt="page options"></p>
+                    <p>From the next screen, if logged into your Google account, click on the <strong>Continue button</strong> with the <em>Create a project</em> option picked from the select dropdown.</p>
+                    <p><img src="assets/images/continue_key.png" alt="page options"></p>
+                    <p>From the next screen, once the project is created, give a name to your key and click <strong>Create</strong>. A popup will show up with the key. We will use that key to import the <strong>Google Maps API</strong> in the <a href="#imports-for-the-map">next section</a>.</p>
+                    <h2 id="imports-for-the-map">Imports for the map</h2>
+                    <p>In order to have a fully functional map, you need to make sure that you import the <strong>Google Maps API</strong> using the API key that you created as instructed on the <a href="#create-an-api-key">previous section</a>. You need to add</p>
+                    <pre><code>&lt;script type=&quot;text/javascript&quot; src=&quot;https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&amp;sensor=false&quot;&gt;&lt;/script&gt;</code></pre>
+                    <p>to the beginning of the contact page.
+                        <br> Make sure that you replace <code>YOUR_API_KEY</code> with your actual API key. You also need to add the following code that will setup the setings for the map.</p>
+                    <pre><code>&lt;script&gt;
+window.map = {
+    map_type: &#39;ROADMAP&#39;,
+    auto_zoom: &#39;manual&#39;,                                       // set to &#39;manual&#39; to set the zoom manually. Leave empty for auto zoom
+    map_zoom: 7,                                               // set the zoom if auto_zoom is set to
+    map_scrollable: &#39;on&#39;,                                      // makes the map draggable
+    map_style: &#39;retro&#39;,                                   // if set to blackwhite it takes a black/white saturation
+    addresses: [&#39;London&#39;, &#39;Paris&#39;,],                           // addresses separated by comma. Addresses are picked up first
+    latlngs : [&#39;51.511084, -0.133202&#39;,&#39;51.506623, -0.111916&#39;], // Lat/Lng separated by comma. if no addresses are set these coordinates will get used
+    labels: [&#39;London&#39;, &#39;Paris&#39;],                               // labels that will be added to the markeres respectively. Keep the same number as markers
+    auto_center: &#39;auto&#39;,                                       // center the map &#39;auto&#39; or &#39;custom&#39;
+    center_latlng: &#39;&#39;,                                         // centers the map to this point, unless it is set to auto
+    show_markers: &#39;on&#39;,                                        // shows/Hides the markers
+    markerURL: &#39;assets/images/marker.png&#39;,                     // the marker URL
+};
+&lt;/script&gt;</code></pre>
+                    <p>An explanation of the above options follows.</p>
+                    <h2 id="changing-the-map-options">Changing the map options</h2>
+                    <p>In order to change the location of the map you need to edit <strong>source/html/contact.html</strong>. Inside that file locate the code for the map options</p>
+                    <pre><code>    &lt;script&gt;
+        window.map = {
+            map_type: &#39;ROADMAP&#39;,
+            auto_zoom: &#39;manual&#39;,
+            map_zoom: 7,
+            map_scrollable: &#39;on&#39;,
+            map_style: &#39;retro&#39;,
+            addresses: [&#39;London&#39;, &#39;Paris&#39;,],
+            latlngs : [&#39;51.511084, -0.133202&#39;,&#39;51.506623, -0.111916&#39;],
+            labels: [&#39;London&#39;, &#39;Paris&#39;],
+            auto_center: &#39;auto&#39;,
+            center_latlng: &#39;&#39;,
+            show_markers: &#39;on&#39;,
+            markerURL: &#39;assets/images/marker.png&#39;,
+        };
+    &lt;/script&gt;</code></pre>
+                    <p>The available options are</p>
+                    <ul>
+                        <li>map_type : <strong>ROADMAP, SATELLITE, TERRAIN</strong> or <strong>HYBRID</strong>.</li>
+                        <li>auto_zoom : set to &#39;manual&#39; to set the zoom manually. Leave empty for auto zoom</li>
+                        <li>map_zoom : the amount of zoom that you wish to have (1-20), if auto_zoom is set to &#39;manual&#39;</li>
+                        <li>map_style : <strong>blackwhite</strong>, <strong>retro</strong> or <strong>regular</strong></li>
+                        <li>map_scrollable : <strong>on</strong> or <strong>off</strong> for the map to be draggable</li>
+                        <li>show_markers : <strong>on</strong> or <strong>off</strong>.</li>
+                        <li>labels : Set the text that will show as the markers label. If multiple markers are added, make sure that you have set the same number of labels as well.</li>
+                        <li>addresses : Set the addresses of the map&#39;s markers. Be careful of the syntax that is being used here. It has to be an <strong>array</strong> of comma-separated single quotes. Inside the quotes put the addresses separated by comma. Leave empty if you want to use <strong>lat/lng</strong>. Example for 3 addresses [&#39;address 15 New York&#39;,&#39;address 22 New Orleans&#39;,&#39;address 3 Amsterdam&#39;]</li>
+                        <li>latlngs : Set the latitude and longitude of the map&#39;s location. Be careful of the syntax that is being used here. It has to be an <strong>array</strong> of comma-separated single quotes. Inside the quotes put the latitude and longitude separated by comma. Example for 3 markers [&#39;lat1, lng1&#39;,&#39;lat2, lng2&#39;,&#39;lat3, lng3&#39;]</li>
+                        <li>auto_center : Set to <strong>auto</strong> if you want the map to be centered automatically, fitting all the markers that you have inserted or <strong>custom</strong> if you want to set the center of the map</li>
+                        <li>center_latlng : Set the lat/lng according to which you want the map to be <strong>centered at</strong>, <strong>unless</strong> <strong>auto_center</strong> is set to <strong>auto</strong></li>
+                        <li>markerURL : Set the <strong>URL</strong> of the marker&#39;s icon.</li>
+                    </ul>
+                    <h1 id="advanced">Advanced</h1>
+                    <h2 id="php-contact-form">PHP Contact Form</h2>
+                    <p>The contact form uses the <strong>PHPMailer</strong>, which is a full-featured email creation and transfer class for PHP. For more about PHPMailer please visit the official website <a href="http://phpmailer.worxware.com/"><a href="http://phpmailer.worxware.com/">http://phpmailer.worxware.com/</a></a>.</p>
+                    <h3 id="connecting-the-contact-page-to-phpmailer">Connecting the Contact Page to PHPMailer</h3>
+                    <p>For your contact page to connect to <strong>PHPMailer</strong>, you need to make sure that your form has an action set to call <strong>contact-mailer.php</strong> on the server, as in</p>
+                    <pre><code>    &lt;form action=&quot;contact-mailer.php&quot; class=&quot;contact-form&quot; id=&quot;contactForm&quot;&gt;</code></pre>
+                    <p>Also, you need to make sure that there is a folder named <strong>vendor</strong> in the root of the theme. This is the PHPMailer plugin. For the ajax call to take place, it is also vital that you assign the <code>contact-form</code> class to the form, which triggers the related javascript.</p>
+                    <p>For the contact form to work properly, you need to add to the related page</p>
+                    <pre><code>    &lt;script type=&quot;text/javascript&quot; src=&quot;assets/js/contact.js&quot;&gt;&lt;/script&gt;</code></pre>
+                    <h3 id="setup-phpmailer">Setup PHPMailer</h3>
+                    <p>To setup your contact form you will need to edit the <strong>contact-mailer.php</strong> file in the main theme folder. The first <strong>62 lines</strong> can be modified to customise your contact form.</p>
+                    <ol>
+                        <li>
+                            <p>Set the main host. It is by default set to <code>smtp.gmail.com</code> if you are using a <strong>GMail</strong> account. Other options are</p>
+                            <pre><code>Hotmail  =&gt; `smtp.live.com`
+Yahoo    =&gt; `smtp.mail.yahoo.com`
+Lycos    =&gt; `smtp.mail.lycos.com`
+AOL      =&gt; `smtp.aol.com`</code></pre>
+                        </li>
+                        <li>Set the SMTP username and password. This is the email account that PHPMailer will use to send the email. Change <code>some_email@email.com</code> to the email that you want to use and <code>secret</code> to the password of that email, from <strong>lines 16, 17</strong>.</li>
+                        <li>Set the address that the email of the form will be delivered to. Change the <code>receiver@mail.com</code> from <strong>line 21</strong> to the address that you want.</li>
+                        <li>Set the company name - When a message arrives in your inbox it will have a subject with your company name inside. To change this edit <strong>line 26</strong> and change the <em>your_company</em> to your company name.</li>
+                        <li>
+                            <p>Set which fields are required - to change which fields are required in your form you can edit the following</p>
+                            <pre><code> $field_rules = array(
+  &#39;name&#39; =&gt; &#39;required&#39;,
+  &#39;email&#39; =&gt; &#39;required|valid_email&#39;,
+  &#39;message&#39; =&gt; &#39;required&#39;
+ );</code></pre>
+                            <p>Remove the lines of the fields you do not want to be required.</p>
+                        </li>
+                        <li>
+                            <p>Change error validation messages - to change the error messages that popup on the forms change the following section</p>
+                            <pre><code> $error_messages = array(
+  &#39;required&#39; =&gt; &#39;This field is required&#39;,
+  &#39;valid_email&#39; =&gt; &#39;Please enter a valid email address&#39;
+ );
+ // select where each inputs error messages will be shown
+ $error_placements = array(
+  &#39;name&#39; =&gt; &#39;top&#39;,
+  &#39;email&#39; =&gt; &#39;top&#39;,
+  &#39;subject&#39; =&gt; &#39;right&#39;,
+  &#39;message&#39; =&gt; &#39;right&#39;,
+  &#39;submitButton&#39; =&gt; &#39;right&#39;
+ );</code></pre>
+                        </li>
+                    </ol>
+                    <p><strong>$error_messages</strong> - defines the messages shown in the popups.</p>
+                    <p><strong>$error_placements</strong> - defines where the popups will appear on (top|bottom|left|right).</p>
+                    <div class="alert alert-success">
+                        <i class="fa fa-gittip"></i> Keep in mind that you need to include the
+                        <code>&lt;script src=&quot;assets/js/contact.js&quot;&gt;&lt;/script&gt;</code> at the end of the <code>&lt;body&gt;</code>.
+                    </div>
+                    <h3 id="troubleshooting">Troubleshooting</h3>
+                    <p>If you have done all of the above as instructed and you still have issues with the contact form, please do the following:</p>
+                    <ol>
+                        <li>Contact your host and ask them if PHP is enabled and if outgoing connections are enabled.</li>
+                        <li>Check if the <strong>vendor</strong> folder exists on your server.</li>
+                        <li>
+                            <p>Enable debug mode on PHPMailer and get more info on the problem. You can enable debug mode if you add the following line to the beginning of contact-mailer.php, after</p>
+                            <pre><code> $mail = new PHPMailer;
+ $mail-&gt;SMTPDebug  = 2; // enables SMTP debug information (for testing)
+                // 1 = errors and messages
+                // 2 = messages only</code></pre>
+                        </li>
+                        <li>Follow the instructions provided by PHPMailer troubleshooter <a href="https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting">here.</a></li>
+                    </ol>
+                    <h1 id="technologies">Technologies</h1>
+                    <div class="alert alert-success" role="alert"><strong>Thank You</strong> for purchasing the Verso Bootstrap 4 HTML template!
+                    </div>
+                    <h2 id="bootstrap-4">Bootstrap 4</h2>
+                    <p>Verso is built on top of a few fantastic technologies. Bootstrap is the most popular HTML, CSS, and JS framework in the world for building responsive, mobile-first projects on the web. Bootstrap makes front-end web development faster and easier. It&#39;s made for folks of all skill levels, devices of all shapes, and projects of all sizes.</p>
+                    <h1 id="migration">Migration</h1>
+                    <h2 id="migrating-to-version-1-2">Migrating to Version 1.2</h2>
+                    <p>The latest version of Verso has been updated to work with Bootstrap 4 beta 2 version. If you have already installed the Bootstrap alpha version(version &lt; 1.2) of the theme <strong>you need to change your code to reflect the framework&#39;s changes</strong>. These are mostly class names that have been renamed. The following articles explain how to change your code when updating to Bootstrap beta 2 version.</p>
+                    <ol>
+                        <li><a href="https://medium.com/wdstack/upgrade-bootstrap-4-alpha-6-to-beta-ca582f15ee32">Upgrade Bootstrap 4 Alpha 6 to Beta</a></li>
+                        <li><a href="https://medium.com/@lukaszholeczek/how-to-upgrade-bootstrap-4-alpha-6-to-bootstrap-4-beta-d43b4210f2a3">How to upgrade Bootstrap 4 alpha.6 to Bootstrap 4 beta</a></li>
+                        <li><a href="https://wireddots.com/blog/upgrade-bootstrap-4-alpha-6-to-beta">Upgrade Bootstrap 4 Alpha 6 to Beta</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="assets/js/main.js"></script>
+</html>

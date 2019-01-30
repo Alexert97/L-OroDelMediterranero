@@ -1,0 +1,101 @@
+{% set active_page = 'menu-single.html' -%}
+
+{% extends "layouts/default.html" %}
+
+{% block content %}
+
+<div class="section">
+    <div class="section-background">
+        <div class="section-bg-image section-bg-image-size-100 section-bg-image-position-top section-bg-image-paralax --o--demo-bg-image-02"></div>
+    </div>
+    <div class="section-content">
+        <div class="container">
+            <div class="row --o--pb-18 --o--pt-30">
+                <div class="col-lg-6">
+                    <div class="card card-hero --o--shadow-12 --o--shadow-hover-16 --o--transition --o--os-animation --o--os-animation " data-os-animation="fadeIn" data-os-animation-delay=".3s">
+                        <div class="card-img-container">
+                            <div id="carousel-card-1" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="carousel-item active">
+                                        <img class="card-img" src="assets/images/restaurant-dark-700x500-1-notinclude.jpg" alt="Food">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="card-img" src="assets/images/restaurant-dark-700x500-2-notinclude.jpg" alt="Food">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="card-img" src="assets/images/restaurant-dark-700x500-3-notinclude.jpg" alt="Food">
+                                    </div>
+                                </div>
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carousel-card-1" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carousel-card-1" data-slide-to="1"></li>
+                                    <li data-target="#carousel-card-1" data-slide-to="2"></li>
+                              </ol>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="card card-hero --o--shadow-16 --o--shadow-hover-20 --o--transition --o--os-animation --o--os-animation --o--mt-lg-9 --o--ml-lg--10" data-os-animation="fadeIn" data-os-animation-delay=".3s">
+                        <div class="card-body">
+                            <small class="d-block text-uppercase font-Merriweather">Pasta, Main</small>
+                            <h2 class="card-title">
+                                <a href="about.html">Greek Pasta with Tomatoes &amp; Feta</a>
+                            </h2>
+                            <a href="#" data-toggle="tooltip" data-placement="right" title="Difficulty: Medium" class="d-inline-block text-primary --o--mb-3 --o--opacity-5"><i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                            </a>
+                            <p class="card-text --o--mb-3">Italian-style tomatoes go for a brief simmer with tender white cannellini beans and garden-fresh spinach. Serve over hot penne and spoon crumbled bits of feta cheese over the top for a creamy sharp bite with every mouthful.</p>
+                            <h4 class="--o--mb-1">Ingredients</h4>
+                            <ul class="fa-ul --o--mb-3">
+                              <li><i class="fa-li fa fa-check --o--demo-color-red small"></i>2 cans Italian-style diced tomatoes</li>
+                              <li><i class="fa-li fa fa-check --o--demo-color-red small"></i>1 can cannellini beans, drained and rinsed</li>
+                              <li><i class="fa-li fa fa-check --o--demo-color-red small"></i>10 ounces fresh spinach, washed and chopped</li>
+                              <li><i class="fa-li fa fa-check --o--demo-color-red small"></i>8 ounces penne pasta</li>
+                              <li><i class="fa-li fa fa-check --o--demo-color-red small"></i>1/2 cup crumbled feta cheese</li>
+                            </ul>
+                            <h4 class="--o--mb-1">Preparation</h4>
+                            <ol class="fa-ul --o--pb-lg-14">
+                              <li><i class="fa-li fa fa-circle --o--demo-color-red small"></i>Cook the pasta in a large pot of boiling  water</li>
+                              <li><i class="fa-li fa fa-circle --o--demo-color-red small"></i>Meanwhile, combine tomatoes and beans in skillet.</li>
+                              <li><i class="fa-li fa fa-circle --o--demo-color-red small"></i>Add spinach to the sauce.</li>
+                              <li><i class="fa-li fa fa-circle --o--demo-color-red small"></i>Serve sauce over pasta, and sprinkle with feta.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 ml-auto">
+                    <div class="--o--pos-relative --o--shadow-16 --o--shadow-hover-20 --o--demo-bg-color-mahogany text-center --o--mt-lg--19 --o--pa-2 --o--z-2 --o--text-light  --o--os-animation --o--transition" data-os-animation="fadeIn" data-os-animation-delay=".7s">
+                        <div class="row text-center">
+                            <div class="col-sm-4 --o--py-2">
+                                <i class="fa fa-clock-o fa-2x"></i>
+                                <small class="d-block --o--opacity-5 font-italic">Prep Time</small>
+                                <h5 class="--o--mb-0">12mins</h5>
+                            </div>
+                            <div class="col-sm-4 --o--py-2">
+                                <i class="fa fa-fire fa-2x"></i>
+                                <small class="d-block --o--opacity-5 font-italic">Cook Time</small>
+                                <h5 class="--o--mb-0">45mins</h5>
+                            </div>
+                            <div class="col-sm-4 --o--py-2">
+                                <i class="fa fa-users fa-2x"></i>
+                                <small class="d-block --o--opacity-5 font-italic">Serves</small>
+                                <h5 class="--o--mb-0">4 people</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

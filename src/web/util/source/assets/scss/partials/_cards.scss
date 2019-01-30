@@ -1,0 +1,361 @@
+// Cards
+
+// Mixins
+@mixin card-variant($background, $border) {
+  background-color: $background;
+  border-color: $border;
+
+  .card-header,
+  .card-footer {
+    background-color: transparent;
+  }
+}
+
+
+.card-title {
+  margin-bottom: 0.6666rem;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+.card-body + .card-body {
+  padding-top: 0;
+}
+.card-body img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card-subtitle {
+  margin-top: -0.3rem;
+}
+
+.card-footer {
+  padding: $o-card-cap-spacer-y $card-spacer-x;
+  background-color: $card-cap-bg;
+  box-shadow: 0px 0px 2px rgba(0,0,0,0.12) inset;
+}
+
+// Card Images
+[class^="card-img"] {
+  width: 100%;
+  // Fix for post images in WordPress
+  .post &.wp-post-image {
+    width: auto;
+    max-width: 100%;
+  }
+}
+.card-img {
+  border-radius: $card-border-radius;
+  height: auto !important;
+}
+.card-img-container {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  background-size: cover;
+  background-color: $card-cap-bg;
+  justify-content: center;
+  body.--o--agent-explorer & {
+    flex: 0 1 auto;
+  }
+}
+
+// Image Overlay
+.card-img-overlay {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  background: $o-card-overlay-bg;
+  color: #fff;
+  h1, h2, h3, h4, h5, h6, a, p, div, span {
+    color: #fff;
+    outline: none;
+    &:hover {
+      color: #fff;
+    }
+  }
+  &.card-img-overlay-mini {
+    left: auto;
+    right: auto;
+    width: auto;
+    padding: $card-img-overlay-padding/2 $card-img-overlay-padding;
+  }
+  &.card-img-overlay-square {
+    left: auto;
+    right: auto;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    padding: 0;
+  }
+  &.card-img-overlay-transparent {
+    background: none;
+  }
+}
+
+// Image Overlay Background Variations
+.card-img-overlay-fade-to-bottom {
+  background: linear-gradient(to bottom, $o-card-overlay-bg 0%,rgba(0,0,0,0) 60%);
+}
+.card-img-overlay-fade-to-top {
+  background: linear-gradient(to top, $o-card-overlay-bg 0%,rgba(0,0,0,0) 60%);
+}
+.card-img-overlay-fade-to-left {
+  background: linear-gradient(to left, $o-card-overlay-bg 0%,rgba(0,0,0,0) 60%);
+}
+.card-img-overlay-fade-to-right {
+  background: linear-gradient(to right, $o-card-overlay-bg 0%,rgba(0,0,0,0) 60%);
+}
+
+// Image Overlay positioning
+.card-img-overlay-top {
+  justify-content: flex-start;
+  &.card-img-overlay-mini {
+    bottom: auto;
+    top:  $card-spacer-y;
+    @include media-breakpoint-up(sm) {
+      .card-hero & {
+        top: $o-card-hero-spacer-y;
+      }
+    }
+  }
+}
+.card-img-overlay-center {
+  justify-content: center;
+  &.card-img-overlay-mini {
+    bottom: auto;
+    top:  $card-spacer-y;
+    @include media-breakpoint-up(sm) {
+      .card-hero & {
+        top: $o-card-hero-spacer-y;
+      }
+    }
+  }
+}
+.card-img-overlay-bottom {
+  justify-content: flex-end;
+  &.card-img-overlay-mini {
+    top: auto;
+    bottom:  $card-spacer-y;
+    @include media-breakpoint-up(sm) {
+      .card-hero & {
+        bottom: $o-card-hero-spacer-y;
+      }
+    }
+  }
+}
+.card-img-overlay-left {
+  &.card-img-overlay-mini {
+    right: auto;
+    left:  $card-spacer-x;
+    @include media-breakpoint-up(sm) {
+      .card-hero & {
+        left: $o-card-hero-spacer-x;
+      }
+    }
+  }
+}
+.card-img-overlay-right {
+  &.card-img-overlay-mini {
+    left: auto;
+    right:  $card-spacer-x;
+    @include media-breakpoint-up(sm) {
+      .card-hero & {
+        right: $o-card-hero-spacer-x;
+      }
+    }
+  }
+}
+
+// Image overlay effects
+.card-img-overlay.card-img-overlay-on-hover {
+  opacity: 0;
+  transition: all $o-transition-speed cubic-bezier(.25,.8,.25,1);
+  h1, h2, h3, h4, h5, h6, a, p, div, span {
+    opacity: 0;
+    transform: translateY(2em);
+    transition-delay: 1.3 * $o-transition-speed;
+  }
+  &:hover{
+    opacity: 1;
+    h1, h2, h3, h4, h5, h6, a, p, div, span {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+// Card Columns
+.card-columns {
+  column-gap: $grid-gutter-width;
+  .card {
+    display: inline-block;
+  }
+}
+.card-columns-2 {
+  column-count: 2;
+}
+.card-columns-4 {
+  column-count: 4;
+}
+
+// Blockquote Card
+.card-blockquote.blockquote, .card-body blockquote {
+  padding: ($spacer * 3);
+}
+
+// Horizontal Cards
+.card > .row {
+  margin-left: 0;
+  margin-right: 0;
+  overflow: hidden;
+  > [class^="col"] {
+    padding: 0;
+  }
+}
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    .card > .row [class*="col-#{$breakpoint}"] {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      .card-img, .carousel {
+        top: 0;
+        left: 0;
+        height: 100% !important;
+        width: 100%;
+        position: absolute;
+        object-fit: cover;
+      }
+      .carousel img {
+        height: 100%;
+        width: 100% !important;
+        object-fit: cover;
+      }
+      // Explorer fix for object fit
+      body.--o--agent-explorer &, body.--o--agent-edge & {
+        .card-img {
+          visibility: hidden;
+        }
+      }
+    }
+  }
+}
+
+// Horizontal cards as post format images
+.archive .card-horizontal.format-image,
+.blog .card-horizontal.format-image {
+  .card-img-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    .card-img {
+      height: 100% !important;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+// Inverse Cards
+.card-inverse, .card.sticky {
+   @include card-variant($o-card-inverse-bg, $o-card-inverse-bg);
+  .card-text, .card-body, .card-blockquote .blockquote-footer, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, a {
+    color: rgba(255, 255, 255, 0.65);
+    a {
+      color: rgba(255, 255, 255, 1);
+    }
+    .text-muted {
+      color: rgba(255, 255, 255, 0.5) !important;
+    }
+  }
+  .card-subtitle, .card-title, .card-blockquote {
+    color: #fff;
+  }
+  .card-title, .card-subtitle {
+    > h1, > h2, > h3, > h4, > h5, > h6, > a, > p, > div, > span {
+      color: #fff;
+    }
+  }
+  .card-footer {
+    a, a:hover, .text-muted, a.text-muted {
+      color: #fff !important;
+    }
+  }
+}
+
+// Hero Cards
+@include media-breakpoint-up(sm) {
+  .card-hero {
+    .card-body {
+      padding: $o-card-hero-spacer-x $o-card-hero-spacer-y;
+      & + .card-body {
+        padding-top: 0;
+      }
+    }
+  }
+}
+
+// Collapsible Headers
+.card-header-collapse{
+  display: block;
+  position: relative;
+  z-index: 2;
+  &:after {
+    width: 24px;
+    height: 24px;
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -12px;
+    z-index: 1;
+    transition: all $o-transition-speed cubic-bezier(.25,.8,.25,1);
+    font-family: FontAwesome;
+    content: "\f107";
+    text-align: center;
+    line-height: 24px;
+    font-size: 16px;
+  }
+  &:not(.collapsed):after {
+    transform: rotate(180deg);
+  }
+}
+
+// Post Format Aside
+.format-aside {
+  .card-title, 
+  .card-subtitle {
+    display: none;
+  }
+}
+
+// Post Format Status
+.format-status {
+  .card-body {
+    display: flex;
+    flex-direction: column-reverse;
+    .card-title {
+      display: none;
+    }
+    .card-subtitle {
+      margin-bottom: 0 !important;
+    }
+    p:not(.card-subtitle) {
+      @extend .lead;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+

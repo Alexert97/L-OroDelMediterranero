@@ -1,0 +1,101 @@
+{% set active_page = 'checkout.html' -%}
+
+{% extends "layouts/default.html" %}
+
+{% block content %}
+<div class="section --o--demo-bg-color-red">
+    <div class="section-content">
+        <div class="container">
+            <div class="row --o--py-6">
+                <h1 class="--o--text-light --o--mb-0">
+                    Checkout
+                </h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section">
+     <div class="section-background">
+        <div class="section-bg-image section-bg-image-size-100 section-bg-image-position-bottom --o--demo-bg-image-07"></div>
+    </div>
+    <div class="section-content">
+        <div class="container">
+            <div class="row --o--pt-6 --o--pb-12">
+                <div class="col-lg-6">
+                    <h3 class="--o--mb-3">Billing Address</h3>
+                    <form>
+                        <label>First name*</label> <br>
+                        <input type="text" class="form-control --o--shadow-4 --o--shadow-hover-8 --o--transition" name="fname"><br>
+                        <label>Last name*</label> <br>
+                        <input type="text" class="form-control --o--shadow-4 --o--shadow-hover-8 --o--transition" name="lname"><br>
+                        <label>Company</label> <br>
+                        <input type="text" class="form-control --o--shadow-4 --o--shadow-hover-8 --o--transition" name="company"><br>
+                        <label>Email Address*</label> <br>
+                        <input type="text" class="form-control --o--shadow-4 --o--shadow-hover-8 --o--transition" name="email"><br>
+                        <label>Phone*</label> <br>
+                        <input type="text" class="form-control --o--shadow-4 --o--shadow-hover-8 --o--transition" name="phone"><br>
+                        <label>Country*</label> <br>
+                        <input type="text" class="form-control --o--shadow-4 --o--shadow-hover-8 --o--transition" name="country"><br>
+                        <label>Address*</label><br>
+                        <input type="text" class="form-control --o--shadow-4 --o--shadow-hover-8 --o--transition" name="address" placeholder="Streer Address"><br>
+                        <input type="text" class="form-control --o--shadow-4 --o--shadow-hover-8 --o--transition" name="appartment" placeholder="Appartment, suit, unit etc.(optional)"><br>
+                        <label>City/Town*</label> <br>
+                        <input type="text" class="form-control --o--shadow-4 --o--shadow-hover-8 --o--transition" name="city"><br>
+                        <label>State/Country*</label> <br>
+                        <input type="text" class="form-control --o--shadow-4 --o--shadow-hover-8 --o--transition" name="state"><br>
+                        <label>Postcode / ZIP*</label> <br>
+                        <input type="text" class="form-control --o--shadow-4 --o--shadow-hover-8 --o--transition" name="postcode"><br>
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" value="">
+                            Create an account?
+                        </label>
+                    </form>
+                    <h3 class="--o--mt-5 --o--mb-3">Additional Information</h3>
+                    <label>Order Notes</label><br>
+                    <textarea rows="5" class="form-control --o--shadow-4 --o--shadow-hover-8 --o--transition" name="details" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
+                </div>
+                <div class="col-lg-6">
+                   <h3 class="--o--mb-3">Your Order</h3>
+                    <table class="table bordered table-hover --o--shadow-12 --o--shadow-hover-16 --o--transition">
+                        <thead>
+                            <tr>
+                                <th class="text-center">PRODUCT</th>
+                                <th class="text-center">TOTAL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Smartphone × 1</td>
+                                <td>£120.00</td>
+                            </tr>
+                            <tr>
+                                <td>Smartphone × 1</td>
+                                <td>£120.00</td>
+                            </tr>
+                            <tr>
+                                <td>Smartphone × 1</td>
+                                <td>£120.00</td>
+                            </tr>
+                            <tr>
+                                <th>Cart Subtotal</th>
+                                <td>£360.00</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td>Order Total</td>
+                                <td>£360.00</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <form>
+                        <input type="radio" class="--o--mt-2" name="payment" value="check" checked> Check Payments<br>
+                        <input type="radio" class="--o--mt-2" name="payment" value="paypal"> PayPal<br>
+                        <input type="submit" class="--o--mt-2 btn btn-primary --o--shadow-2 rounded-0 pull-right" name="Place order">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

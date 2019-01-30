@@ -1,0 +1,99 @@
+// Timeline Element
+.--o--timeline {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.--o--timeline-item {
+  position: relative;
+  flex: 1;
+  padding-bottom: $grid-gutter-width;
+  padding-left: $grid-gutter-width;
+  flex: 0 1 auto;
+  &:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  &:before {
+    position: absolute;
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: $hr-border-color;
+    left: 0;
+    top: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 3px  rgba(0, 0, 0, .08);
+    z-index: 2;
+    animation: timeline 2s ease-in-out infinite;
+  }
+  &:after {
+    content: "";
+    width: 1px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 6px;
+    background: $hr-border-color;
+    opacity: 0.2;
+    z-index: 1;
+  }
+  &:first-child:after {
+    top: 10px;
+  }
+  &:last-child:after {
+    top: 0px;
+    bottom: calc(100% - 10px);
+  }
+}
+@include media-breakpoint-up(lg) {
+  .--o--timeline-horizontal {
+    flex-direction: row;
+  }
+  .--o--timeline-horizontal .--o--timeline-item {
+    padding-left: $grid-gutter-width;
+    padding-bottom: 0;
+    padding-top: $grid-gutter-width;
+    text-align: center;
+    &:first-child {
+      margin-left: 0;
+    }
+    &:before {
+      left: 50%;
+      top: 0;
+    }
+    &:after {
+      height: 1px;
+      top: 6px;
+      left: 0;
+      right: 0;
+      bottom: auto;
+      width: auto;
+    }
+    &:first-child:after {
+      left: 50%;
+    }
+    &:last-child:after {
+      right: 50%;
+    }
+  }
+}
+$i: 1;
+@while $i <= 10 {
+  .--o--timeline-item:nth-child(#{$i}):before {
+    animation-delay: ($i * .4s);
+  }
+  $i: $i + 1;
+}
+@keyframes timeline {
+  0% {
+    box-shadow: 0px 0px 0px 3px  rgba(0, 0, 0, .08);
+  }
+  50% {
+    box-shadow: 0px 0px 0px 6px  rgba(0, 0, 0, .16);
+  }
+  100% {
+    box-shadow: 0px 0px 0px 3px  rgba(0, 0, 0, .08);
+  }
+}
