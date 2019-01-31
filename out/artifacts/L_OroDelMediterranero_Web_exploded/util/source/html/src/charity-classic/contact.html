@@ -1,0 +1,184 @@
+{% set active_page = 'contact.html' -%}
+
+{% extends "layouts/default.html" %}
+
+{% block extrajs %}
+    <script type="text/javascript">
+        var map = {
+            map_type: 'ROADMAP',
+            auto_zoom: 'manual',                                        // set to 'manual' to set the zoom manually. Leave empty for auto zoom
+            map_zoom: 7,                                                // set the zoom if auto_zoom is set to
+            map_scrollable: 'on',                                       // makes the map draggable
+            map_style: '',                                    // if set to blackwhite it takes a black/white saturation
+            addresses: ['London', 'Paris'],                             // addresses separated by comma. Addresses are picked up first
+            latlngs : ['51.511084, -0.133202', '51.506623, -0.111916'], // Lat/Lng separated by comma. if no addresses are set these coordinates will get used
+            labels: ['London', 'Paris'],                                // labels that will be added to the markeres respectively. Keep the same number as markers
+            auto_center: 'auto',                                        // center the map 'auto' or 'custom'
+            center_latlng: '',                                          // centers the map to this point, unless it is set to auto
+            show_markers: 'on',                                         // shows/Hides the markers
+            markerURL: 'assets/images/marker.png'                       // the marker URL
+        };
+    </script>
+    <script type="text/javascript" src="assets/js/contact.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA53lVLoFr_BgRcgzx80ThvLm4vBJLp3x0"></script>
+{% endblock %}
+
+{% block content %}
+
+<div class="section --o--demo-bg-black">
+    <div class="section-background">
+        <div class="section-bg-image section-bg-image-size-md-cover --o--demo-bg-image-6 section-bg-image-paralax --o--opacity-5"></div>
+    </div>
+    <div class="section-content">
+        <div class="container">
+            <div class="row --o--py-10 --o--text-light">
+                <div class="col-md-12">
+                    <h1 class="--o--heading-bordered text-capitalize --o--os-animation --o--mb-0" data-os-animation="fadeIn" data-os-animation-delay=".3s">
+                    <small class="text-muted font-italic">Contact</small> verso
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="--o--heading-bordered text-capitalize --o--os-animation  --o--mt-10 --o--mb-4" data-os-animation="fadeIn" data-os-animation-delay=".3s">
+                        <small class="text-muted font-italic">Send your</small> Message
+                    </h2>
+                </div>
+                <div class="col-md-12">
+                    <div class="card card-hero --o--shadow-8 --o--shadow-hover-16 --o--transition --o--os-animation" data-os-animation="fadeIn" data-os-animation-delay=".3s">
+                        <div class="card-img-container">
+                            <img class="card-img-top" src="assets/images/charity-02-1100x300-notinclude.jpg" alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Do you have anything in your mind to tell us? Please don't hesitate to get in touch to us via our contact form.</p>
+                            <form action="contact_mailer.php" class="contact-form" id="contactForm">
+                                <div class="row text-center">
+                                    <div class="col-md-6">
+                                        <input type="text" id="name" name="name" class="form-control --o--shadow-2 --o--shadow-focus-4 --o--transition --o--mb-2" placeholder="Name">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="email" id="email" name="email" class="form-control --o--shadow-2 --o--shadow-focus-4 --o--transition --o--mb-2" placeholder="Your Email">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <textarea id="message" name="message" rows="8" class="form-control --o--shadow-2 --o--shadow-focus-4 --o--transition --o--mb-2" placeholder="Your Message"></textarea>
+                                        <button type="submit" class="btn btn-primary --o--shadow-2">Send Message</button>
+                                    </div>
+                                </div>
+                                <div class="--o--messages --o--pt-2"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <h2 class="--o--heading-bordered text-capitalize --o--os-animation  --o--mt-10 --o--mb-4" data-os-animation="fadeIn" data-os-animation-delay=".3s">
+                        <small class="text-muted font-italic">Address</small> & Details
+                    </h2>
+                </div>
+                <div class="col-md-12">
+                    <div class="card card-horizontal card-hero --o--shadow-8 --o--shadow-hover-16 --o--transition --o--os-animation --o--mb-10" data-os-animation="fadeIn" data-os-animation-delay=".4s">
+                        <div class="row flex-items-xs-middle">
+                            <div class="col-lg-6 flex-lg-last">
+                                <div class="google-map --o--photo-filter-grayscale" id="map" style="min-height:350px; height:100%"></div>
+                            </div>
+                            <div class="col-lg-6 flex-lg-first">
+                                <div class="card-body">
+                                    <dl class="row --o--mb-0">
+                                        <dt class="col-md-4">
+                                            <span class="text-muted font-italic">Street:</span>
+                                        </dt>
+                                        <dd class="col-md-8">
+                                            28th Envato Street
+                                        </dd>
+                                        <dt class="col-md-4">
+                                            <span class="text-muted font-italic">City:</span>
+                                        </dt>
+                                        <dd class="col-md-8">
+                                            New York
+                                        </dd>
+                                        <dt class="col-md-4">
+                                            <span class="text-muted font-italic">Phone No:</span>
+                                        </dt>
+                                        <dd class="col-md-8">
+                                            555-7894-1144
+                                        </dd>
+                                        <dt class="col-md-4">
+                                            <span class="text-muted font-italic">E-Mail:</span>
+                                        </dt>
+                                        <dd class="col-md-8">
+                                            info@versochurch.org
+                                        </dd>
+                                        <dt class="col-md-4">
+                                            <span class="text-muted font-italic">Manager:</span>
+                                        </dt>
+                                        <dd class="col-md-8">
+                                            Gary Jones
+                                        </dd>
+                                        <dt class="col-md-4">
+                                            <span class="text-muted font-italic">Facebook:</span>
+                                        </dt>
+                                        <dd class="col-md-8">
+                                            verso Church Group
+                                        </dd>
+                                        <dt class="col-md-4">
+                                            <span class="text-muted font-italic">Twitter:</span>
+                                        </dt>
+                                        <dd class="col-md-8">
+                                            @verso_Church
+                                        </dd>
+                                        <dt class="col-md-4">
+                                            <span class="text-muted font-italic">Instagram:</span>
+                                        </dt>
+                                        <dd class="col-md-8">
+                                            The Great verso Church
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-background">
+        <div class="section-bg-image section-bg-image-size-md-cover --o--demo-bg-image-6"></div>
+    </div>
+    <div class="section-content">
+        <div class="container-fluid">
+            <div class="row ">
+                <div class="col-md-3 col-xs-6 --o--py-6 text-xs-center --o--demo-bg-orange-45 --o--text-light text-capitalize --o--os-animation text-center" data-os-animation="fadeInUp" data-os-animation-delay=".3s">
+                    <i class="fa fa-graduation-cap fa-2x"></i>
+                    <h2 class="--o--mb-1">250</h2>
+                    <h5 class="--o--mb-0">School Graduates</h5>
+                </div>
+                <div class="col-md-3 col-xs-6 --o--py-6 text-xs-center --o--demo-bg-orange-60 --o--text-light text-capitalize --o--os-animation text-center" data-os-animation="fadeInUp" data-os-animation-delay=".4s">
+                    <i class="fa fa-heartbeat fa-2x"></i>
+
+                    <h2 class="--o--mb-1">450</h2>
+                    <h5 class="--o--mb-0">Health Check-ups</h5>
+                </div>
+                <div class="col-md-3 col-xs-6 --o--py-6 text-xs-center --o--demo-bg-orange-75 --o--text-light text-capitalize --o--os-animation text-center" data-os-animation="fadeInUp" data-os-animation-delay=".5s">
+                    <i class="fa fa-stethoscope fa-2x"></i>
+                    <h2 class="--o--mb-1">250</h2>
+                    <h5 class="--o--mb-0">medical checks</h5>
+                </div>
+                <div class="col-md-3 col-xs-6 --o--py-6 text-xs-center --o--demo-bg-orange-90 --o--text-light text-capitalize --o--os-animation text-center" data-os-animation="fadeInUp" data-os-animation-delay=".6s">
+                    <i class="fa fa-university fa-2x"></i>
+                    <h2 class="--o--mb-1">85</h2>
+                    <h5 class="--o--mb-0">University Scholarships</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

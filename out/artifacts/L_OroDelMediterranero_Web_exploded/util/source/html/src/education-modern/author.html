@@ -1,0 +1,82 @@
+{% set active_page = 'blog.html' -%}
+
+{% extends "layouts/default.html" %}
+
+{% block content %}
+<div class="section">
+    <div class="section-background">
+        <div class="section-bg-image section-bg-image-size-cover section-bg-image-position-top section-bg-image-paralax --o--demo-bg-image-01"></div>
+    </div>
+    <div class="section-content">
+        <div class="container">
+            <div class="row --o--pb-18 --o--pt-25">
+                <div class="col-lg-9">
+                    <div class="card  card-hero --o--shadow-15 --o--shadow-hover-20 --o--transition --o--mb-5 --o--os-animation --o--os-animation" data-os-animation="fadeIn" data-os-animation-delay=".3s">
+                        <div class="card-img-container">
+                            <img class="card-img" src="assets/images/education-modern-team-12-1000x500-notinclude.jpg" alt="Card image">
+                        </div>
+                        <div class="card-body">
+                            <h1 class="h2 card-title --o--mb-1">
+                                John M Langan
+                            </h1>
+                            <p class="card-subtitle font-italic text-muted --o--mb-3">By <a href="author.html">Christos</a> on May 1977, in <a href="blog.html">Organization</a></p>
+                            <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+                        </div>
+                        <div class="card-footer clearfix">
+                            <div class="--o--icon-set --o--transition float-right">
+                                <a class="--o--icon-set-item text-muted --o--transition" href="#">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                                <a class="--o--icon-set-item text-muted --o--transition" href="#">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                                <a class="--o--icon-set-item text-muted --o--transition" href="#">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <a class="--o--icon-set-item text-muted --o--transition" href="#">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <h2 class="h3 --o--mb-3 --o--transition --o--os-animation text-shadow" data-os-animation="fadeIn" data-os-animation-delay=".3s">Authors posts</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card --o--shadow-15 --o--shadow-hover-20 --o--transition --o--mb-3 --o--os-animation" data-os-animation="fadeIn" data-os-animation-delay=".4s">
+                                <div class="card-img-container">
+                                    <img class="card-img d-block mw-100" src="assets/images/education-modern-course-08-400x300-notinclude.jpg" alt="Card image">
+                                    <div class="card-img-overlay card-img-overlay-fade-to-top card-img-overlay-bottom">
+                                        <h5 class="card-title text-uppercase"><a href="single.html">Best HTML practises</a></h5>
+                                        <p class="--o--mb-0 text-truncate font-italic">
+                                            By <a href="author.html">Christos</a> in <a href="blog.html">Web Design</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card --o--shadow-15 --o--shadow-hover-20 --o--transition --o--mb-3 --o--os-animation" data-os-animation="fadeIn" data-os-animation-delay=".4s">
+                                <div class="card-img-container">
+                                    <img class="card-img d-block mw-100" src="assets/images/education-modern-course-07-400x300-notinclude.jpg" alt="Card image">
+                                    <div class="card-img-overlay card-img-overlay-fade-to-top card-img-overlay-bottom">
+                                        <h5 class="card-title text-uppercase"><a href="single.html">Working with WordPress</a></h5>
+                                        <p class="--o--mb-0 text-truncate font-italic">
+                                            By <a href="author.html">Christos</a> in <a href="blog.html">Brand Design</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 sidebar">
+                    {% include "partials/sidebar.html" %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

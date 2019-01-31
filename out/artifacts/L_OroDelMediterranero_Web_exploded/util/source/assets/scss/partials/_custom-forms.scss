@@ -1,0 +1,15 @@
+.custom-select, .orderby {
+  border: 0;
+  font-family: $font-family-base;
+  border-left: $input-btn-border-width solid $input-border-color;
+  -webkit-appearance: none;
+  &::placeholder {
+    font-style: italic;
+  }
+  &:focus {
+    border-left: $input-btn-border-width solid $input-border-color;
+  }
+  &:disabled::placeholder {
+    opacity: 0.5;
+  }
+}

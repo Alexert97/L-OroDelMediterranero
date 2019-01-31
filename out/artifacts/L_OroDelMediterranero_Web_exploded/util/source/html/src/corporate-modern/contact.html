@@ -1,0 +1,157 @@
+{% set active_page = 'services.html' -%}
+
+{% extends "layouts/default.html" %}
+
+{% block extrajs %}
+    <script type="text/javascript">
+        var map = {
+            map_type: 'ROADMAP',
+            auto_zoom: 'manual',                                        // set to 'manual' to set the zoom manually. Leave empty for auto zoom
+            map_zoom: 7,                                                // set the zoom if auto_zoom is set to
+            map_scrollable: 'on',                                       // makes the map draggable
+            map_style: '',                                    // if set to blackwhite it takes a black/white saturation
+            addresses: ['London', 'Paris'],                             // addresses separated by comma. Addresses are picked up first
+            latlngs : ['51.511084, -0.133202', '51.506623, -0.111916'], // Lat/Lng separated by comma. if no addresses are set these coordinates will get used
+            labels: ['London', 'Paris'],                                // labels that will be added to the markeres respectively. Keep the same number as markers
+            auto_center: 'auto',                                        // center the map 'auto' or 'custom'
+            center_latlng: '',                                          // centers the map to this point, unless it is set to auto
+            show_markers: 'on',                                         // shows/Hides the markers
+            markerURL: 'assets/images/marker.png'                       // the marker URL
+        };
+    </script>
+    <script type="text/javascript" src="assets/js/contact.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA53lVLoFr_BgRcgzx80ThvLm4vBJLp3x0"></script>
+{% endblock %}
+
+{% block content %}
+<div class="section">
+     <div class="section-background">
+        <div class="section-bg-image section-bg-image-size-cover section-bg-image-position-top section-bg-image-paralax --o--demo-bg-image-04"></div>
+    </div>
+    <div class="section-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <h1 class="display-3 text-uppercase --o--text-light --o--font-weight-300 --o--mt-25 --o--mb-15 --o--opacity-8 --o--os-animation text-shadow" data-os-animation="fadeIn" data-os-animation-delay=".3s">
+                        <span class="text-muted">Contact </span> Us
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-background" data-section-bg-title="CONTACT"></div>
+    <div class="section-content">
+        <div class="container">
+            <div class="row --o--py-10 --o--mb-lg-10">
+                <div class="col-lg-12">
+                    <h1 class="h2 --o--heading-image --o--heading-image-01 text-uppercase --o--heading-image-reversed d-inline-block  text-left --o--os-animation" data-os-animation="fadeInLeft" data-os-animation-delay=".3s">
+                        Contact Details
+                    </h1>
+                </div>
+                <div class="col-lg-12">
+                    <div class="card card-hero card-horizontal --o--shadow-15 --o--shadow-hover-20 --o--transition --o--mb-3 --o--os-animation text-center --o--os-animation " data-os-animation="fadeIn" data-os-animation-delay=".4s">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card-body">
+                                    <form action="contact_mailer.php" class="contact-form">
+                                        <input type="text" id="name" name="name" class="form-control --o--shadow-0 --o--shadow-focus-2 --o--transition --o--mb-3" placeholder="Name">
+                                        <input type="email" id="email" name="email" class="form-control --o--shadow-0 --o--shadow-focus-2 --o--transition --o--mb-3" placeholder="Your Email">
+                                        <textarea id="message" name="message" rows="8" class="form-control --o--shadow-0 --o--shadow-focus-2 --o--transition --o--mb-3" placeholder="Your Comment"></textarea>
+                                        <div class="form-check --o--mb-3">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" id="sign" name="sign" type="checkbox" value="sign"> Sign me up to the newsletter
+                                            </label>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary --o--shadow-2">Send</button>
+                                        <div class="--o--messages --o--pt-2"></div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-md-6 --o--demo-bg-image-11 card-inverse">
+                                <div class="card-body text-left">
+                                    <p>Completely synergize scalable e-commerce rather than high standards in e-services. Assertively iterate resource maximizing products after leading-edge intellectual capital.</p>
+                                    <dl class="row --o--mb-0">
+                                        <dt class="col-md-4">
+                                            <span class="text-muted font-italic">Street:</span>
+                                        </dt>
+                                        <dd class="col-md-8">
+                                            28th Envato Street
+                                        </dd>
+                                        <dt class="col-md-4">
+                                            <span class="text-muted font-italic">City:</span>
+                                        </dt>
+                                        <dd class="col-md-8">
+                                            New York
+                                        </dd>
+                                        <dt class="col-md-4">
+                                            <span class="text-muted font-italic">Phone No:</span>
+                                        </dt>
+                                        <dd class="col-md-8">
+                                            555-7894-1144
+                                        </dd>
+                                        <dt class="col-md-4">
+                                            <span class="text-muted font-italic">E-Mail:</span>
+                                        </dt>
+                                        <dd class="col-md-8">
+                                            info@versotheme.org
+                                        </dd>
+                                        <dt class="col-md-4">
+                                            <span class="text-muted font-italic">Manager:</span>
+                                        </dt>
+                                        <dd class="col-md-8">
+                                            Gary Jones
+                                        </dd>
+                                        <dt class="col-md-4">
+                                            <span class="text-muted font-italic">Facebook:</span>
+                                        </dt>
+                                        <dd class="col-md-8">
+                                            Verso Theme Group
+                                        </dd>
+                                        <dt class="col-md-4">
+                                            <span class="text-muted font-italic">Twitter:</span>
+                                        </dt>
+                                        <dd class="col-md-8">
+                                            @Verso_Theme
+                                        </dd>
+                                        <dt class="col-md-4">
+                                            <span class="text-muted font-italic">Instagram:</span>
+                                        </dt>
+                                        <dd class="col-md-8">
+                                            One Theme to Rule them All.
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+     <div class="section-background" data-section-bg-title="OFFICES">
+        <div class="section-bg-image section-bg-image-size-cover section-bg-image-position-top section-bg-image-paralax --o--demo-bg-image-02"></div>
+    </div>
+    <div class="section-content">
+        <div class="container">
+            <div class="row --o--pt-10 --o--pb-10 --o--text-light">
+                <div class="col-lg-12">
+                    <h1 class="h2 --o--heading-image --o--heading-image-01 text-uppercase --o--heading-image-reversed d-inline-block  text-left --o--os-animation text-shadow" data-os-animation="fadeInLeft" data-os-animation-delay=".3s">
+                        Our Offices
+                    </h1>
+                </div>
+                <div class="col-lg-12">
+                    <div class="card card-hero card-inverse --o--shadow-15 --o--shadow-hover-20 --o--os-animation text-center --o--photo-filter-grayscale" data-os-animation="fadeIn" data-os-animation-delay=".4s">
+                        <div class="google-map" id="map" style="height:450px"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

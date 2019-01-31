@@ -1,0 +1,53 @@
+// Margin Contextual Control
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    // Top/Bottom margin from -300 to 300 px
+    @for $i from -30 through 30 {
+      .--o--mt#{$infix}-#{$i} {
+        margin-top: #{$i * 10}px !important;
+      }
+      .--o--mb#{$infix}-#{$i} {
+        margin-bottom: #{$i * 10}px !important;
+      }
+    }
+
+    // Left/Right margin from 0 to 100 px
+    @for $i from -10 through 10 {
+      .--o--mr#{$infix}-#{$i} {
+        margin-right: #{$i * 10}px !important;
+      }
+      .--o--ml#{$infix}-#{$i} {
+        margin-left: #{$i * 10}px !important;
+      }
+    }
+
+    // Padding from 0 to 300 px
+    @for $i from 0 through 30 {
+      .--o--pt#{$infix}-#{$i} {
+        padding-top: #{$i * 10}px !important;
+      }
+      .--o--pb#{$infix}-#{$i} {
+        padding-bottom: #{$i * 10}px !important;
+      }
+      .--o--pr#{$infix}-#{$i} {
+        padding-right: #{$i * 10}px !important;
+      }
+      .--o--pl#{$infix}-#{$i} {
+        padding-left: #{$i * 10}px !important;
+      }
+      .--o--py#{$infix}-#{$i} {
+        padding-top: #{$i * 10}px !important;
+        padding-bottom: #{$i * 10}px !important;
+      }
+      .--o--px#{$infix}-#{$i} {
+        padding-left: #{$i * 10}px !important;
+        padding-right: #{$i * 10}px !important;
+      }
+      .--o--pa#{$infix}-#{$i} {
+        padding: #{$i * 10}px !important;
+      }
+    }
+  }
+}

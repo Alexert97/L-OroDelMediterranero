@@ -1,0 +1,423 @@
+{% set active_page = 'about.html' -%}
+
+{% extends "layouts/default.html" %}
+
+{% block extrajs %}
+    <script type="text/javascript">
+        var map = {
+            map_type: 'ROADMAP',
+            auto_zoom: 'manual',                                        // set to 'manual' to set the zoom manually. Leave empty for auto zoom
+            map_zoom: 7,                                                // set the zoom if auto_zoom is set to
+            map_scrollable: 'on',                                       // makes the map draggable
+            map_style: '',                                    // if set to blackwhite it takes a black/white saturation
+            addresses: ['London', 'Paris'],                             // addresses separated by comma. Addresses are picked up first
+            latlngs : ['51.511084, -0.133202', '51.506623, -0.111916'], // Lat/Lng separated by comma. if no addresses are set these coordinates will get used
+            labels: ['London', 'Paris'],                                // labels that will be added to the markeres respectively. Keep the same number as markers
+            auto_center: 'auto',                                        // center the map 'auto' or 'custom'
+            center_latlng: '',                                          // centers the map to this point, unless it is set to auto
+            show_markers: 'on',                                         // shows/Hides the markers
+            markerURL: 'assets/images/marker.png'                       // the marker URL
+        };
+    </script>
+    <script type="text/javascript" src="assets/js/contact.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA53lVLoFr_BgRcgzx80ThvLm4vBJLp3x0"></script>
+{% endblock %}
+
+{% block content %}
+
+<div class="section --o--demo-bg-black">
+    <div class="section-background">
+        <div class="section-bg-image section-bg-image-size-md-cover --o--demo-bg-image-2 section-bg-image-paralax --o--opacity-5"></div>
+    </div>
+    <div class="section-content">
+        <div class="container">
+            <div class="row --o--py-10 --o--text-light">
+                <div class="col-md-12">
+                    <h1 class="--o--heading-bordered text-capitalize --o--os-animation --o--mb-0" data-os-animation="fadeIn" data-os-animation-delay=".3s">
+                    <small class="text-muted font-italic">About</small> verso
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section">
+    <div class="section-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="h2 --o--heading-bordered text-capitalize --o--os-animation --o--mt-10 --o--mb-4"  data-os-animation="fadeIn" data-os-animation-delay=".3s">
+                        <small class="text-muted font-italic">Our</small> History
+                    </h2>
+                </div>
+                <div class="col-md-12">
+                    <div class="card card-horizontal card-hero --o--shadow-8 --o--shadow-hover-16 --o--transition --o--os-animation --o--mb-9" data-os-animation="fadeIn" data-os-animation-delay=".4s">
+                        <div class="row">
+                            <div class="col-lg-6 flex-lg-last">
+                                <div class="card-img-container">
+                                    <img class="card-img" src="assets/images/charity-05-550x400-notinclude.jpg" alt="Card image">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 flex-lg-first">
+                                <div class="card-body">
+                                    <h2 class="card-title --o--mb-3">Verso Charity</h2>
+                                    <p class="card-text lead">As for God, his way is perfect. The word of Yahweh is tried. He is a shield to all those who take refuge in him. For who is God, except Yahweh? Who is a rock, besides our God, the God who arms me with strength, and makes my way perfect?</p>
+                                    <p class="card-text lead"> He makes my feet like deer's feet, and sets me on my high places.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-background">
+        <div class="section-bg-image section-bg-image-size-md-cover section-bg-image-position-xs-top --o--demo-bg-image-5 section-bg-image-paralax  --o--opacity-8"></div>
+    </div>
+    <div class="section-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 ml-auto mr-auto text-center">
+                    <div class="card --o--shadow-4 --o--shadow-hover-16 --o--transition card-hero card-inverse --o--mt-10 --o--mb-10 --o--os-animation " data-os-animation="fadeIn" data-os-animation-delay="1s">
+                        <div class="card-body">
+                            <div id="carousel-example-1" class="carousel slide --o--mb-0 carousel-indicators-circle " data-ride="carousel">
+                                <ol class="carousel-indicators --o--mb--3">
+                                    <li data-target="#carousel-example-1" data-slide-to="0" class="active --o--transition"></li>
+                                    <li class="--o--transition" data-target="#carousel-example-1" data-slide-to="1"></li>
+                                    <li class="--o--transition" data-target="#carousel-example-1" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="carousel-item active">
+                                        <blockquote class="card-blockquote blockquote --o--pl-4 blockquote-lg">
+                                            <p>Dare to imagine a free world, without hunger, without poverty & sickness. A world for everyone.</p>
+                                            <footer class="blockquote-footer --o--mt-3">Corinthians  <cite title="Source Title">13:12 NIV</cite></footer>
+                                        </blockquote>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <blockquote class="card-blockquote blockquote --o--pl-4 blockquote-lg">
+                                            <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. </p>
+                                            <footer class="blockquote-footer --o--mt-3">Corinthians  <cite title="Source Title">13:12 NIV</cite></footer>
+                                        </blockquote>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <blockquote class="card-blockquote blockquote --o--pl-4 blockquote-lg">
+                                            <p>Podcasting operational change management inside of workflows to establish a framework. Taking.</p>
+                                            <footer class="blockquote-footer --o--mt-3">Corinthians  <cite title="Source Title">13:12 NIV</cite></footer>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-content">
+        <div class="container">
+            <div class="row --o--py-10">
+                <div class="col-md-12">
+                    <h2 class="--o--heading-bordered text-capitalize --o--os-animation --o--mb-4" data-os-animation="fadeIn" data-os-animation-delay=".3s">
+                        <small class="text-muted font-italic">Meet</small> Our Team
+                    </h2>
+                </div>
+
+                <div class="col-md-4 text-center">
+                    <div class="card --o--shadow-8 --o--shadow-hover-16 --o--transition --o--os-animation --o--mb-3" data-os-animation="fadeIn" data-os-animation-delay=".3s">
+                        <div class="card-img-container">
+                            <img class="card-img-top" src="assets/images/charity-team-7-600x600-notinclude.jpg" alt="Card image cap">
+                            <div class="card-img-overlay card-img-overlay-on-hover  text-center card-img-overlay-bottom card-img-overlay-fade-to-top --o--transition"  >
+                                <div class="--o--icon-set --o--icon-set-transparent --o--transition">
+                                    <a class="--o--icon-set-item --o--transition --o--text-light" href="#">
+                                        <i class="fa fa-instagram"></i>
+                                    </a>
+                                    <a class="--o--icon-set-item --o--transition --o--text-light" href="#">
+                                        <i class="fa fa-linkedin"></i>
+                                    </a>
+                                    <a class="--o--icon-set-item --o--transition --o--text-light" href="#">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                    <a class="--o--icon-set-item --o--transition --o--text-light" href="#">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Mary Langan</h3>
+                            <h6 class="card-subtitle font-italic text-muted">Founder</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 text-center">
+                    <div class="card --o--shadow-8 --o--shadow-hover-16 --o--transition --o--os-animation --o--mb-3" data-os-animation="fadeIn" data-os-animation-delay=".4s">
+                        <div class="card-img-container">
+                            <img class="card-img-top" src="assets/images/charity-team-2-600x600-notinclude.jpg" alt="Card image cap">
+                            <div class="card-img-overlay card-img-overlay-on-hover  text-center card-img-overlay-bottom card-img-overlay-fade-to-top --o--transition"  >
+                                <div class="--o--icon-set --o--icon-set-transparent --o--transition">
+                                    <a class="--o--icon-set-item --o--transition --o--text-light" href="#">
+                                        <i class="fa fa-instagram"></i>
+                                    </a>
+                                    <a class="--o--icon-set-item --o--transition --o--text-light" href="#">
+                                        <i class="fa fa-linkedin"></i>
+                                    </a>
+                                    <a class="--o--icon-set-item --o--transition --o--text-light" href="#">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Jane Ross</h3>
+                            <h6 class="card-subtitle font-italic text-muted">Consultant</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 text-center">
+                    <div class="card --o--shadow-8 --o--shadow-hover-16 --o--transition --o--os-animation --o--mb-3" data-os-animation="fadeIn" data-os-animation-delay=".5s">
+                        <div class="card-img-container">
+                            <img class="card-img-top" src="assets/images/charity-team-3-600x600-notinclude.jpg" alt="Card image cap">
+                            <div class="card-img-overlay card-img-overlay-on-hover  text-center card-img-overlay-bottom card-img-overlay-fade-to-top --o--transition"  >
+                                <div class="--o--icon-set --o--icon-set-transparent --o--transition">
+                                    <a class="--o--icon-set-item --o--transition --o--text-light" href="#">
+                                        <i class="fa fa-instagram"></i>
+                                    </a>
+                                    <a class="--o--icon-set-item --o--transition --o--text-light" href="#">
+                                        <i class="fa fa-linkedin"></i>
+                                    </a>
+                                    <a class="--o--icon-set-item --o--transition --o--text-light" href="#">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                    <a class="--o--icon-set-item --o--transition --o--text-light" href="#">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                    <a class="--o--icon-set-item --o--transition --o--text-light" href="#">
+                                        <i class="fa fa-google-plus"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Mike Johnson</h3>
+                            <h6 class="card-subtitle font-italic text-muted">Priest</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="card --o--shadow-8 --o--shadow-hover-16 --o--transition --o--os-animation --o--mb-3" data-os-animation="fadeIn" data-os-animation-delay=".6s">
+                        <div class="card-img-container">
+                            <img class="card-img-top" src="assets/images/charity-team-4-600x600-notinclude.jpg" alt="Card image cap">
+                            <div class="card-img-overlay card-img-overlay-on-hover  text-center card-img-overlay-bottom card-img-overlay-fade-to-top --o--transition"  >
+                                <div class="--o--icon-set --o--icon-set-transparent --o--transition">
+                                    <a class="--o--icon-set-item --o--transition --o--text-light" href="#">
+                                        <i class="fa fa-instagram"></i>
+                                    </a>
+                                    <a class="--o--icon-set-item --o--transition --o--text-light" href="#">
+                                        <i class="fa fa-linkedin"></i>
+                                    </a>
+                                    <a class="--o--icon-set-item --o--transition --o--text-light" href="#">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                    <a class="--o--icon-set-item --o--transition --o--text-light" href="#">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">John Langan</h3>
+                            <h6 class="card-subtitle font-italic text-muted">CEO</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 text-center">
+                    <div class="card --o--shadow-8 --o--shadow-hover-16 --o--transition --o--os-animation --o--mb-3" data-os-animation="fadeIn" data-os-animation-delay=".7s">
+                        <div class="card-img-container">
+                            <img class="card-img-top" src="assets/images/charity-team-5-600x600-notinclude.jpg" alt="Card image cap">
+                            <div class="card-img-overlay card-img-overlay-on-hover  text-center card-img-overlay-bottom card-img-overlay-fade-to-top --o--transition"  >
+                                <div class="--o--icon-set --o--icon-set-transparent --o--transition">
+                                    <a class="--o--icon-set-item --o--transition --o--text-light" href="#">
+                                        <i class="fa fa-instagram"></i>
+                                    </a>
+                                    <a class="--o--icon-set-item --o--transition --o--text-light" href="#">
+                                        <i class="fa fa-linkedin"></i>
+                                    </a>
+                                    <a class="--o--icon-set-item --o--transition --o--text-light" href="#">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Christopher Ross</h3>
+                            <h6 class="card-subtitle font-italic text-muted">Priest</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 text-center">
+                    <div class="card --o--shadow-8 --o--shadow-hover-16 --o--transition --o--os-animation --o--mb-3" data-os-animation="fadeIn" data-os-animation-delay=".8s">
+                        <div class="card-img-container">
+                            <img class="card-img-top" src="assets/images/charity-team-6-600x600-notinclude.jpg" alt="Card image cap">
+                            <div class="card-img-overlay card-img-overlay-on-hover  text-center card-img-overlay-bottom card-img-overlay-fade-to-top --o--transition"  >
+                                <div class="--o--icon-set --o--icon-set-transparent --o--transition">
+                                    <a class="--o--icon-set-item --o--transition --o--text-light" href="#">
+                                        <i class="fa fa-instagram"></i>
+                                    </a>
+                                    <a class="--o--icon-set-item --o--transition --o--text-light" href="#">
+                                        <i class="fa fa-linkedin"></i>
+                                    </a>
+                                    <a class="--o--icon-set-item --o--transition --o--text-light" href="#">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                    <a class="--o--icon-set-item --o--transition --o--text-light" href="#">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                    <a class="--o--icon-set-item --o--transition --o--text-light" href="#">
+                                        <i class="fa fa-google-plus"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Jane Johnson</h3>
+                            <h6 class="card-subtitle font-italic text-muted">Priest</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-background">
+        <div class="section-bg-image section-bg-image-size-md-cover section-bg-image-position-xs-bottom --o--demo-bg-image-3 section-bg-image-paralax --o--opacity-8"></div>
+    </div>
+    <div class="section-content --o--demo-bg-black">
+        <div class="container">
+            <div class="row --o--py-10">
+                <div class="col-lg-8 ml-auto mr-auto text-center --o--text-light">
+                    <h1 class="h2 --o--os-animation" data-os-animation="fadeIn" data-os-animation-delay=".3s">
+                        Become a part of the verso
+                    </h1>
+                    <p class="lead --o--os-animation --o--mb-3" data-os-animation="fadeIn" data-os-animation-delay=".4s">Our sole purpose is Aiding, anything & anyone who needs help.</p>
+                    <a href="#" class="btn btn-lg btn-primary --o--os-animation btn-lg --o--shadow-4 --o--shadow-hover-16" data-os-animation="fadeInDown" data-os-animation-delay=".5s" data-toggle="modal" data-target="#donate">
+                        Help Us Now!
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-content">
+        <div class="container">
+            <div class="row --o--py-10">
+                <div class="col-md-12">
+                    <h2 class="--o--heading-bordered text-capitalize --o--os-animation --o--mb-4" data-os-animation="fadeIn" data-os-animation-delay=".3s">
+                        <small class="text-muted font-italic">How to</small> Find us
+                    </h2>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="card card-horizontal card-hero --o--shadow-8 --o--shadow-hover-16 --o--transition --o--os-animation" data-os-animation="fadeIn" data-os-animation-delay=".6s">
+                        <div class="row flex-items-xs-middle">
+                            <div class="col-lg-6 flex-lg-last">
+                                <div class="google-map --o--photo-filter-grayscale" id="map" style="min-height:350px; height:100%"></div>
+                            </div>
+                            <div class="col-lg-6 flex-lg-first">
+                                <div class="card-body">
+                                    <dl class="row --o--mb-0">
+                                        <dt class="col-md-4">
+                                            <span class="text-muted font-italic">Street:</span>
+                                        </dt>
+                                        <dd class="col-md-8">
+                                            28th Envato Street
+                                        </dd>
+                                        <dt class="col-md-4">
+                                            <span class="text-muted font-italic">City:</span>
+                                        </dt>
+                                        <dd class="col-md-8">
+                                            New York
+                                        </dd>
+                                        <dt class="col-md-4">
+                                            <span class="text-muted font-italic">Phone No:</span>
+                                        </dt>
+                                        <dd class="col-md-8">
+                                            555-7894-1144
+                                        </dd>
+                                        <dt class="col-md-4">
+                                            <span class="text-muted font-italic">E-Mail:</span>
+                                        </dt>
+                                        <dd class="col-md-8">
+                                            info@versochurch.org
+                                        </dd>
+                                        <dt class="col-md-4">
+                                            <span class="text-muted font-italic">Manager:</span>
+                                        </dt>
+                                        <dd class="col-md-8">
+                                            Gary Jones
+                                        </dd>
+                                        <dt class="col-md-4">
+                                            <span class="text-muted font-italic">Facebook:</span>
+                                        </dt>
+                                        <dd class="col-md-8">
+                                            verso Church Group
+                                        </dd>
+                                        <dt class="col-md-4">
+                                            <span class="text-muted font-italic">Twitter:</span>
+                                        </dt>
+                                        <dd class="col-md-8">
+                                            @verso_Church
+                                        </dd>
+                                        <dt class="col-md-4">
+                                            <span class="text-muted font-italic">Instagram:</span>
+                                        </dt>
+                                        <dd class="col-md-8">
+                                            The Great verso Church
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="donate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title text-uppercase" id="myModalLabel">Help our Cause</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="contact_mailer.php" class="contact-form">
+                    <input type="text" id="name" name="name" class="form-control --o--shadow-0 --o--shadow-focus-2 --o--transition --o--mb-3" placeholder="Your Name">
+                    <input type="email" id="email" name="email" class="form-control --o--shadow-0 --o--shadow-focus-2 --o--transition --o--mb-3" placeholder="Your Email">
+                    <input type="number" id="ammount" name="ammount" class="form-control --o--shadow-0 --o--shadow-focus-2 --o--transition --o--mb-3" placeholder="Your Ammount">
+                    <textarea id="message" name="message" rows="8" class="form-control --o--shadow-0 --o--shadow-focus-2 --o--transition --o--mb-3" placeholder="Describe your issue and the date you wish to visit us"></textarea>
+                    <button type="submit" class="btn btn-primary --o--shadow-2">Donate Now</button>
+                    <div class="--o--messages --o--pt-2"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

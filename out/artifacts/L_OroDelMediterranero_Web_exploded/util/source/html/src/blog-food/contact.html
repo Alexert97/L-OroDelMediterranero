@@ -1,0 +1,97 @@
+{% set active_page = 'blog.html' -%}
+
+{% extends "layouts/default.html" %}
+
+{% block extrajs %}
+    <script type="text/javascript">
+        var map = {
+            map_type: 'ROADMAP',
+            auto_zoom: 'manual',                                        // set to 'manual' to set the zoom manually. Leave empty for auto zoom
+            map_zoom: 7,                                                // set the zoom if auto_zoom is set to
+            map_scrollable: 'on',                                       // makes the map draggable
+            map_style: '',                                    // if set to blackwhite it takes a black/white saturation
+            addresses: ['London', 'Paris'],                             // addresses separated by comma. Addresses are picked up first
+            latlngs : ['51.511084, -0.133202', '51.506623, -0.111916'], // Lat/Lng separated by comma. if no addresses are set these coordinates will get used
+            labels: ['London', 'Paris'],                                // labels that will be added to the markeres respectively. Keep the same number as markers
+            auto_center: 'auto',                                        // center the map 'auto' or 'custom'
+            center_latlng: '',                                          // centers the map to this point, unless it is set to auto
+            show_markers: 'on',                                         // shows/Hides the markers
+            markerURL: 'assets/images/marker.png'                       // the marker URL
+        };
+    </script>
+    <script type="text/javascript" src="assets/js/contact.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA53lVLoFr_BgRcgzx80ThvLm4vBJLp3x0"></script>
+{% endblock %}
+
+{% block content %}
+<div class="section">
+    <div class="section-background">
+        <div class="section-bg-image section-bg-image-size-100 section-bg-image-position-top section-bg-image-paralax --o--demo-bg-image-01"></div>
+    </div>
+    <div class="section-content">
+        <div class="container">
+            <div class="row --o--pt-20 --o--pb-10">
+                <div class="col-lg-8">
+                    <div class="card --o--shadow-15 --o--shadow-hover-20 --o--transition --o--mb-3 --o--os-animation" data-os-animation="fadeIn" data-os-animation-delay=".3s">
+                        <div class="card-body">
+                            <h1 class="h2 text-uppercase card-title --o--mb-3">
+                                Contact us
+                            </h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eum voluptate quae perspiciatis vitae. Commodi delectus, esse quam nam blanditiis eum officiis consequatur culpa maxime quisquam. Lorem ipsum dolor sit amet, consectetur.</p>
+                            <form action="contact_mailer.php" class="contact-form">
+                                <input type="text" id="name" name="name" class="form-control --o--shadow-0 --o--shadow-focus-2 --o--transition --o--mb-3" placeholder="Name">
+                                <input type="email" id="email" name="email" class="form-control --o--shadow-0 --o--shadow-focus-2 --o--transition --o--mb-3" placeholder="Your Email">
+                                <textarea id="message" name="message" rows="8" class="form-control --o--shadow-0 --o--shadow-focus-2 --o--transition --o--mb-3" placeholder="Your Comment"></textarea>
+                                <div class="form-check --o--mb-3">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" id="sign" name="sign" type="checkbox" value="sign"> Sign me up to the newsletter
+                                    </label>
+                                </div>
+                                <button type="submit" class="btn btn-primary --o--shadow-2">Send</button>
+                                <div class="--o--messages --o--pt-2"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card --o--shadow-15 --o--shadow-hover-20 --o--transition --o--mb-3 --o--os-animation" data-os-animation="fadeIn" data-os-animation-delay=".4s">
+                        <div class="card-body">
+                            <dl class="row --o--mb-0">
+                                <dt class="col-md-4">
+                                    <span class="text-muted font-italic">Street:</span>
+                                </dt>
+                                <dd class="col-md-8">
+                                    28th Envato Street
+                                </dd>
+                                <dt class="col-md-4">
+                                    <span class="text-muted font-italic">City:</span>
+                                </dt>
+                                <dd class="col-md-8">
+                                    New York
+                                </dd>
+                                <dt class="col-md-4">
+                                    <span class="text-muted font-italic">Phone:</span>
+                                </dt>
+                                <dd class="col-md-8">
+                                    555-7894-1144
+                                </dd>
+                                <dt class="col-md-4">
+                                    <span class="text-muted font-italic">E-Mail:</span>
+                                </dt>
+                                <dd class="col-md-8">
+                                    info@some.org
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="card --o--shadow-15 --o--shadow-hover-20 --o--transition --o--os-animation" data-os-animation="fadeIn" data-os-animation-delay=".5s">
+                        <div class="google-map" id="map" style="height:300px"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

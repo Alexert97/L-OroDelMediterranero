@@ -1,0 +1,339 @@
+{% set active_page = 'events-calendar.html' -%}
+
+{% extends "layouts/default.html" %}
+
+{% block content %}
+<div class="section">
+    <div class="section-background">
+        <div class="section-bg-image section-bg-image-size-lg-100 section-bg-image-position-top section-bg-image-paralax --o--demo-bg-image-16-b --o--opacity-3"></div>
+    </div>
+    <div class="section-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="--o--heading-bordered text-capitalize --o--os-animation  --o--mt-25 --o--mb-3" data-os-animation="fadeIn" data-os-animation-delay=".3s">
+                        <small class="text-muted font-italic">Monthly Events</small> June 2017
+                    </h2>
+                </div>
+
+                <div class="col-md-12">
+                    {% include "partials/events-form.html" %}
+                    <table class="--o--events-table table table-striped table-vertical-striped table-fixed --o--shadow-2 --o--shadow-hover-4 --o--transition --o--os-animation" data-os-animation="fadeIn" data-os-animation-delay=".6s">
+                        <thead class="font-italic">
+                            <tr>
+                                <th>
+                                    <div class="--o--heading-bordered p-a-1 text-capitalize --oo--mb--1 --o--ml--2 --o--text-super-truncate">
+                                        Monday
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="--o--heading-bordered p-a-1 text-capitalize --oo--mb--1 --o--ml--2 --o--text-super-truncate">
+                                        Tuesday
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="--o--heading-bordered p-a-1 text-capitalize --oo--mb--1 --o--ml--2 --o--text-super-truncate">
+                                        Wednesday
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="--o--heading-bordered p-a-1 text-capitalize --oo--mb--1 --o--ml--2 --o--text-super-truncate">
+                                        Thursday
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="--o--heading-bordered p-a-1 text-capitalize --oo--mb--1 --o--ml--2 --o--text-super-truncate">
+                                        Friday
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="--o--heading-bordered p-a-1 text-capitalize --oo--mb--1 --o--ml--2 --o--text-super-truncate">
+                                        Saturday
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="--o--heading-bordered p-a-1 text-capitalize --oo--mb--1 --o--ml--2 --o--text-super-truncate">
+                                        Sunday
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="small">
+                            <tr>
+                                <td class="--o--event-day-past --o--shadow-hover-6 --o--transition"></td>
+                                <td class="--o--event-day-past --o--shadow-hover-6 --o--transition"></td>
+                                <td class="--o--event-day-past --o--shadow-hover-6 --o--transition">
+                                    <div class="--o--event-date">
+                                        <span class="font-weight-bold font-italic d-block">1</span>
+                                    </div>
+                                </td>
+                                <td class="--o--event-day-past --o--event-day-has-event --o--shadow-hover-6 --o--transition">
+                                    <div class="--o--event-date">
+                                        <span class="font-weight-bold font-italic d-block">2</span>
+                                    </div>
+                                    <a href="events-day.html" class="--o--event-more d-block d-md-none">
+                                        <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                    </a>
+                                    <p class="text-truncate d-none d-md-block">
+                                        <a class="--o--event"  data-toggle="popover" data-trigger="hover" data-placement="top" title="Seven Resolutions for Finishing Well" data-content="Athens 2nd June 2017" href="single-event.html">
+                                            Seven Resolutions for Finishing Well
+                                        </a>
+                                    </p>
+                                    <p class="text-truncate d-none d-md-block">
+                                        <a class="--o--event"  data-toggle="popover" data-trigger="hover" data-placement="top" title="Praying for Love" data-content="Athens 2nd June 2017" href="single-event.html">
+                                            Praying for Love
+                                        </a>
+                                    </p>
+                                </td>
+                                <td class="--o--event-day-past --o--shadow-hover-6 --o--transition">
+                                    <div class="--o--event-date">
+                                        <span class="font-weight-bold font-italic d-block">3</span>
+                                    </div>
+                                </td>
+                                <td class="--o--event-day-past --o--event-day-has-event --o--shadow-hover-6 --o--transition">
+                                    <div class="--o--event-date">
+                                        <span class="font-weight-bold font-italic d-block">4</span>
+                                    </div>
+                                    <a href="events-day.html" class="--o--event-more d-block d-md-none">
+                                        <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                    </a>
+                                    <p class="text-truncate d-none d-md-block">
+                                        <a class="--o--event"  data-toggle="popover" data-trigger="hover" data-placement="left" title="Three Sightings of the Glory of Jesus" data-content="Athens 4th June 2017" href="single-event.html">
+                                            Three Sightings of the Glory of Jesus
+                                        </a>
+                                    </p>
+                                </td>
+                                <td class="--o--event-day-past --o--event-day-has-event --o--shadow-hover-6 --o--transition">
+                                    <div class="--o--event-date">
+                                        <span class="font-weight-bold font-italic d-block">5</span>
+                                    </div>
+                                    <a href="events-day.html" class="--o--event-more d-block d-md-none">
+                                        <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                    </a>
+                                    <p class="text-truncate d-none d-md-block">
+                                        <a class="--o--event" style="white-space: nowrap;"  data-toggle="popover" data-trigger="hover" data-placement="left" title="The Blood of the Martyrs Is Seed: Learning from Missiona and for Missions" data-content="Thessalonikh 5th June 2017" href="single-event.html">
+                                            The Blood of the Martyrs Is Seed: Learning from Missiona and for Missions
+                                        </a>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="--o--event-day-past --o--shadow-hover-6 --o--transition">
+                                    <div class="--o--event-date">
+                                        <span class="font-weight-bold font-italic d-block">6</span>
+                                    </div>
+                                </td>
+                                <td class="--o--event-day-past --o--shadow-hover-6 --o--transition">
+                                    <div class="--o--event-date">
+                                        <span class="font-weight-bold font-italic d-block">7</span>
+                                    </div>
+                                </td>
+                                <td class="--o--event-day-past --o--event-day-has-event --o--shadow-hover-6 --o--transition">
+                                    <div class="--o--event-date">
+                                        <span class="font-weight-bold font-italic d-block">8</span>
+                                    </div>
+                                    <a href="events-day.html" class="--o--event-more d-block d-md-none">
+                                        <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                    </a>
+                                    <p class="text-truncate d-none d-md-block">
+                                        <a class="--o--event"  data-toggle="popover" data-trigger="hover" data-placement="left" title="Precision with God's Words, Love for God's Glory" data-content="Heraklion 8th June 2017" href="single-event.html">
+                                            Precision with God's Words, Love for God's Glory
+                                        </a>
+                                    </p>
+                                </td>
+                                <td class="--o--shadow-hover-6 --o--transition">
+                                    <div class="--o--event-date">
+                                        <span class="font-weight-bold font-italic d-block">9</span>
+                                    </div>
+                                </td>
+                                <td class="--o--event-day-has-event --o--event-day-current --o--shadow-hover-6 --o--transition">
+                                    <div class="--o--event-date">
+                                        <span class="font-weight-bold font-italic d-block">10</span>
+                                    </div>
+                                    <a href="events-day.html" class="--o--event-more d-block d-md-none">
+                                        <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                    </a>
+                                    <p class="text-truncate d-none d-md-block">
+                                        <a class="--o--event"  data-toggle="popover" data-trigger="hover" data-placement="left" title="Think It Not Strange: Fiery Trials and the Testimony of Christ" data-content="Patra 10th June 2017" href="single-event.html">
+                                            Think It Not Strange: Fiery Trials and the Testimony of Christ
+                                        </a>
+                                    </p>
+                                </td>
+                                <td class="--o--shadow-hover-6 --o--transition">
+                                    <div class="--o--event-date">
+                                        <span class="font-weight-bold font-italic d-block">11</span>
+                                    </div>
+                                </td>
+                                <td class="--o--shadow-hover-6 --o--transition">
+                                    <div class="--o--event-date">
+                                        <span class="font-weight-bold font-italic d-block">12</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="--o--shadow-hover-6 --o--transition">
+                                    <div class="--o--event-date">
+                                        <span class="font-weight-bold font-italic d-block">13</span>
+                                    </div>
+                                </td>
+                                <td class="--o--shadow-hover-6 --o--transition">
+                                    <div class="--o--event-date">
+                                        <span class="font-weight-bold font-italic d-block">14</span>
+                                    </div>
+                                </td>
+                                <td class="--o--shadow-hover-6 --o--transition">
+                                    <div class="--o--event-date">
+                                        <span class="font-weight-bold font-italic d-block">15</span>
+                                    </div>
+                                </td>
+                                <td class="--o--event-day-has-event --o--shadow-hover-6 --o--transition">
+                                    <div class="--o--event-date">
+                                        <span class="font-weight-bold font-italic d-block">16</span>
+                                    </div>
+                                    <a href="events-day.html" class="--o--event-more d-block d-md-none">
+                                        <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                    </a>
+                                    <p class="text-truncate d-none d-md-block">
+                                        <a class="--o--event"  data-toggle="popover" data-trigger="hover" data-placement="left" title="The Beast, the Book, and the Beauty of the Lamb." data-content="Volos 16th June 2017" href="single-event.html">
+                                            The Beast, the Book, and the Beauty of the Lamb.
+                                        </a>
+                                    </p>
+                                </td>
+                                <td class="--o--event-day-has-event --o--shadow-hover-6 --o--transition">
+                                    <div class="--o--event-date">
+                                        <span class="font-weight-bold font-italic d-block">17</span>
+                                    </div>
+                                    <a href="events-day.html" class="--o--event-more d-block d-md-none">
+                                        <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                    </a>
+                                    <p class="text-truncate d-none d-md-block">
+                                        <a class="--o--event"  data-toggle="popover" data-trigger="hover" data-placement="left" title="How Our Children Can Know the Bible Is True" data-content="Athens 17th June 2017" href="single-event.html">
+                                            How Our Children Can Know the Bible Is True
+                                        </a>
+                                    </p>
+                                </td>
+                                <td class="--o--shadow-hover-6 --o--transition">
+                                    <div class="--o--event-date">
+                                        <span class="font-weight-bold font-italic d-block">18</span>
+                                    </div>
+                                </td>
+                                <td class="--o--shadow-hover-6 --o--transition">
+                                    <div class="--o--event-date">
+                                        <span class="font-weight-bold font-italic d-block">19</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="--o--shadow-hover-6 --o--transition">
+                                    <div class="--o--event-date">
+                                        <span class="font-weight-bold font-italic d-block">20</span>
+                                    </div>
+                                </td>
+                                <td class="--o--event-day-has-event --o--shadow-hover-6 --o--transition">
+                                    <div class="--o--event-date">
+                                        <span class="font-weight-bold font-italic d-block">21</span>
+                                    </div>
+                                    <a href="events-day.html" class="--o--event-more d-block d-md-none">
+                                        <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                    </a>
+                                    <p class="text-truncate d-none d-md-block">
+                                        <a class="--o--event"  data-toggle="popover" data-trigger="hover" data-placement="top" title="Seven Resolutions for Finishing Well" data-content="Athens 21st June 2017" href="single-event.html">
+                                            Seven Resolutions for Finishing Well
+                                        </a>
+                                    </p>
+                                </td>
+                                <td class="--o--shadow-hover-6 --o--transition">
+                                    <div class="--o--event-date">
+                                        <span class="font-weight-bold font-italic d-block">22</span>
+                                    </div>
+                                </td>
+                                <td class="--o--event-day-has-event --o--shadow-hover-6 --o--transition">
+                                    <div class="--o--event-date">
+                                        <span class="font-weight-bold font-italic d-block">23</span>
+                                    </div>
+                                    <a href="events-day.html" class="--o--event-more d-block d-md-none">
+                                        <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                    </a>
+                                    <p class="text-truncate d-none d-md-block">
+                                        <a class="--o--event"  data-toggle="popover" data-trigger="hover" data-placement="left" title="Bethlehem 2016 Conference for Pastors and Church Leaders" data-content="Athens 23rd June 2017" href="single-event.html">
+                                            Bethlehem 2016 Conference for Pastors and Church Leaders
+                                        </a>
+                                    </p>
+                                </td>
+                                <td class="--o--shadow-hover-6 --o--transition">
+                                    <div class="--o--event-date">
+                                        <span class="font-weight-bold font-italic d-block">24</span>
+                                    </div>
+                                </td>
+                                <td class="--o--shadow-hover-6 --o--transition">
+                                    <div class="--o--event-date">
+                                        <span class="font-weight-bold font-italic d-block">25</span>
+                                    </div>
+                                </td>
+                                <td class="--o--shadow-hover-6 --o--transition">
+                                    <div class="--o--event-date">
+                                        <span class="font-weight-bold font-italic d-block">26</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="--o--shadow-hover-6 --o--transition">
+                                    <div class="--o--event-date">
+                                        <span class="font-weight-bold font-italic d-block">27</span>
+                                    </div>
+                                </td>
+                                <td class="--o--event-day-has-event --o--shadow-hover-6 --o--transition">
+                                    <div class="--o--event-date">
+                                        <span class="font-weight-bold font-italic d-block">28</span>
+                                    </div>
+                                    <a href="events-day.html" class="--o--event-more d-block d-md-none">
+                                        <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                    </a>
+                                    <p class="text-truncate d-none d-md-block">
+                                        <a class="--o--event"  data-toggle="popover" data-trigger="hover" data-placement="left" title="Seven Resolutions for Finishing Well" data-content="Athens 28th June 2017" href="single-event.html">
+                                            Think It Not Strange: Fiery Trials and the Testimony of Christ
+                                        </a>
+                                    </p>
+                                </td>
+                                <td class="--o--shadow-hover-6 --o--transition">
+                                    <div class="--o--event-date">
+                                        <span class="font-weight-bold font-italic d-block">29</span>
+                                    </div>
+                                </td>
+                                <td class="--o--shadow-hover-6 --o--transition">
+                                    <div class="--o--event-date">
+                                        <span class="font-weight-bold font-italic d-block">30</span>
+                                    </div>
+                                </td>
+                                <td class="--o--shadow-hover-6 --o--transition">
+                                    <div class="--o--event-date">
+                                        <span class="font-weight-bold font-italic d-block">31</span>
+                                    </div>
+                                </td>
+                                <td class="--o--shadow-hover-6 --o--transition"></td>
+                                <td class="--o--shadow-hover-6 --o--transition"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="row">
+                        <div class="col-md-6 col-6 --o--mt-9">
+                            <h3 class="--o--heading-bordered text-capitalize --o--os-animation" data-os-animation="fadeInUp" data-os-animation-delay=".3s">
+                                <a href="events-day.html">
+                                    <small class="text-muted font-italic">&larr; Previous</small> Events On May
+                                </a>
+                            </h3>
+                        </div>
+                        <div class="col-md-6 col-6 --o--mt-9 --o--mb-9">
+                            <h3 class="--o--heading-bordered --o--heading-bordered-reversed text-capitalize --o--os-animation" data-os-animation="fadeInUp" data-os-animation-delay=".6s">
+                                <a href="events-list.html">
+                                    <small class="text-muted font-italic">Next &rarr;</small>  Events On July
+                                </a>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
