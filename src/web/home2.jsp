@@ -28,7 +28,7 @@
 </head>
 <body class=" ">
 <a id="start"></a>
-<%@ include file="navBar.jsp"%>
+<%@ include file="navBar2.jsp"%>
 <div class="main-container">
     <section class="cover height-100 imagebg text-center" data-overlay="2" id="home">
         <div class="background-image-holder">
@@ -39,7 +39,7 @@
                 <div class="col-md-12">
                     <h1 class="h1 type--uppercase">
                         <em>
-                            <strong>Gestisci le prenotazioni</strong>
+                            <strong>Prenotati Ora... Cosa Aspetti?</strong>
                         </em>
                     </h1>
                 </div>

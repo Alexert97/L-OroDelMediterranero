@@ -39,7 +39,7 @@
                 <div class="col-md-12">
                     <h1 class="h1 type--uppercase">
                         <em>
-                            <strong>Prenotati Ora... Cosa Aspetti?</strong>
+                            <strong>Gestisci le prenotazioni</strong>
                         </em>
                     </h1>
                 </div>

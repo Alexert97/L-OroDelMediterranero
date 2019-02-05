@@ -10,7 +10,7 @@
 <div class="nav-container nav-container--sidebar">
     <div class="nav-sidebar-column bg--dark">
         <div class="text-center text-block">
-            <a href="home2.jsp">
+            <a href="home1.jsp">
                 <img alt="logo" class="logo" src="img/logo-tondo.png" />
             </a>
             <p>
@@ -19,23 +19,41 @@
             </p>
             <hr>
             <p>
-                Admin
+                User
             </p>
         </div>
         <hr>
         <div class="text-block">
             <ul class="menu-vertical">
-                <li>
-                    <a href="home-coming-soon-2.html">
-                        Gestione Prenotazioni
-                    </a>
+                <li class="dropdown">
+                    <span class="dropdown__trigger">Gestione Prenotazioni</span>
+                    <div class="dropdown__container">
+                        <div class="dropdown__content">
+                            <ul class="menu-vertical">
+                                <li>
+                                    <a href="prenotati.jsp">
+                                        Prenota
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="home-construction.html">
+                                        Modifica
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="home-construction.html">
+                                        Elimina
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </li>
                 <li>
-                    <a href="home-coming-soon-3.html">
-                        Gestione vendite
+                    <a href="home-construction.html">
+                        Acquista Olio
                     </a>
                 </li>
-
             </ul>
         </div>
         <hr>

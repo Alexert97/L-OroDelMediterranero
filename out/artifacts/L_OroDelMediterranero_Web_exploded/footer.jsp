@@ -10,30 +10,6 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <%--<div class="heading-block">
-                    <ul class="list-inline list--hover">
-                        <li>
-                            <a href="#">
-                                <span>Our Company</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span>Locations</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span>Products</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span>Work With Us</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>--%>
                 <div>
                     <ul class="social-list list-inline list--hover">
                         <li>
