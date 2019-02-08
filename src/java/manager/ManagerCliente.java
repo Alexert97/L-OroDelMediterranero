@@ -11,7 +11,7 @@ public class ManagerCliente {
 
   static void popola() {
     clienti = new ArrayList<>();
-    clienti.add(new Cliente());
+    clienti.add(new Cliente("Federico", "Ripoli", "01/10/1996"));
   }
 
   public List<Cliente> retrieveAll() {
