@@ -3,15 +3,13 @@ package bean;
 public class Prenotazione {
   private String data;
   private String ora;
-  private Cliente cliente;
 
   public Prenotazione() {
   }
 
-  public Prenotazione(String data, String ora, Cliente cliente) {
+  public Prenotazione(String data, String ora) {
     this.ora = ora;
     this.data = data;
-    this.cliente = cliente;
   }
 
   public String getData() {
@@ -30,11 +28,4 @@ public class Prenotazione {
     this.ora = ora;
   }
 
-  public Cliente getCliente() {
-    return cliente;
-  }
-
-  public void setCliente(Cliente cliente) {
-    this.cliente = cliente;
-  }
 }
