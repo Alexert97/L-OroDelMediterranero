@@ -1,12 +1,14 @@
 package bean;
 
 public class Olio {
+  private int id;
   private String nome;
   private String categoria;
   private Float prezzo;
   private int centilitri;
 
-  public Olio(String nome, String categoria, Float prezzo, int cl) {
+  public Olio(int id, String nome, String categoria, Float prezzo, int cl) {
+    this.id = id;
     this.categoria = categoria;
     this.nome = nome;
     this.prezzo = prezzo;
@@ -14,6 +16,14 @@ public class Olio {
   }
 
   public Olio() {
+  }
+
+  public int getId() {
+    return id;
+  }
+
+  public void setId(int id) {
+    this.id = id;
   }
 
   public String getCategoria() {

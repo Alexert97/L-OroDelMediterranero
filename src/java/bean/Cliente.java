@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Cliente {
+  private int id;
   private String nome;
   private String cognome;
   private String dataNascita;
@@ -13,10 +14,19 @@ public class Cliente {
     prenotazioni = new ArrayList<>();
   }
 
-  public Cliente(String nome, String cognome, String dataNascita) {
+  public Cliente(int id, String nome, String cognome, String dataNascita) {
+    this.id = id;
     this.nome = nome;
     this.cognome = cognome;
     this.dataNascita = dataNascita;
+  }
+
+  public int getId() {
+    return id;
+  }
+
+  public void setId(int id) {
+    this.id = id;
   }
 
   public String getCognome() {

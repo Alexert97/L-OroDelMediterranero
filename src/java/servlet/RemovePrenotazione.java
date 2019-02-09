@@ -12,29 +12,25 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet("/addPrenotazione")
-public class AddPrenotazione extends HttpServlet {
+
+@WebServlet("/removePrenotazione")
+public class RemovePrenotazione extends HttpServlet {
 
   @Override
   protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-    String data = req.getParameter("data");
-    String ora = req.getParameter("ora");
+    int id = Integer.parseInt(req.getParameter("id"));
 
     HttpSession session = req.getSession();
-    RequestDispatcher dispatcher = session.getServletContext().getRequestDispatcher("/home1.jsp");
     List<Prenotazione> list = (List<Prenotazione>) session.getAttribute("listaPrenotazioni");
-    for(Prenotazione p : list) {
-      if (p.getData().equals(data) && p.getOra().equals(ora)) {
-        req.removeAttribute("presente");
-        req.setAttribute("presente" ,1);
-        dispatcher.forward(req, resp);
+    for (Prenotazione p : list) {
+      if (p.getId() ==  id) {
+        list.remove(p);
       }
     }
-    req.removeAttribute("presente");
-    req.setAttribute("presente", 0);
+    session.removeAttribute("listaPrenotazioni");
+    session.setAttribute("listaPrenotazioni", list);
 
-    list.add(new Prenotazione(list.get(list.size()).getId() + 1, data, ora));
-
+    RequestDispatcher dispatcher = session.getServletContext().getRequestDispatcher("/home1.jsp");
     dispatcher.forward(req, resp);
   }
 
