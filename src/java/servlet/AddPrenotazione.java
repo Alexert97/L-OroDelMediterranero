@@ -23,6 +23,8 @@ public class AddPrenotazione extends HttpServlet {
     HttpSession session = req.getSession();
     RequestDispatcher dispatcher = session.getServletContext().getRequestDispatcher("/home1.jsp");
     List<Prenotazione> list = (List<Prenotazione>) session.getAttribute("listaPrenotazioni");
+
+    /*controllo se è già presente nell'array*/
     for(Prenotazione p : list) {
       if (p.getData().equals(data) && p.getOra().equals(ora)) {
         req.removeAttribute("presente");
@@ -32,8 +34,8 @@ public class AddPrenotazione extends HttpServlet {
     }
     req.removeAttribute("presente");
     req.setAttribute("presente", 0);
-
-    list.add(new Prenotazione(list.get(list.size()).getId() + 1, data, ora));
+    /* per l'aggiunta dell'id prendo quello dell'ultimo elemento della lista e aggiungo 1*/
+    list.add(new Prenotazione(list.get(list.size() - 1).getId() + 1, data, ora));
 
     dispatcher.forward(req, resp);
   }
