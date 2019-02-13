@@ -4,15 +4,17 @@ public class Olio {
   private int id;
   private String nome;
   private String categoria;
-  private Float prezzo;
+  private double prezzo;
   private int centilitri;
+  private int numeroBottiglie;
 
-  public Olio(int id, String nome, String categoria, Float prezzo, int cl) {
+  public Olio(int id, String nome, String categoria, double prezzo, int cl, int numeroBottiglie) {
     this.id = id;
     this.categoria = categoria;
     this.nome = nome;
     this.prezzo = prezzo;
     centilitri = cl;
+    this.numeroBottiglie = numeroBottiglie;
   }
 
   public Olio() {
@@ -42,11 +44,11 @@ public class Olio {
     this.nome = nome;
   }
 
-  public Float getPrezzo() {
+  public double getPrezzo() {
     return prezzo;
   }
 
-  public void setPrezzo(Float prezzo) {
+  public void setPrezzo(double prezzo) {
     this.prezzo = prezzo;
   }
 
@@ -56,5 +58,13 @@ public class Olio {
 
   public void setCentilitri(int centilitri) {
     this.centilitri = centilitri;
+  }
+
+  public int getNumeroBottiglie() {
+    return numeroBottiglie;
+  }
+
+  public void setNumeroBottiglie(int numeroBottiglie) {
+    this.numeroBottiglie = numeroBottiglie;
   }
 }

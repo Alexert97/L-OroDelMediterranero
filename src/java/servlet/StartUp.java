@@ -1,36 +1,34 @@
 package servlet;
 
 import bean.Olio;
+import bean.Prenotazione;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet("/addOlio")
-public class AddOlio extends HttpServlet {
-
+public class StartUp extends HttpServlet {
   @Override
   protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-    String nome = req.getParameter("nome");
-    String categoria = req.getParameter("categoria");
-    double prezzo = Double.parseDouble(req.getParameter("prezzo"));
-    int centilitri = Integer.parseInt(req.getParameter("centilitri"));
-    int numeroBottiglie = Integer.parseInt(req.getParameter("numeroBottiglie"));
-
     HttpSession session = req.getSession();
-    List<Olio> list = (List<Olio>) session.getAttribute("listaOlio");
 
-    /* per l'aggiunta dell'id prendo quello dell'ultimo elemento della lista e aggiungo 1*/
-    Olio bean = new Olio(list.get(list.size() - 1).getId() + 1, nome, categoria, prezzo, centilitri, numeroBottiglie);
+    List<Olio> listaOlio = new ArrayList<>();
+    List<Prenotazione> listaPrenotazioni = new ArrayList<>();
 
-    list.add(bean);
-    session.setAttribute("listaOlio", list);
+    listaOlio.add(new Olio(1, "", "", 9.50, 75, 100));
+    listaOlio.add(new Olio(2, "", "", 7.50, 75, 100));
+    listaOlio.add(new Olio(3, "", "", 8.00, 75, 100));
+
+    listaPrenotazioni.add(new Prenotazione(1, "25/02/2019", "10:00", 240));
+
+    session.setAttribute("listaOlio", listaOlio);
+    session.setAttribute("listaaPrenotazioni", listaPrenotazioni);
 
     RequestDispatcher dispatcher = session.getServletContext().getRequestDispatcher("/home1.jsp");
     dispatcher.forward(req, resp);
