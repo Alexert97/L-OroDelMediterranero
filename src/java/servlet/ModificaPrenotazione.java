@@ -20,13 +20,24 @@ public class ModificaPrenotazione extends HttpServlet {
 
     HttpSession session = req.getSession();
     List<Prenotazione> list = (List<Prenotazione>) session.getAttribute("listaPrenotazioni");
+    boolean pres = false;
+    Prenotazione prenotazione = null;
     for (Prenotazione p : list) {
       if (p.getId() == id) {
-        int i = list.indexOf(p);
-        p.setData(data);
-        p.setOra(ora);
-        list.set(i, p);
+        prenotazione = p;
       }
+      if (p.getData().equals(data) && p.getOra().equals(ora)) {
+        req.removeAttribute("presente");
+        req.setAttribute("presente", 1);
+        pres = true;
+      }
+    }
+    if (!pres) {
+        int i = list.indexOf(prenotazione);
+        prenotazione.setData(data);
+        prenotazione.setOra(ora);
+        list.set(i, prenotazione);
+
     }
     session.removeAttribute("listaPrenotazioni");
     session.setAttribute("listaPrenotazioni", list);
