@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Carrello {
   private List<Olio> list;
-  private Float prezzo;
+  private double prezzo;
 
   public Carrello () {
     list = new ArrayList<>();
@@ -30,7 +30,7 @@ public class Carrello {
     return list;
   }
 
-  public Float getPrezzo() {
+  public double getPrezzo() {
     return prezzo;
   }
 
