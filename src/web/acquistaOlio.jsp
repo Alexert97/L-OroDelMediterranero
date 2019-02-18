@@ -1,5 +1,6 @@
 <%@ page import="java.util.List" %>
-<%@ page import="bean.Olio" %><%--
+<%@ page import="bean.Olio" %>
+<%@ page import="java.util.Iterator" %><%--
   Created by IntelliJ IDEA.
   User: aleoa
   Date: 31/01/2019
@@ -64,25 +65,23 @@
                         <div class="masonry__item col-md-4" style="position: absolute; left: 0px; top: 0px;"></div>
                         <%
                             List<Olio> lista = (List<Olio>) session.getAttribute("listaOlio");
-
-                            for (Olio o : lista) {
+                            Iterator<Olio> i = lista.iterator();
+                            while (i.hasNext()) {
+                              Olio o = i.next();
                         %>
                             <!--begin item-->
                             <div class="masonry__item col-md-4" style="position: absolute; left: 0px; top: 0px;">
                                 <div class="product boxed boxed--border bg--secondary">
-                                    <span class="label">Sale</span>
-                                    <a href="#">
+                                    <a href="${pageContext.request.contextPath}/addToCarrello?id=<%=o.getId()%>">
                                         <img alt="Image" src="img/product-small-1.png">
                                     </a>
-                                    <a class="block" href="#">
+                                    <a class="block" href="${pageContext.request.contextPath}/addToCarrello?id=<%=o.getId()%>">
                                         <div>
-                                            <h5>Apple iPad</h5>
-                                            <span> 128GB Wifi + Celluar</span>
+                                            <h5><%=o.getNome()%>, <%=o.getCentilitri()%>cl</h5>
+                                            <span> <%=o.getCategoria()%></span>
                                         </div>
                                         <div>
-                                            <span class="h4 inline-block type--strikethrough">30€
-                                            </span>
-                                            <span class="h4 inline-block">25€ a bottiglia</span>
+                                            <span class="h4 inline-block">&euro;<%=o.getPrezzo()%></span>
                                         </div>
                                     </a>
                                 </div>
