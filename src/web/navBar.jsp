@@ -26,12 +26,12 @@
         <div class="text-block">
             <ul class="menu-vertical">
                 <li>
-                    <a href="home-coming-soon-2.html">
+                    <a href="gestionePrenotazione.jsp">
                         Gestione Prenotazioni
                     </a>
                 </li>
                 <li>
-                    <a href="home-coming-soon-3.html">
+                    <a href="gestioneAcquistaOlio.jsp">
                         Gestione vendite
                     </a>
                 </li>
