@@ -9,7 +9,7 @@
 <html lang="it">
 <head>
     <meta charset="utf-8">
-    <title>Stack Multipurpose HTML Template</title>
+    <title>Gestione prenotazione</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Site Description Here">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
