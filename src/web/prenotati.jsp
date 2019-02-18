@@ -92,7 +92,7 @@
                                         <i class="fa fa-balance-scale">
                                         </i>
                                     </div>
-                                    <input id="quintali" type='text' name="quantita" placeholder="Inserire approssimativamente il peso in quintali" class="form-control" />
+                                    <input id="quintali" type='number' name="quantita" placeholder="Inserire approssimativamente il peso in quintali" class="form-control" />
                                 </div>
                             </div>
                             <div class="form-group">

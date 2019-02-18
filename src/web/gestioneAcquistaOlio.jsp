@@ -1,4 +1,6 @@
-<%--
+<%@ page import="bean.Olio" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.Iterator" %><%--
   Created by IntelliJ IDEA.
   User: aleoa
   Date: 31/01/2019
@@ -60,82 +62,39 @@
                 <div class="col-md-12">
                     <div class="masonry">
                         <div class="masonry__container row masonry--active">
-                            <div class="masonry__item col-md-4">
+                            <%
+                                List<Olio> lista = (List<Olio>) session.getAttribute("listaOlio");
+                                Iterator<Olio> i = lista.iterator();
+                                while (i.hasNext()) {
+                                    Olio o = i.next();
+                            %>
+                            <!--begin item-->
+                            <div class="masonry__item col-md-4" style="position: absolute; left: 0px; top: 0px;">
                                 <div class="product boxed boxed--border bg--secondary">
-                                    <span class="label">Sale</span>
                                     <a href="#">
                                         <img alt="Image" src="img/product-small-1.png">
                                     </a>
                                     <a class="block" href="#">
                                         <div>
-                                            <h5>Apple iPad</h5>
-                                            <span> 128GB Wifi + Celluar</span>
+                                            <h5><%=o.getNome()%>, <%=o.getCentilitri()%>cl</h5>
+                                            <span> <%=o.getCategoria()%></span>
                                         </div>
                                         <div>
-                                        <span class="h4 inline-block type--strikethrough">30€
-                                        </span>
-                                            <span class="h4 inline-block">25€ a bottiglia</span>
+                                            <span class="h4 inline-block">&euro;<%=o.getPrezzo()%></span>
                                         </div>
                                     </a>
                                 </div>
                             </div>
                             <!--end item-->
-                            <div class="masonry__item col-md-4 ">
-                                <div class="product">
-                                    <a href="#">
-                                        <img alt="Image" src="img/product-small-8.png">
-                                    </a>
-                                    <a class="block" href="#">
-                                        <div>
-                                            <h5>Canon 550D</h5>
-                                            <span> 18MP DSLR Camera</span>
-                                        </div>
-                                        <div>
-                                            <span class="h4 inline-block">10€ a bottiglia</span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <!--end item-->
-                            <div class="masonry__item col-md-4" >
-                                <div class="product">
-                                    <a href="#">
-                                        <img alt="Image" src="img/product-small-2.png">
-                                    </a>
-                                    <a class="block" href="#">
-                                        <div>
-                                            <h5>Apple Keyboard</h5>
-                                            <span> Wireless Bluetooth</span>
-                                        </div>
-                                        <div>
-                                            <span class="h4 inline-block">8€ a bottiglia</span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <!--end item-->
-                            <div class="masonry__item col-md-4 " >
-                                <div class="product">
-                                    <a href="#">
-                                        <img alt="Image" src="img/product-small-12.png">
-                                    </a>
-                                    <a class="block" href="#">
-                                        <div>
-                                            <h5>Magic Mouse</h5>
-                                            <span> Wireless Bluetooth</span>
-                                        </div>
-                                        <div>
-                                            <span class="h4 inline-block">13€ a bottiglia</span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <!--end masonry container-->
+
+                            <%
+                                }
+                            %>
                         </div>
-                        <!--end masonry-->
+                        <!--end masonry container-->
                     </div>
 
-                    <!--end item-->
+                    <!--end masonry-->
                 </div>
                 <!--end of row-->
             </div>
@@ -165,7 +124,7 @@
                                             <div class="col-lg-7">
                                                 <div class="row justify-content-center">
                                                     <div class="col-lg-10 col-md-11">
-                                                        <form>
+                                                        <form action="${pageContext.request.contextPath}/addOlio" method="post">
                                                             <p>Inserisci l'immagine del prodotto: </p>
                                                             <input type="file" name="" id="">
                                                             <hr>
@@ -174,13 +133,22 @@
                                                                 <input type="text" name="titolo" placeholder="inserisci il titolo del prodotto">
                                                             </div>
                                                             <div>
-                                                                <p>Sottotitolo: </p>
-                                                                <input type="text" name="sottotitolo"  placeholder="inserisci un sottotitolo" >
+                                                                <p>Categoria: </p>
+                                                                <input type="text" name="categoria"  placeholder="inserisci la categoria">
                                                             </div>
                                                             <div>
                                                                 <p>Prezzo: </p>
                                                                 <input type="number" name="prezzo" placeholder="inserisci qui il prezzo">
                                                             </div>
+                                                            <div>
+                                                                <p>Centilitri: </p>
+                                                                <input type="number" name="centilitri" placeholder="inserisci i centilitri">
+                                                            </div>
+                                                            <div>
+                                                                <p>Numero di bottiglie: </p>
+                                                                <input type="number" name="numeroBottiglie" placeholder="inserisci il numero di bottiglie disponibili">
+                                                            </div>
+
 
 
                                                         </form>
