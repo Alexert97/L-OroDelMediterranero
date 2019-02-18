@@ -63,9 +63,9 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-6 col-sm-6 col-xs-12 bg-light rounded">
-                        <form method="post">
+                        <form method="post" action="addPrenotazione">
                             <div class="form-group ">
-                                <label class="control-label text-secondary" for="date">
+                                <label class="control-label text-secondary" for="data">
                                     Data & Ora & Quintali
                                 </label>
                                 <div class="input-group">
@@ -73,7 +73,7 @@
                                         <i class="fa fa-calendar">
                                         </i>
                                     </div>
-                                    <input class="form-control" id="date" name="date" placeholder="DD/MM/YYYY" type="text"/>
+                                    <input class="form-control" id="data" name="date" placeholder="DD/MM/YYYY" type="text"/>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -82,7 +82,7 @@
                                         <i class="fa fa-clock-o">
                                         </i>
                                     </div>
-                                    <input id="datepicker3" type='text' class="form-control" />
+                                    <input id="datepicker3" type='text' name="ora" class="form-control" />
                                 </div>
                             </div>
 
@@ -119,8 +119,8 @@
             </div>
         </div>
         <script>
-            $('#date').datepicker(function(){
-                var date_input=$('input[name="date"]'); //our date input has the name "date"
+            $('#data').datepicker(function(){
+                var date_input=$('input[name="data"]'); //our date input has the name "date"
                 var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
                 date_input.datetimepicker({
                     format: 'dd/mm/yyyy',
