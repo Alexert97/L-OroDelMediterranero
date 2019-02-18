@@ -92,18 +92,7 @@
                                         <i class="fa fa-balance-scale">
                                         </i>
                                     </div>
-                                    <select class="form-control " id="exampleSelect1">
-                                        <option>1 quintale</option>
-                                        <option>2 quintali</option>
-                                        <option>3 quintali</option>
-                                        <option>4 quintali</option>
-                                        <option>5 quintali</option>
-                                        <option>6 quintali</option>
-                                        <option>7 quintali</option>
-                                        <option>8 quintali</option>
-                                        <option>9 quintali</option>
-                                        <option>10 quintali</option>
-                                    </select>
+                                    <input id="quintali" type='text' name="quantita" placeholder="Inserire approssimativamente il peso in quintali" class="form-control" />
                                 </div>
                             </div>
                             <div class="form-group">
