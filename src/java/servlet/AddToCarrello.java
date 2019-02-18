@@ -34,7 +34,7 @@ public class AddToCarrello extends HttpServlet {
     session.removeAttribute("carrello");
     session.setAttribute("carrello", kart);
 
-    RequestDispatcher dispatcher = session.getServletContext().getRequestDispatcher("/home1.jsp");
+    RequestDispatcher dispatcher = session.getServletContext().getRequestDispatcher("/acquistaOlio.jsp");
     dispatcher.forward(req, resp);
 
 
