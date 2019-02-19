@@ -36,12 +36,12 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="home-construction.html">
+                                    <a href="modifica.jsp">
                                         Modifica
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="home-construction.html">
+                                    <a href="elimina.jsp">
                                         Elimina
                                     </a>
                                 </li>
@@ -50,7 +50,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href="home-construction.html">
+                    <a href="acquistaOlio.jsp">
                         Acquista Olio
                     </a>
                 </li>
