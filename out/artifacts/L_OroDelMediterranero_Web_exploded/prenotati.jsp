@@ -9,7 +9,7 @@
 <html lang="it">
 <head>
     <meta charset="utf-8">
-    <title>Stack Multipurpose HTML Template</title>
+    <title>Nuova prenotazione</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Site Description Here">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
@@ -63,9 +63,9 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-6 col-sm-6 col-xs-12 bg-light rounded">
-                        <form method="post">
+                        <form method="post" action="addPrenotazione">
                             <div class="form-group ">
-                                <label class="control-label text-secondary" for="date">
+                                <label class="control-label text-secondary" for="data">
                                     Data & Ora & Quintali
                                 </label>
                                 <div class="input-group">
@@ -73,7 +73,7 @@
                                         <i class="fa fa-calendar">
                                         </i>
                                     </div>
-                                    <input class="form-control" id="date" name="date" placeholder="DD/MM/YYYY" type="text"/>
+                                    <input class="form-control" id="data" name="date" placeholder="DD/MM/YYYY" type="text"/>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -82,7 +82,7 @@
                                         <i class="fa fa-clock-o">
                                         </i>
                                     </div>
-                                    <input id="datepicker3" type='text' class="form-control" />
+                                    <input id="datepicker3" type='text' name="ora" class="form-control" />
                                 </div>
                             </div>
 
@@ -92,18 +92,7 @@
                                         <i class="fa fa-balance-scale">
                                         </i>
                                     </div>
-                                    <select class="form-control " id="exampleSelect1">
-                                        <option>1 quintale</option>
-                                        <option>2 quintali</option>
-                                        <option>3 quintali</option>
-                                        <option>4 quintali</option>
-                                        <option>5 quintali</option>
-                                        <option>6 quintali</option>
-                                        <option>7 quintali</option>
-                                        <option>8 quintali</option>
-                                        <option>9 quintali</option>
-                                        <option>10 quintali</option>
-                                    </select>
+                                    <input id="quintali" type='number' name="quantita" placeholder="Inserire approssimativamente il peso in quintali" class="form-control" />
                                 </div>
                             </div>
                             <div class="form-group">
@@ -119,8 +108,8 @@
             </div>
         </div>
         <script>
-            $('#date').datepicker(function(){
-                var date_input=$('input[name="date"]'); //our date input has the name "date"
+            $('#data').datepicker(function(){
+                var date_input=$('input[name="data"]'); //our date input has the name "date"
                 var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
                 date_input.datetimepicker({
                     format: 'dd/mm/yyyy',

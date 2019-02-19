@@ -1,4 +1,6 @@
-<%--
+<%@ page import="java.util.List" %>
+<%@ page import="bean.Olio" %>
+<%@ page import="java.util.Iterator" %><%--
   Created by IntelliJ IDEA.
   User: aleoa
   Date: 31/01/2019
@@ -9,7 +11,7 @@
 <html lang="it">
 <head>
     <meta charset="utf-8">
-    <title>Stack Multipurpose HTML Template</title>
+    <title>Shop</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Site Description Here">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
@@ -61,76 +63,34 @@
                 <div class="masonry">
                     <div class="masonry__container row masonry--active" style="position: relative; height: 5894.16px;">
                         <div class="masonry__item col-md-4" style="position: absolute; left: 0px; top: 0px;"></div>
-                        <div class="masonry__item col-md-4 filter-computing" data-masonry-filter="Computing" style="position: absolute; left: 0px; top: 0px;">
-                            <div class="product boxed boxed--border bg--secondary">
-                                <span class="label">Sale</span>
-                                <a href="#">
-                                    <img alt="Image" src="img/product-small-1.png">
-                                </a>
-                                <a class="block" href="#">
-                                    <div>
-                                        <h5>Apple iPad</h5>
-                                        <span> 128GB Wifi + Celluar</span>
-                                    </div>
-                                    <div>
-                                        <span class="h4 inline-block type--strikethrough">30€</span>
-                                        <span class="h4 inline-block">25€ a bottiglia</span>
-                                    </div>
-                                </a>
+                        <%
+                            List<Olio> lista = (List<Olio>) session.getAttribute("listaOlio");
+                            Iterator<Olio> i = lista.iterator();
+                            while (i.hasNext()) {
+                              Olio o = i.next();
+                        %>
+                            <!--begin item-->
+                            <div class="masonry__item col-md-4" style="position: absolute; left: 0px; top: 0px;">
+                                <div class="product boxed boxed--border bg--secondary">
+                                    <a href="${pageContext.request.contextPath}/addToCarrello?id=<%=o.getId()%>">
+                                        <img alt="Image" src="img/product-small-1.png">
+                                    </a>
+                                    <a class="block" href="${pageContext.request.contextPath}/addToCarrello?id=<%=o.getId()%>">
+                                        <div>
+                                            <h5><%=o.getNome()%>, <%=o.getCentilitri()%>cl</h5>
+                                            <span> <%=o.getCategoria()%></span>
+                                        </div>
+                                        <div>
+                                            <span class="h4 inline-block">&euro;<%=o.getPrezzo()%></span>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                        <!--end item-->
-                        <div class="masonry__item col-md-4 filter-creative" data-masonry-filter="Creative" style="position: absolute; left: 0px; top: 500px;">
-                            <div class="product">
-                                <a href="#">
-                                    <img alt="Image" src="img/product-small-8.png">
-                                </a>
-                                <a class="block" href="#">
-                                    <div>
-                                        <h5>Canon 550D</h5>
-                                        <span> 18MP DSLR Camera</span>
-                                    </div>
-                                    <div>
-                                        <span class="h4 inline-block">10€ a bottiglia</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <!--end item-->
-                        <div class="masonry__item col-md-4 filter-accessories" data-masonry-filter="Accessories" style="position: absolute; left: 0px; top: 989px;">
-                            <div class="product">
-                                <a href="#">
-                                    <img alt="Image" src="img/product-small-2.png">
-                                </a>
-                                <a class="block" href="#">
-                                    <div>
-                                        <h5>Apple Keyboard</h5>
-                                        <span> Wireless Bluetooth</span>
-                                    </div>
-                                    <div>
-                                        <span class="h4 inline-block">8€ a bottiglia</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <!--end item-->
-                        <div class="masonry__item col-md-4 filter-accessories" data-masonry-filter="Accessories" style="position: absolute; left: 0px; top: 1479px;">
-                            <div class="product">
-                                <a href="#">
-                                    <img alt="Image" src="img/product-small-12.png">
-                                </a>
-                                <a class="block" href="#">
-                                    <div>
-                                        <h5>Magic Mouse</h5>
-                                        <span> Wireless Bluetooth</span>
-                                    </div>
-                                    <div>
-                                        <span class="h4 inline-block">13€ a bottiglia</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <!--end item-->
+                            <!--end item-->
+
+                        <%
+                            }
+                        %>
                     </div>
                     <!--end masonry container-->
                 </div>
