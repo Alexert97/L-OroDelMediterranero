@@ -26,7 +26,7 @@
         <div class="text-block">
             <ul class="menu-vertical">
                 <li>
-                    <a href="gestionePrenotazione.jsp">
+                    <a href="gestionePrenotazioni.jsp">
                         Gestione Prenotazioni
                     </a>
                 </li>

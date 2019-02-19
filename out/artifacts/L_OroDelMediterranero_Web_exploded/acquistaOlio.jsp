@@ -73,7 +73,7 @@
                             <div class="masonry__item col-md-4" style="position: absolute; left: 0px; top: 0px;">
                                 <div class="product boxed boxed--border bg--secondary">
                                     <a href="${pageContext.request.contextPath}/addToCarrello?id=<%=o.getId()%>">
-                                        <img alt="Image" src="img/product-small-1.png">
+                                        <img alt="Image" src="img/olivo/olio%20seconda%20qualità.jpg">
                                     </a>
                                     <a class="block" href="${pageContext.request.contextPath}/addToCarrello?id=<%=o.getId()%>">
                                         <div>

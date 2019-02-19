@@ -72,7 +72,7 @@
                             <div class="masonry__item col-md-4" style="position: absolute; left: 0px; top: 0px;">
                                 <div class="product boxed boxed--border bg--secondary">
                                     <a href="#">
-                                        <img alt="Image" src="img/product-small-1.png">
+                                        <img alt="Image" src="img/olivo/olio%20seconda%20qualità.jpg">
                                     </a>
                                     <a class="block" href="#">
                                         <div>
@@ -81,6 +81,12 @@
                                         </div>
                                         <div>
                                             <span class="h4 inline-block">&euro;<%=o.getPrezzo()%></span>
+                                        </div>
+                                        <hr>
+                                        <div>
+                                            <button class="btn btn-danger  text-light" name="submit" type="submit">
+                                                Elimina Prodotto
+                                            </button>
                                         </div>
                                     </a>
                                 </div>
@@ -116,7 +122,7 @@
                                 <section class="imageblock feature-large bg--white border--round ">
                                     <div class="imageblock__content col-lg-5 col-md-3 pos-left">
                                         <div class="background-image-holder">
-                                            <img alt="image" src="img/cowork-11.jpg" />
+                                            <img alt="image" src="img/olivo/frantoio1.jpg" />
                                         </div>
                                     </div>
                                     <div class="container">
