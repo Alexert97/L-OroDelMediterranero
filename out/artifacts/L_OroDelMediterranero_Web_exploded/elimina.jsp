@@ -9,7 +9,7 @@
 <html lang="it">
 <head>
     <meta charset="utf-8">
-    <title>Stack Multipurpose HTML Template</title>
+    <title>Gestione prenotazione</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Site Description Here">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
@@ -63,9 +63,9 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-6 col-sm-6 col-xs-12 bg-light rounded">
-                        <form method="post">
+                        <form method="post" action="${pageContext.request.contextPath}/removePrenotazione?id=<%=request.getParameter("id")%>">
                             <div class="form-group ">
-                                <label class="control-label text-secondary" for="date">
+                                <label class="control-label text-secondary">
                                     Elimina la tua prenotazione
                                 </label>
                                 <div>
