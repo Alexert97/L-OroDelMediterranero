@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.List;
 
 @WebServlet("/modificaPrenotazioni")
@@ -26,7 +27,9 @@ public class ModificaPrenotazione extends HttpServlet {
     List<Prenotazione> list = (List<Prenotazione>) session.getAttribute("listaPrenotazioni");
     boolean pres = false;
     Prenotazione prenotazione = null;
-    for (Prenotazione p : list) {
+    Iterator<Prenotazione> i = list.iterator();
+    while (i.hasNext()) {
+      Prenotazione p = i.next();
       if (p.getId() == id) {
         prenotazione = p;
       }
@@ -37,11 +40,11 @@ public class ModificaPrenotazione extends HttpServlet {
       }
     }
     if (!pres) {
-        int i = list.indexOf(prenotazione);
+        int index = list.indexOf(prenotazione);
         prenotazione.setData(data);
         prenotazione.setOra(ora);
         prenotazione.setQuantita(quantita);
-        list.set(i, prenotazione);
+        list.set(index, prenotazione);
 
     }
     session.removeAttribute("listaPrenotazioni");

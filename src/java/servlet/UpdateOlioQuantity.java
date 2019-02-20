@@ -40,7 +40,7 @@ public class UpdateOlioQuantity extends HttpServlet {
     session.removeAttribute("listaOlio");
     session.setAttribute("listaOlio", list);
 
-    RequestDispatcher dispatcher = session.getServletContext().getRequestDispatcher("/home1.jsp");
+    RequestDispatcher dispatcher = session.getServletContext().getRequestDispatcher("/gestioneAcquistaOlio.jsp");
     dispatcher.forward(req, resp);
 
   }

@@ -136,7 +136,7 @@
                                                         <hr>
                                                         <form action="${pageContext.request.contextPath}/addOlio" method="post">
                                                                 <p>Titolo: </p>
-                                                                <input type="text" name="titolo" placeholder="inserisci il titolo del prodotto">
+                                                                <input type="text" name="nome" placeholder="inserisci il nome del prodotto">
                                                             </div>
                                                             <div>
                                                                 <p>Categoria: </p>

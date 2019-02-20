@@ -23,9 +23,9 @@ public class StartUp extends HttpServlet {
     List<Olio> listaOlio = new ArrayList<>();
     List<Prenotazione> listaPrenotazioni = new ArrayList<>();
 
-    listaOlio.add(new Olio(1, "", "", 9.50, 75, 100));
-    listaOlio.add(new Olio(2, "", "", 7.50, 75, 100));
-    listaOlio.add(new Olio(3, "", "", 8.00, 75, 100));
+    listaOlio.add(new Olio(1, "terre di mezzo", "extravergine", 9.50, 75, 100));
+    listaOlio.add(new Olio(2, "mordor", "extravergine", 7.50, 75, 100));
+    listaOlio.add(new Olio(3, "gandalf", "vergine", 8.00, 75, 100));
 
     listaPrenotazioni.add(new Prenotazione(1, "Alessandro", "Rigido", "25/02/2019", "10:00", 240));
 
