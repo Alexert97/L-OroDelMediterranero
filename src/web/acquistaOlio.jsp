@@ -75,35 +75,32 @@
                             <!--begin item-->
                             <div class="masonry__item col-md-4" style="position: absolute; left: 0px; top: 0px;">
                                 <div class="product boxed boxed--border bg--secondary">
-                                    <form method="post" action="addPrenotazione">
-                                        <a href="${pageContext.request.contextPath}/addToCarrello?id=<%=o.getId()%>">
-                                            <img alt="Image" src="img/olivo/olio%20seconda%20qualità.jpg">
-                                        </a>
-                                        <a class="block" href="${pageContext.request.contextPath}/addToCarrello?id=<%=o.getId()%>">
-                                            <div>
-                                                <h5><%=o.getNome()%>, <%=o.getCentilitri()%>cl</h5>
-                                                <span> <%=o.getCategoria()%></span>
-                                            </div>
-                                            <div>
-                                                <span class="h4 inline-block">&euro;<%=o.getPrezzo()%></span>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class='input-group' >
-                                                    <div class="input-group-addon">
-                                                        <i class="fas fa-wine-bottle p-1 mt-2">
-                                                        </i>
-                                                    </div>
-                                                    <input id="quintali" type='number' name="quantita" placeholder="Numero bottiglie" class="form-control" />
+                                    <form method="post" action="${pageContext.request.contextPath}/addToCarrello">
+                                        <input type="hidden" value="<%=o.getId()%>" name="id"/>
+                                        <img alt="Image" src="img/olivo/olio%20seconda%20qualità.jpg">
+                                        <div>
+                                            <h5><%=o.getNome()%>, <%=o.getCentilitri()%>cl</h5>
+                                            <span> <%=o.getCategoria()%></span>
+                                        </div>
+                                        <div>
+                                            <span class="h4 inline-block">&euro;<%=o.getPrezzo()%></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class='input-group' >
+                                                <div class="input-group-addon">
+                                                    <i class="fas fa-wine-bottle p-1 mt-2">
+                                                    </i>
                                                 </div>
+                                                <input id="quintali" type='number' name="quantita" placeholder="Numero bottiglie" value="1" class="form-control" />
                                             </div>
-                                            <div class="form-group">
-                                                <div>
-                                                    <button class="btn btn-success  text-light" name="submit" type="submit" >
-                                                        Compra olio
-                                                    </button>
-                                                </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div>
+                                                <button class="btn btn-success  text-light" name="submit" type="submit" >
+                                                    Compra olio
+                                                </button>
                                             </div>
-                                        </a>
+                                        </div>
                                     </form>
                                 </div>
                             </div>

@@ -72,9 +72,9 @@
                             Iterator<Prenotazione> i = lista.iterator();
                             boolean pres = false;
                             while (i.hasNext()) {
-                                Prenotazione p = i.next();
-                                if (p.getNome().equals("Federico")) {
-                                    pres = true;
+                              Prenotazione p = i.next();
+                              if (p.getNome().equals("Federico")) {
+                                pres = true;
                         %>
                         <form method="post">
                             <div class="form-group ">
@@ -86,7 +86,7 @@
                                         <i class="fa fa-calendar">
                                         </i>
                                     </div>
-                                    <input class="form-control" id="date" name="data" placeholder="DD/MM/YYYY" value="" type="text"/>
+                                    <input class="form-control" id="date" name="data" placeholder="<%=p.getData()%>" value="<%=p.getData()%>" type="text"/>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -95,7 +95,7 @@
                                         <i class="fa fa-clock-o">
                                         </i>
                                     </div>
-                                    <input id="datepicker3" type='text'  name="ora" class="form-control" />
+                                    <input id="datepicker3" type='text'  name="ora" placeholder="<%=p.getOra()%>" value="<%=p.getOra()%>" class="form-control" />
                                 </div>
                             </div>
 
@@ -105,7 +105,7 @@
                                         <i class="fa fa-balance-scale p-1 mt-2">
                                         </i>
                                     </div>
-                                    <input id="quintali" type='number' name="quantita" value="" class="form-control" />
+                                    <input id="quintali" type='number' name="quantita" placeholder="<%=p.getQuantita()%>" value="<%=p.getQuantita()%>" class="form-control" />
 
                                 </div>
                             </div>
