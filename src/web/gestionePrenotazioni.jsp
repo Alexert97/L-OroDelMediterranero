@@ -1,4 +1,6 @@
-<%--
+<%@ page import="bean.Prenotazione" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.Iterator" %><%--
   Created by IntelliJ IDEA.
   User: aleoa
   Date: 31/01/2019
@@ -64,6 +66,10 @@
                 <div class="row">
                     <div class="col-md-11 p-5 bg-light border--round ">
                         <table class="border--round table--alternate-row">
+                            <%
+                                List<Prenotazione> lista = (List<Prenotazione>) session.getAttribute("listaPrenotazioni");
+                                Iterator<Prenotazione> i = lista.iterator();
+                            %>
                             <thead>
                             <tr>
                                 <th>Nome</th>
@@ -77,16 +83,20 @@
                             </thead>
                             <tbody>
                             <tr>
-                                <td>Alessandro</td>
-                                <td>Rigido</td>
-                                <td>13/02/1997</td>
-                                <td>13:00</td>
-                                <td>15 quintali</td>
-                                <td>
+                                <%
+                                    while (i.hasNext()) {
+                                      Prenotazione p = i.next();
+                                %>
+                                    <td><%=p.getNome()%></td>
+                                    <td><%=p.getCognome()%></td>
+                                    <td><%=p.getData()%></td>
+                                    <td><%=p.getOra()%></td>
+                                    <td><%=p.getQuantita()%></td>
+                                    <td>
                                     <div>
                                         <div class="modal-instance">
                                             <div class="align-content-center p-2">
-                                                <button class="btn btn-success modal-trigger ">
+                                                <button class="btn btn-success modal-trigger " href="">
                                                     Modifica
                                                 </button>
                                             </div>
@@ -105,7 +115,8 @@
                                                                         <div class="col-lg-10 col-md-11">
                                                                             <h1 class="text-center">Modifica prenotazione</h1>
                                                                             <hr>
-                                                                            <form method="post" action="addPrenotazione">
+                                                                            <form method="post" action="${pageContext.request.contextPath}/modificaPrenotazioni">
+                                                                                <input type="hidden" value="<%=p.getId()%>">
                                                                                 <div class="form-group ">
                                                                                     <label class="control-label text-secondary" for="data">
                                                                                         Data & Ora & Quintali
@@ -115,7 +126,7 @@
                                                                                             <i class="fa fa-calendar p-2 mt-2">
                                                                                             </i>
                                                                                         </div>
-                                                                                        <input class="form-control" id="data" name="date" placeholder="DD/MM/YYYY" type="text"/>
+                                                                                        <input class="form-control" id="data" name="data" value="" type="text"/>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="form-group">
@@ -179,14 +190,16 @@
                                         <!--end of row-->
 
                                         <div class="align-content-center p-2">
-                                            <button class="btn btn-danger" data-notification-link="trigger">
+                                            <button class="btn btn-danger" data-notification-link="trigger" href="${pageContext.request.contextPath}/removePrenotazione?id<%=p.getId()%>">
                                                 Elimina
                                             </button>
                                         </div>
 
                                     </div>
                                 </td>
-
+                                <%
+                                    }
+                                %>
                             </tr>
 
                             </tbody>

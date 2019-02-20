@@ -19,6 +19,8 @@ public class ModificaPrenotazione extends HttpServlet {
     int id = Integer.parseInt(req.getParameter("id"));
     String data = req.getParameter("data");
     String ora = req.getParameter("ora");
+    String q = req.getParameter("quantita");
+    double quantita = Double.parseDouble(q);
 
     HttpSession session = req.getSession();
     List<Prenotazione> list = (List<Prenotazione>) session.getAttribute("listaPrenotazioni");
@@ -38,6 +40,7 @@ public class ModificaPrenotazione extends HttpServlet {
         int i = list.indexOf(prenotazione);
         prenotazione.setData(data);
         prenotazione.setOra(ora);
+        prenotazione.setQuantita(quantita);
         list.set(i, prenotazione);
 
     }

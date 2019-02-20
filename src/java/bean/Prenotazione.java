@@ -5,11 +5,15 @@ public class Prenotazione {
   private String data;
   private String ora;
   private double quantita;
+  private String nome;
+  private String cognome;
 
   public Prenotazione() {
   }
 
-  public Prenotazione(int id, String data, String ora, double quantita) {
+  public Prenotazione(int id, String nome, String cognome, String data, String ora, double quantita) {
+    this.nome = nome;
+    this.cognome = cognome;
     this.ora = ora;
     this.data = data;
     this.quantita = quantita;
@@ -45,5 +49,21 @@ public class Prenotazione {
 
   public void setQuantita(double quantita) {
     this.quantita = quantita;
+  }
+
+  public String getNome() {
+    return nome;
+  }
+
+  public void setNome(String nome) {
+    this.nome = nome;
+  }
+
+  public String getCognome() {
+    return cognome;
+  }
+
+  public void setCognome(String cognome) {
+    this.cognome = cognome;
   }
 }
