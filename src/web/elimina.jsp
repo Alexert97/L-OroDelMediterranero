@@ -1,4 +1,6 @@
-<%--
+<%@ page import="bean.Prenotazione" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.Iterator" %><%--
   Created by IntelliJ IDEA.
   User: aleoa
   Date: 31/01/2019
@@ -63,18 +65,74 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-6 col-sm-6 col-xs-12 bg-light rounded">
-                        <form method="post" action="${pageContext.request.contextPath}/removePrenotazione?id=<%=request.getParameter("id")%>">
+                        <%
+                            List<Prenotazione> lista = (List<Prenotazione>) session.getAttribute("listaPrenotazioni");
+                            Iterator<Prenotazione> i = lista.iterator();
+                            boolean pres = false;
+                            while (i.hasNext()) {
+                                Prenotazione p = i.next();
+                                if (p.getNome().equals("Federico")) {
+                                    pres = true;
+                        %>
+                        <form method="post" action="${pageContext.request.contextPath}/removePrenotazione">
+                            <input type="hidden" name="id" value="<%=p.getId()%>"/>
                             <div class="form-group ">
                                 <label class="control-label text-secondary">
                                     Elimina la tua prenotazione
                                 </label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-calendar">
+                                        </i>
+                                    </div>
+                                    <input class="form-control" id="date" name="data" placeholder="<%=p.getData()%>" value="<%=p.getData()%>" type="text" disabled/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                    <div class='input-group' >
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-clock-o">
+                                            </i>
+                                        </div>
+                                        <input id="datepicker3" type='text'  name="ora" placeholder="<%=p.getOra()%>" value="<%=p.getOra()%>" class="form-control" disabled/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class='input-group' >
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-balance-scale p-1 mt-2">
+                                            </i>
+                                        </div>
+                                        <input id="quintali" type='number' name="quantita" placeholder="<%=p.getQuantita()%>" value="<%=p.getQuantita()%>" class="form-control" disabled />
+
+                                    </div>
+                                </div>
                                 <div>
                                     <button class="btn btn-danger text-light" name="submit" type="submit">
                                         Elimina Ora
                                     </button>
                                 </div>
-                            </div>
                         </form>
+                        <%
+                                }
+                            }
+                            if(!pres) {
+                        %>
+                        <div class="p-3">
+                            <h1 class="text-dark">
+                                Non hai nessuna prenotazione effettuata
+                            </h1>
+                            <div>
+                                <a href="prenotati.jsp">
+                                    <button class="btn btn-success text-light" name="submit" type="submit">
+                                        Prenotati ora
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                        <%
+                            }
+                        %>
                     </div>
                 </div>
             </div>

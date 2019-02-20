@@ -72,9 +72,9 @@
                             Iterator<Prenotazione> i = lista.iterator();
                             boolean pres = false;
                             while (i.hasNext()) {
-                              Prenotazione p = i.next();
-                              if (p.getNome().equals("Federico")) {
-                                pres = true;
+                                Prenotazione p = i.next();
+                                if (p.getNome().equals("Federico")) {
+                                    pres = true;
                         %>
                         <form method="post">
                             <div class="form-group ">
@@ -105,7 +105,7 @@
                                         <i class="fa fa-balance-scale p-1 mt-2">
                                         </i>
                                     </div>
-                                    <input id="quintali" type='number' name="quantita" placeholder="<%=p.getQuantita()%>" value="<%=p.getQuantita()%>" class="form-control" />
+                                    <input id="quintali" type='number' name="quantita" placeholder="<%=p.getQuantita()%>" value="<%=p.getQuantita()%>" class="form-control"  />
 
                                 </div>
                             </div>
