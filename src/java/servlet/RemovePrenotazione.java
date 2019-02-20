@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.List;
 
 
@@ -22,9 +23,11 @@ public class RemovePrenotazione extends HttpServlet {
 
     HttpSession session = req.getSession();
     List<Prenotazione> list = (List<Prenotazione>) session.getAttribute("listaPrenotazioni");
-    for (Prenotazione p : list) {
+    Iterator<Prenotazione> i = list.iterator();
+    while (i.hasNext()) {
+      Prenotazione p = i.next();
       if (p.getId() ==  id) {
-        list.remove(p);
+        i.remove();
       }
     }
     session.removeAttribute("listaPrenotazioni");

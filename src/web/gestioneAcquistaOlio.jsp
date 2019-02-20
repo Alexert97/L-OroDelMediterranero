@@ -84,11 +84,74 @@
                                         </div>
                                         <hr>
                                         <div>
-                                            <a href="${pageContext.request.contextPath}/removeOlio?id=<%=o.getId()%>">
-                                            <button class="btn btn-danger  text-light" name="submit" type="submit" >
-                                                Elimina Prodotto
-                                            </button>
-                                            </a>
+                                            <div class="modal-instance">
+                                                <div class="align-content-center p-2">
+                                                    <button class="btn btn-danger modal-trigger " href="">
+                                                        Elimina Prodotto
+                                                    </button>
+                                                </div>
+                                                <div class="modal-container">
+                                                    <div class="modal-content">
+                                                        <section class="imageblock feature-large bg--white border--round ">
+                                                            <div class="imageblock__content col-lg-5 col-md-3 pos-left">
+                                                                <div class="background-image-holder">
+                                                                    <img alt="image" src="img/olivo/frantoio1.jpg" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="container">
+                                                                <div class="row justify-content-end">
+                                                                    <div class="col-lg-7">
+                                                                        <div class="row justify-content-center">
+                                                                            <div class="col-lg-10 col-md-11">
+                                                                                <div>
+                                                                                    <a href="gestioneAcquistaOlio.jsp">
+                                                                                        <button class="btn btn-success">
+                                                                                            Non eliminare
+                                                                                        </button>
+                                                                                    </a>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="${pageContext.request.contextPath}/removeOlio?id=<%=o.getId()%>">
+                                                                                        <button class="btn btn-danger  text-light" name="submit" type="submit" >
+                                                                                            Elimina Prodotto
+                                                                                        </button>
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!--end of row-->
+                                                                    </div>
+                                                                    <!--end of col-->
+                                                                </div>
+                                                                <!--end of row-->
+                                                            </div>
+                                                            <!--end of container-->
+                                                            <script>
+                                                                $('#data').datepicker(function(){
+                                                                    var date_input=$('input[name="data"]'); //our date input has the name "date"
+                                                                    var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+                                                                    date_input.datetimepicker({
+                                                                        format: 'dd/mm/yyyy',
+                                                                        container: container,
+                                                                        todayHighlight: true,
+                                                                        autoclose: true,
+                                                                    })
+                                                                })
+                                                            </script>
+                                                            <script>
+                                                                $('#datepicker3').timepicker({
+                                                                    // 12 or 24 hour
+                                                                    darktheme: true,
+                                                                });
+                                                            </script>
+                                                        </section>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--end of row-->
+
+
+
                                         </div>
                                     </a>
                                 </div>
@@ -135,55 +198,55 @@
                                                         <h1 class="text-center">Aggiungi bottiglie</h1>
                                                         <hr>
                                                         <form action="${pageContext.request.contextPath}/addOlio" method="post">
-                                                                <p>Titolo: </p>
-                                                                <input type="text" name="nome" placeholder="inserisci il nome del prodotto">
-                                                            </div>
-                                                            <div>
-                                                                <p>Categoria: </p>
-                                                                <input type="text" name="categoria"  placeholder="inserisci la categoria">
-                                                            </div>
-                                                            <div>
-                                                                <p>Prezzo: </p>
-                                                                <input type="number" name="prezzo" placeholder="inserisci qui il prezzo">
-                                                            </div>
-                                                            <div>
-                                                                <p>Centilitri: </p>
-                                                                <input type="number" name="centilitri" placeholder="inserisci i centilitri">
-                                                            </div>
-                                                            <div>
-                                                                <p>Numero di bottiglie: </p>
-                                                                <input type="number" name="numeroBottiglie" placeholder="inserisci il numero di bottiglie disponibili">
-                                                            </div>
-                                                            <hr>
-                                                            <div>
-                                                                <button class="btn btn-success  text-light" name="submit" type="submit">
-                                                                    Salva
-                                                                </button>
-                                                            </div>
-
-
-
-                                                        </form>
+                                                            <p>Titolo: </p>
+                                                            <input type="text" name="nome" placeholder="inserisci il nome del prodotto">
                                                     </div>
+                                                    <div>
+                                                        <p>Categoria: </p>
+                                                        <input type="text" name="categoria"  placeholder="inserisci la categoria">
+                                                    </div>
+                                                    <div>
+                                                        <p>Prezzo: </p>
+                                                        <input type="number" name="prezzo" placeholder="inserisci qui il prezzo">
+                                                    </div>
+                                                    <div>
+                                                        <p>Centilitri: </p>
+                                                        <input type="number" name="centilitri" placeholder="inserisci i centilitri">
+                                                    </div>
+                                                    <div>
+                                                        <p>Numero di bottiglie: </p>
+                                                        <input type="number" name="numeroBottiglie" placeholder="inserisci il numero di bottiglie disponibili">
+                                                    </div>
+                                                    <hr>
+                                                    <div>
+                                                        <button class="btn btn-success  text-light" name="submit" type="submit">
+                                                            Salva
+                                                        </button>
+                                                    </div>
+
+
+
+                                                    </form>
                                                 </div>
-                                                <!--end of row-->
                                             </div>
-                                            <!--end of col-->
+                                            <!--end of row-->
                                         </div>
-                                        <!--end of row-->
+                                        <!--end of col-->
                                     </div>
-                                    <!--end of container-->
-                                </section>
+                                    <!--end of row-->
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--end of row-->
-        </div>
-        <!--end of container-->
+                            <!--end of container-->
     </section>
-    <%@ include file="footer.jsp"%>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--end of row-->
+</div>
+<!--end of container-->
+</section>
+<%@ include file="footer.jsp"%>
 </div>
 <!--<div class="loader"></div>-->
 <a class="back-to-top inner-link" href="#start" data-scroll-class="100vh:active">
