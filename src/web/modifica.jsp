@@ -72,9 +72,9 @@
                             Iterator<Prenotazione> i = lista.iterator();
                             boolean pres = false;
                             while (i.hasNext()) {
-                              Prenotazione p = i.next();
-                              if (p.getNome().equals("Federico")) {
-                                pres = true;
+                                Prenotazione p = i.next();
+                                if (p.getNome().equals("Federico")) {
+                                    pres = true;
                         %>
                         <form method="post">
                             <div class="form-group ">
@@ -118,11 +118,22 @@
                             </div>
                         </form>
                         <%
-                              }
+                                }
                             }
                             if(!pres) {
                         %>
-                        
+                        <div class="p-3">
+                            <h1 class="text-dark">
+                                Non hai nessuna prenotazione effettuata
+                            </h1>
+                            <div>
+                                <a href="prenotati.jsp">
+                                    <button class="btn btn-success text-light" name="submit" type="submit">
+                                        Prenotati ora
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
                         <%
                             }
                         %>
