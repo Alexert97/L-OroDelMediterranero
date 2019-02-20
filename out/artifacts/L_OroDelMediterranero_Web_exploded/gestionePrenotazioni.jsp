@@ -54,7 +54,7 @@
 <a id="start"></a>
 <%@ include file="navBar.jsp"%>
 <div class="main-container">
-    <section class="cover height-50 imagebg text-center" data-overlay="2" id="home">
+    <section class="cover height-80 imagebg text-center" data-overlay="2" id="home">
         <div class="background-image-holder">
             <img alt="background" src="img/frantoio-Presicce.jpg" />
         </div>
