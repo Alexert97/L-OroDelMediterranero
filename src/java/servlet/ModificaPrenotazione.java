@@ -47,7 +47,7 @@ public class ModificaPrenotazione extends HttpServlet {
     session.removeAttribute("listaPrenotazioni");
     session.setAttribute("listaPrenotazioni", list);
 
-    RequestDispatcher dispatcher = session.getServletContext().getRequestDispatcher("/home1.jsp");
+    RequestDispatcher dispatcher = session.getServletContext().getRequestDispatcher("/gestionePrenotazioni.jsp");
     dispatcher.forward(req, resp);
   }
 

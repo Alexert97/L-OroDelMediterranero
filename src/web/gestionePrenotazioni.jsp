@@ -56,11 +56,7 @@
 <a id="start"></a>
 <%@ include file="navBar.jsp"%>
 <div class="main-container">
-    <section class="cover height-80 imagebg text-center" data-overlay="2" id="home">
-        <div class="background-image-holder">
-            <img alt="background" src="img/frantoio-Presicce.jpg" />
-        </div>
-        <hr>
+    <section class="bg-light text-center" data-overlay="2" id="home">
         <div class="bootstrap-iso">
             <div class="container-fluid">
                 <div class="row">
@@ -116,7 +112,7 @@
                                                                             <h1 class="text-center">Modifica prenotazione</h1>
                                                                             <hr>
                                                                             <form method="post" action="${pageContext.request.contextPath}/modificaPrenotazioni">
-                                                                                <input type="hidden" value="<%=p.getId()%>">
+                                                                                <input type="hidden" name="id" value="<%=p.getId()%>">
                                                                                 <div class="form-group ">
                                                                                     <label class="control-label text-secondary" for="data">
                                                                                         Data & Ora & Quintali
@@ -126,7 +122,7 @@
                                                                                             <i class="fa fa-calendar p-2 mt-2">
                                                                                             </i>
                                                                                         </div>
-                                                                                        <input class="form-control" id="data" name="data" value="" type="text"/>
+                                                                                        <input class="form-control" id="data" name="data" value="<%=p.getData()%>" type="text"/>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="form-group">
@@ -135,7 +131,7 @@
                                                                                             <i class="fa fa-clock-o p-2 mt-2">
                                                                                             </i>
                                                                                         </div>
-                                                                                        <input id="datepicker3" type='text' name="ora" class="form-control" />
+                                                                                        <input id="datepicker3" type='text' name="ora" value="<%=p.getOra()%>" class="form-control" />
                                                                                     </div>
                                                                                 </div>
 
@@ -145,7 +141,7 @@
                                                                                             <i class="fa fa-balance-scale p-1 mt-2">
                                                                                             </i>
                                                                                         </div>
-                                                                                        <input id="quintali" type='number' name="quantita" placeholder="Inserire approssimativamente il peso in quintali" class="form-control" />
+                                                                                        <input id="quintali" type='number' name="quantita" value="<%=p.getQuantita()%>" class="form-control" />
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="form-group">

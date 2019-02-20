@@ -73,7 +73,7 @@
                                         <i class="fa fa-calendar">
                                         </i>
                                     </div>
-                                    <input class="form-control" id="date" name="date" placeholder="DD/MM/YYYY" type="text"/>
+                                    <input class="form-control" id="date" name="data" placeholder="DD/MM/YYYY" type="text"/>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -89,21 +89,10 @@
                             <div class="form-group">
                                 <div class='input-group' >
                                     <div class="input-group-addon">
-                                        <i class="fa fa-balance-scale">
+                                        <i class="fa fa-balance-scale p-1 mt-2">
                                         </i>
                                     </div>
-                                    <select class="form-control " id="exampleSelect1">
-                                        <option>1 quintale</option>
-                                        <option>2 quintali</option>
-                                        <option>3 quintali</option>
-                                        <option>4 quintali</option>
-                                        <option>5 quintali</option>
-                                        <option>6 quintali</option>
-                                        <option>7 quintali</option>
-                                        <option>8 quintali</option>
-                                        <option>9 quintali</option>
-                                        <option>10 quintali</option>
-                                    </select>
+                                    <input id="quintali" type='number' name="quantita" placeholder="Inserire approssimativamente il peso in quintali" class="form-control" />
                                 </div>
                             </div>
                             <div class="form-group">
@@ -120,7 +109,7 @@
         </div>
         <script>
             $('#date').datepicker(function(){
-                var date_input=$('input[name="date"]'); //our date input has the name "date"
+                var date_input=$('input[name="data"]'); //our date input has the name "date"
                 var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
                 date_input.datetimepicker({
                     format: 'dd/mm/yyyy',
