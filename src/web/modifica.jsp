@@ -1,4 +1,6 @@
-<%--
+<%@ page import="bean.Prenotazione" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.Iterator" %><%--
   Created by IntelliJ IDEA.
   User: aleoa
   Date: 31/01/2019
@@ -65,6 +67,15 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-6 col-sm-6 col-xs-12 bg-light rounded">
+                        <%
+                            List<Prenotazione> lista = (List<Prenotazione>) session.getAttribute("listaPrenotazioni");
+                            Iterator<Prenotazione> i = lista.iterator();
+                            boolean pres = false;
+                            while (i.hasNext()) {
+                              Prenotazione p = i.next();
+                              if (p.getNome().equals("Federico")) {
+                                pres = true;
+                        %>
                         <form method="post">
                             <div class="form-group ">
                                 <label class="control-label text-secondary" for="date">
@@ -75,7 +86,7 @@
                                         <i class="fa fa-calendar">
                                         </i>
                                     </div>
-                                    <input class="form-control" id="date" name="data" placeholder="DD/MM/YYYY" type="text"/>
+                                    <input class="form-control" id="date" name="data" placeholder="DD/MM/YYYY" value="" type="text"/>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -84,7 +95,7 @@
                                         <i class="fa fa-clock-o">
                                         </i>
                                     </div>
-                                    <input id="datepicker3" type='text' class="form-control" />
+                                    <input id="datepicker3" type='text'  name="ora" class="form-control" />
                                 </div>
                             </div>
 
@@ -94,7 +105,7 @@
                                         <i class="fa fa-balance-scale p-1 mt-2">
                                         </i>
                                     </div>
-                                    <input id="quintali" type='number' name="quantita" placeholder="Inserire approssimativamente il peso in quintali" class="form-control" />
+                                    <input id="quintali" type='number' name="quantita" value="" class="form-control" />
 
                                 </div>
                             </div>
@@ -106,6 +117,15 @@
                                 </div>
                             </div>
                         </form>
+                        <%
+                              }
+                            }
+                            if(!pres) {
+                        %>
+                        
+                        <%
+                            }
+                        %>
                     </div>
                 </div>
             </div>
