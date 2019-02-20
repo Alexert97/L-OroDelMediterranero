@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.List;
 
 @WebServlet("/removeOlio")
@@ -20,15 +21,17 @@ public class RemoveOlio extends HttpServlet {
 
     HttpSession session = req.getSession();
     List<Olio> list = (List<Olio>) session.getAttribute("listaOlio");
-    for (Olio o : list) {
+    Iterator<Olio> i = list.iterator();
+    while (i.hasNext()) {
+      Olio o = i.next();
       if (o.getId() == id) {
-        list.remove(o);
+        i.remove();
       }
     }
     session.removeAttribute("listaOlio");
     session.setAttribute("listaOlio", list);
 
-    RequestDispatcher dispatcher = session.getServletContext().getRequestDispatcher("/home1.jsp");
+    RequestDispatcher dispatcher = session.getServletContext().getRequestDispatcher("/gestioneAcquistaOlio.jsp");
     dispatcher.forward(req, resp);
   }
 

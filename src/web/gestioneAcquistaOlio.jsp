@@ -84,9 +84,11 @@
                                         </div>
                                         <hr>
                                         <div>
-                                            <button class="btn btn-danger  text-light" name="submit" type="submit">
+                                            <a href="${pageContext.request.contextPath}/removeOlio?id=<%=o.getId()%>">
+                                            <button class="btn btn-danger  text-light" name="submit" type="submit" >
                                                 Elimina Prodotto
                                             </button>
+                                            </a>
                                         </div>
                                     </a>
                                 </div>
@@ -133,9 +135,6 @@
                                                         <h1 class="text-center">Aggiungi bottiglie</h1>
                                                         <hr>
                                                         <form action="${pageContext.request.contextPath}/addOlio" method="post">
-                                                            <p>Inserisci l'immagine del prodotto: </p>
-                                                            <input type="file" name="" id="">
-                                                            <div>
                                                                 <p>Titolo: </p>
                                                                 <input type="text" name="titolo" placeholder="inserisci il titolo del prodotto">
                                                             </div>
