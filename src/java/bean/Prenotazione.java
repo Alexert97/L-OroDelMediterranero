@@ -4,14 +4,14 @@ public class Prenotazione {
   private int id;
   private String data;
   private String ora;
-  private double quantita;
+  private int quantita;
   private String nome;
   private String cognome;
 
   public Prenotazione() {
   }
 
-  public Prenotazione(int id, String nome, String cognome, String data, String ora, double quantita) {
+  public Prenotazione(int id, String nome, String cognome, String data, String ora, int quantita) {
     this.nome = nome;
     this.cognome = cognome;
     this.ora = ora;
@@ -47,7 +47,7 @@ public class Prenotazione {
     return quantita;
   }
 
-  public void setQuantita(double quantita) {
+  public void setQuantita(int quantita) {
     this.quantita = quantita;
   }
 

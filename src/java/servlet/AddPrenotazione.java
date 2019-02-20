@@ -21,9 +21,9 @@ public class AddPrenotazione extends HttpServlet {
     String data = req.getParameter("data");
     String ora = req.getParameter("ora");
     String quant = req.getParameter("quantita");
-    double quantita = 0;
+    int quantita = 0;
     if (!quant.equals("") && quant != null) {
-      quantita = Double.parseDouble(quant);
+      quantita = Integer.parseInt(quant);
     }
     HttpSession session = req.getSession();
     RequestDispatcher dispatcher = session.getServletContext().getRequestDispatcher("/prenotati.jsp");

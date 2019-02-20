@@ -21,7 +21,7 @@ public class ModificaPrenotazione extends HttpServlet {
     String data = req.getParameter("data");
     String ora = req.getParameter("ora");
     String q = req.getParameter("quantita");
-    double quantita = Double.parseDouble(q);
+    int quantita = Integer.parseInt(q);
 
     HttpSession session = req.getSession();
     List<Prenotazione> list = (List<Prenotazione>) session.getAttribute("listaPrenotazioni");
