@@ -36,6 +36,8 @@
     <script src="js/bootstrap-datetimepicker.js"></script>
     <script src="js/locales/bootstrap-datetimepicker.it.js"></script>
     <script src="js/bootstrap-datetimepicker.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
 
     <!--  jQuery -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -89,21 +91,10 @@
                             <div class="form-group">
                                 <div class='input-group' >
                                     <div class="input-group-addon">
-                                        <i class="fa fa-balance-scale">
+                                        <i class="fa  fa-balance-scale">
                                         </i>
                                     </div>
-                                    <select class="form-control " id="exampleSelect1">
-                                        <option>1 quintale</option>
-                                        <option>2 quintali</option>
-                                        <option>3 quintali</option>
-                                        <option>4 quintali</option>
-                                        <option>5 quintali</option>
-                                        <option>6 quintali</option>
-                                        <option>7 quintali</option>
-                                        <option>8 quintali</option>
-                                        <option>9 quintali</option>
-                                        <option>10 quintali</option>
-                                    </select>
+                                    <input id="quintali" type='number' name="quantita" placeholder="quintali" class="form-control" />
                                 </div>
                             </div>
                             <div class="form-group">

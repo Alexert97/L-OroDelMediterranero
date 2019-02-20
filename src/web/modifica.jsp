@@ -36,6 +36,8 @@
     <script src="js/bootstrap-datetimepicker.js"></script>
     <script src="js/locales/bootstrap-datetimepicker.it.js"></script>
     <script src="js/bootstrap-datetimepicker.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
 
     <!--  jQuery -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -93,6 +95,7 @@
                                         </i>
                                     </div>
                                     <input id="quintali" type='number' name="quantita" placeholder="Inserire approssimativamente il peso in quintali" class="form-control" />
+
                                 </div>
                             </div>
                             <div class="form-group">
